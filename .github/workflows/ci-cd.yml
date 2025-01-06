@@ -1,0 +1,51 @@
+name: CI/CD Workflow
+
+# Run workflow on push or pull requests to specific branches
+on:
+  push:
+    branches:
+    - coding
+    - main
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Python
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r backend/requirements.txt
+
+    # Step 4: Run tests
+    - name: Run tests
+      run: |
+        pytest  # Replace with your test framework
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+    # Step 1: Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Deploy (Placeholder)
+    - name: Deploy application
+      run: echo "Deploying to production" # Replace with your deployment script
