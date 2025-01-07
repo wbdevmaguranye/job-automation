@@ -40,21 +40,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the coding branch
+    # Step 1: Checkout coding branch
     - name: Checkout coding branch
       uses: actions/checkout@v3
 
-    # Step 2: Create a Pull Request from coding to main
+    # Step 2: Fetch all branches
+    - name: Fetch all branches
+      run: git fetch --all
+
+    # Step 3: Merge unrelated histories if needed
+    - name: Merge unrelated histories
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+        git checkout main || git checkout -b main
+        git merge coding --allow-unrelated-histories --no-ff --commit -m "Initial sync of unrelated histories"
+        git push origin main || echo "Push failed - unrelated histories merged but no changes pushed"
+
+    # Step 4: Create a Pull Request from coding to main
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v5
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         branch: coding
         base: main
-        title: "Automated PR: Merge coding into main"
+        title: "Automated PR: Sync coding with main"
         body: |
           This PR was automatically created by GitHub Actions.
-          It merges changes from `coding` into `main` after successful testing.
+          It ensures synchronization of unrelated histories and changes from `coding` to `main`.
         commit-message: "Automated sync: Merge coding into main"
 
   auto-merge:
@@ -62,13 +75,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the main branch
-    - name: Checkout main branch
-      uses: actions/checkout@v3
-      with:
-        ref: main
-
-    # Step 2: Automatically merge the PR if created
+    # Step 1: Check for open PRs and merge
     - name: Merge Pull Request
       uses: actions/github-script@v6
       with:
