@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code
-    - name: Checkout code
+    # Step 1: Checkout the coding branch
+    - name: Checkout coding branch
       uses: actions/checkout@v3
 
     # Step 2: Set up Python
@@ -38,14 +38,13 @@ jobs:
   create-pr:
     needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/coding'
 
     steps:
     # Step 1: Checkout the coding branch
     - name: Checkout coding branch
       uses: actions/checkout@v3
 
-    # Step 2: Create Pull Request from coding to main
+    # Step 2: Create a Pull Request from coding to main
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v5
       with:
@@ -55,16 +54,22 @@ jobs:
         title: "Automated PR: Merge coding into main"
         body: |
           This PR was automatically created by GitHub Actions.
-          It merges changes from `coding` into `main`.
+          It merges changes from `coding` into `main` after successful testing.
         commit-message: "Automated sync: Merge coding into main"
 
-  wait-for-merge:
+  auto-merge:
     needs: create-pr
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Wait for PR to be merged
-    - name: Wait for PR merge
+    # Step 1: Checkout the main branch
+    - name: Checkout main branch
+      uses: actions/checkout@v3
+      with:
+        ref: main
+
+    # Step 2: Automatically merge the PR if created
+    - name: Merge Pull Request
       uses: actions/github-script@v6
       with:
         script: |
@@ -75,14 +80,20 @@ jobs:
             head: `${context.repo.owner}:coding`,
           });
           if (pullRequests.length > 0) {
-            console.log(`Waiting for PR #${pullRequests[0].number} to be merged.`);
-            throw new Error("Pull Request not merged yet. Stopping pipeline.");
+            const prNumber = pullRequests[0].number;
+            await github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              merge_method: "squash",
+            });
+            console.log(`Pull Request #${prNumber} merged successfully.`);
           } else {
-            console.log("No open pull requests found for the coding branch. Continuing pipeline.");
+            console.log("No open pull requests found for the coding branch.");
           }
 
   deploy:
-    needs: wait-for-merge
+    needs: auto-merge
     runs-on: ubuntu-latest
 
     steps:
