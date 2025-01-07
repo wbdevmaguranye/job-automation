@@ -57,8 +57,8 @@ jobs:
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
-        git checkout main
-        git merge coding --no-ff --commit -m "Automated merge of coding into main"
+        git checkout main || git checkout -b main
+        git merge coding --allow-unrelated-histories --no-ff --commit -m "Automated merge of coding into main"
         git push origin main
 
   deploy:
