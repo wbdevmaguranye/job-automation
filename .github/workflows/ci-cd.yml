@@ -45,54 +45,19 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Step 2: Create Pull Request from coding to main
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v5
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        branch: coding
-        base: main
-        title: "Automated PR: Merge coding into main"
-        body: |
-          This PR was automatically created by GitHub Actions.
-          It merges changes from `coding` into `main`.
-        commit-message: "Automated sync: Merge coding into main"
-
-  auto-merge:
-    needs: create-pr
-    runs-on: ubuntu-latest
-
-    steps:
-    # Step 1: Checkout code
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    # Step 2: Automatically merge the PR if created
-    - name: Merge Pull Request
-      uses: actions/github-script@v6
-      with:
-        script: |
-          const { data: pullRequests } = await github.rest.pulls.list({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            state: "open",
-            head: `${context.repo.owner}:coding`,
-          });
-          if (pullRequests.length > 0) {
-            const prNumber = pullRequests[0].number;
-            await github.rest.pulls.merge({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: prNumber,
-              merge_method: "squash",
-            });
-            console.log(`Pull Request #${prNumber} merged successfully.`);
-          } else {
-            console.log("No open pull requests found for the coding branch.");
-          }
+    # Step 2: Merge coding into main
+    - name: Merge coding into main
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+        git fetch origin
+        git checkout main || git checkout -b main
+        git pull origin main
+        git merge coding --allow-unrelated-histories --no-ff -m "Automated merge of coding into main"
+        git push origin main
 
   deploy:
-    needs: auto-merge
+    needs: create-pr
     runs-on: ubuntu-latest
 
     steps:
