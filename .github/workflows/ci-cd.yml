@@ -63,25 +63,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Automatically merge the PR if created
+    # Step 1: Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Automatically merge the PR if created
     - name: Merge Pull Request
       uses: actions/github-script@v6
       with:
         script: |
-          const { data: pullRequests } = await github.pulls.list({
+          const { data: pullRequests } = await github.rest.pulls.list({
             owner: context.repo.owner,
             repo: context.repo.repo,
             state: "open",
-            head: "coding",
+            head: `${context.repo.owner}:coding`,
           });
           if (pullRequests.length > 0) {
             const prNumber = pullRequests[0].number;
-            await github.pulls.merge({
+            await github.rest.pulls.merge({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: prNumber,
               merge_method: "squash",
             });
+            console.log(`Pull Request #${prNumber} merged successfully.`);
+          } else {
+            console.log("No open pull requests found for the coding branch.");
           }
 
   deploy:
