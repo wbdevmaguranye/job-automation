@@ -1,0 +1,87 @@
+Job 1:
+  Title: Content Developer - AI Trainer
+  URL: https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0CnM4TERr6XuVBW3VTRACvDXDx9S3Pbn6a0SwhkmoLTiP0a4lYCvtF3t_o9H3z4ilGbSpCm-9yrTB_x4lp8dbglB97pA0F_EIsI7Bdf-ctiliVv50jnz4GKyFBo4CbTUr3EPZK7OFQvtZ2fQZd1tBA0Y5KxYjtPiKlCj0VIMPUjhO0taWMqMDUdwwYTTn1AwriMSmgfDqlAJJybrTwoMMKkY__-occx5onMYsa0BMCJKkxcDvOgDRp_zU0Kbkms34DtYQXofLUcMefgwbSUYU6ig8gdICX2Os3uyL1EjCsEIS_NIEkGacfjbIct1EPPLrBiKCWrmlV7mudDS83bPZs8bffI18ZFarlfNy3NnDqwXPdGglu9S4dXWST-L9E-nvhC7XcPM1a1qr7tLE6AcO0sZs78dWB9DqB6_-3b2MxVctZYR10M7czqi20qEm-C8iBJ-363j1yy1FYL6ZbKuUIo9Ft99d0R7lWB1fFJOE-WGxEAXM2QuOc9qcNf4kYuxbXznPXCSYJdLATDlzV45gKuevVvzeIMdkSMl1rkLf6Umqss2SGJ8MI0-cy_jPAPbjdDsZOd_J3tz_Q3K3FZt_JT66q6we0ENdLGRoh274-aZw74K8f_F3jZWIo3c21Ilj5ImB5vL8jDumAFPUhAI0V3AgItP5aCMG1uy16nKNfFRPdwDs7H0jlUgNnOaHb8IWuuladGJsshD62g-aLt2swKE7xEO8t_1SVcNpOBPoslkidAKIGKVGsywkJ1pMLJIMcGjopjmQPsE0hI3gZ9V_6OWjuG4KdCyL3-3Hfq6V7TIioTIgH0cOuDivUjPgduTjSqR4oVuZneHQ==&xkcb=SoBo6_M33jLSWVzToZ0LbzkdCdPP&camk=nUmJqO2E8rjkyzH0TwxEQw==&p=0&fvj=0&vjs=3
+  Location: Remote
+  Company: DataAnnotation
+  Description: We are looking for a content developer to join our team to train AI models. You will measure the progress of these AI chatbots, evaluate their logic, and solve problems to improve the quality of each model.
+In this role you will need to hold an expert understanding of biology- a completed or in progress Masters/PhD is preferred but not required. Other related fields include, but are not limited to: Microbiology, Cell Biology, Genetics, Physiology, Biochemistry, Molecular Biology, Biotechnology, Environmental Science.
+Benefits:
+
+ This is a full-time or part-time REMOTE position
+ You’ll be able to choose which projects you want to work on
+ You can work on your own schedule
+ Projects are paid hourly starting at $40+ USD per hour, with bonuses on high-quality and high-volume work
+
+Responsibilities:
+
+ Give AI chatbots diverse and complex biology problems and evaluate their outputs
+ Evaluate the quality produced by AI models for correctness and performance
+
+Qualifications:
+
+ A current, in progress, or completed Masters and/or PhD is preferred but not required
+ Fluency in English (native or bilingual level)
+ Detail-oriented
+ Proficient in biology and inductive/deductive reasoning, experimental design, data interpretation, and systems-level thinking.
+
+Note: Payment is made via PayPal. We will never ask for any money from you.
+#INDUKBIO
+Job Types: Full-time, Part-time
+Pay: From £31.75 per hour
+Expected hours: 1 – 40 per week
+Work Location: Remote
+
+Job 2:
+  Title: SAP B1 Developer
+  URL: https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AFU_OY1N2Lw3zOFoaEK2_JLVp8vP1yaFYGEZPitkY0HgAfIS8-dvT8M77jYWkO81jlNVz43n6knOiVgn7YlZzu6Ah3VEgyWNlv5-VG7SbdtRXVu--tTzx2reYAMKlNmkeuIxsRaMFyU8L9IoplQXPbXrUktZ7zoRtXQBS4HVcaQUkld5dwpbRCKUpiKDnQi2_ileMUsj7aEBju7o2WoH_b7wacpTfSedT9SrHYSv7R01rZGhbzr4lVE892OGE582-4z-NX49YWEW8Bzl5rYtkRpi7pxFxx7swFABA-vWdAmi7SF_TvwAanbczukE7Km8ubjw-q0Qgf8eSdgVv3w2hbl_QXtDISNzxSWdk2Wie_pIgBqFjKuil-hLdW-GpOdt5P5w5ZEVawYHv_wk5rT-0eENiYKnk0IqFeeQ4cvHyl-kqzg8M0TnPqddrhnuDKzeSvg8aFGaBZksqGum__g-1gQTsxMxJWAdoq8_fAtKeJpM7KGGKUpkXd53UDj2uuaNya988NIpUPcM_I5uC1dThiSdswR9YOvBBzuELLmqMPuXnGkRtbreDRM2eE3C3VXJhURNzCDCoV-w==&xkcb=SoDc6_M33jLSWVzToZ0KbzkdCdPP&camk=nUmJqO2E8rirP93upvCQUQ==&p=1&fvj=0&vjs=3
+  Location: Doncaster
+  Company: Butternut Box
+  Description: A bit about the role:
+ As a SAP B1 Developer within our Platform Tribe, you'll play a vital role in driving the growth of Butternut by partnering with fellow SAP engineers, a technical product manager, and a range of senior stakeholders. You will contribute to complex, high-impact projects in warehouse management across our active production and fulfilment sites in Northern England - Rudie's Kitchen and Ace's Pantry - by solving existing challenges and optimising operations. Additionally, as we expand into new European locations, you'll take on the exciting task of establishing SAP B1 solutions from the ground up. This role offers you substantial autonomy, hands on technical challenges and the support of an experienced in-house SAP engineering team.
+ In this role, you can expect to:
+ 
+  Troubleshoot technical issues and support SAP B1 users in day-to-day operations.
+  Collaborate with stakeholders and our kitchen team to gather requirements, analyse workflows and provide technical solutions.
+  Design, develop, and implement SAP Business One (B1) customisations to meet business requirements.
+ 
+  A bit about you:
+ 
+  Proven experience as an SAP Business One Developer, with experience in SAP B1 implementation and development.
+  SAP B1 Application and Support Certification.
+  Experience with B1 Usability Package is essential.
+  Excellent hands on coding ability with C# and SQL.
+  Strong analytical and problem-solving skills, with a high attention to detail.
+  Excellent communication skills and the ability to work collaboratively with technical and non-technical stakeholders.
+  It would be a huge bonus if you have knowledge of BPA (Build Process Automation), Kefron AP, Produmex and/or server side networks.
+ 
+ A bit about us:
+ At Butternut, we put the food back into dog food. We believe dogs deserve to eat the healthiest, most natural and tastiest food with none of the nasties. That's why we make freshly prepared dog food. Cooked like you would at home. Delivered in perfect portions. #LI-Hybrid
+ As a B-Corp certified company; you can be sure you are joining a sustainable company who care about our people, product and our impact on the environment.
+ Our goal is to help dogs live healthier, happier and longer lives whilst leaving humans smiling after every interaction. We've come a long way since our co-founders (Kev & Dave) hand-delivered the first Butternut Box, we now feed a lot of dogs across the UK & Europe - but we want to feed dogs everywhere. And to do this, we need a team of brilliant people who share that ambition to come and work with us.
+  A bit about what we offer.
+ 
+  25 days holiday (plus 8 bank holidays) and an additional day for every year of service
+  5 paid 'paws' days per year to support to learning and/or wellbeing
+  £500 personal learning & development budget
+  Butternut Box employee discount
+  Enhanced parental leave
+  Co-working office space.
+  Flexible working hours and work from home options
+  Cycle to work scheme
+  Pension with NEST
+  Private Medical Insurance with Vitality
+  Private Dental Insurance with Bupa
+  Time off for fertility treatments and pregnancy loss
+  Paid sabbaticals for squad members with 5 or more years at Butternut
+  Discounted gym access through MyGymDiscounts
+  Lots of office dogs (Ajax, Brio, Basil, Chorizo, Lenny, Jasper, Peggy, Pip and many more….)
+ 
+ ❗️A few things to note:
+ 
+  This role is a hands on engineering role, not a purely consulting role.
+  The interview process is as follows: Initial call with our in house recruiter, a take home technical task, a technical interview and a values interview (team).
+  Butternut Box is an equal opportunity employer and we value diversity and inclusion. We welcome people of different nationalities, backgrounds, experiences, abilities and perspectives.
+  As our business has grown so has our responsibility to our community, our planet and our business. We are not perfect, but we are committed to doing business the right way and continually improving our social and environmental performance.
+ 
+ #LI-Hybrid
+
