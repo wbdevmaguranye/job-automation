@@ -1,129 +1,141 @@
+import asyncio
 import logging
-import time
+from urllib.parse import urljoin
+from playwright.async_api import async_playwright
 import random
-import undetected_chromedriver as uc
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+import time
+import sys
+
+# Ensure the console uses UTF-8 encoding
+sys.stdout.reconfigure(encoding="utf-8")
 
 # Logging configuration
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(message)s",
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 
-# Keywords for filtering
-FRONTEND_KEYWORDS = ["Frontend", "VueJS", "JavaScript", "React", "CSS", "HTML"]
-DEVOPS_KEYWORDS = ["DevOps", "Site Reliability", "AWS", "Jenkins", "Kubernetes"]
+BASE_URL = "https://uk.indeed.com"
 
-def matches_keywords(title, keywords):
-    """Check if the job title contains any of the specified keywords."""
-    return any(keyword.lower() in title.lower() for keyword in keywords)
+async def fetch_job_details(browser, url, retries=3):
+    """Fetch job details from the job's individual page using specific IDs."""
+    for attempt in range(retries):
+        try:
+            # Open a new context and page for each job
+            context = await browser.new_context()
+            page = await context.new_page()
+            await page.goto(url, timeout=60000)
+            await page.wait_for_load_state("networkidle")
 
-def scrape_jobs_with_selenium():
-    chrome_options = Options()
-    chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-    chrome_options.add_argument("--incognito")
-    chrome_options.add_argument("--disable-extensions")
-    chrome_options.add_argument("--start-maximized")
-    chrome_options.add_argument(
-        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.5938.132 Safari/537.36"
-    )
-
-    driver = uc.Chrome(options=chrome_options)
-    wait = WebDriverWait(driver, 15)
-
-    jobs_data = []
-
-    try:
-        driver.get("https://uk.indeed.com/jobs?q=developer&l=")
-        logging.info("Page title: %s", driver.title)
-
-        # Wait for job elements to load
-        job_elements = wait.until(
-            EC.presence_of_all_elements_located((By.CLASS_NAME, "jcs-JobTitle"))
-        )
-        logging.info("Found %d job elements on the page.", len(job_elements))
-
-        for job_element in job_elements:
+            # Extract details using IDs
+            location = await page.locator("#jobLocationText").text_content(timeout=5000) or "N/A"
+            
+            # Extract title robustly
             try:
-                title = job_element.text
-                url = job_element.get_attribute("href")
+                title = await page.locator("h2[data-testid='jobsearch-JobInfoHeader-title']").text_content(timeout=5000)
+            except:
+                title = "N/A"
 
-                # Filter jobs based on keywords
-                if not (matches_keywords(title, FRONTEND_KEYWORDS) or matches_keywords(title, DEVOPS_KEYWORDS)):
-                    logging.info("Skipping job: %s (No matching keywords)", title)
-                    continue
+            description = await page.locator("#jobDescriptionText").text_content(timeout=10000) or "N/A"
 
-                logging.info("Processing job: %s", title)
+            # Extract company name
+            try:
+                company = await page.locator("div[data-company-name='true'] a").text_content(timeout=5000)
+            except:
+                company = "N/A"
 
-                # Navigate to job URL to extract detailed information
-                driver.get(url)
-                time.sleep(random.uniform(2, 4))  # Random delay to avoid detection
+            # Close the context and page
+            await page.close()
+            await context.close()
 
-                # Extract job details
-                job_description = driver.find_element(By.ID, "jobDescriptionText").text
-                location = driver.find_element(By.ID, "jobLocationText").text if driver.find_elements(By.ID, "jobLocationText") else "Not specified"
-                pay = driver.find_element(By.XPATH, "//div[@role='group' and contains(., 'Pay')]").text if driver.find_elements(By.XPATH, "//div[@role='group' and contains(., 'Pay')]") else "Not specified"
-                benefits = driver.find_element(By.ID, "benefits").text if driver.find_elements(By.ID, "benefits") else "Not specified"
+            return {
+                "title": title.strip(),
+                "location": location.strip(),
+                "description": description.strip(),
+                "company": company.strip(),
+            }
+        except Exception as e:
+            logging.warning(f"Attempt {attempt + 1}/{retries}: Failed to fetch details for {url} - {e}")
+            await asyncio.sleep(2 ** attempt)  # Exponential backoff
 
-                job_data = {
-                    "title": title,
-                    "url": url,
-                    "description": job_description,
-                    "location": location,
-                    "pay": pay,
-                    "benefits": benefits,
-                }
-                jobs_data.append(job_data)
-                logging.info("Extracted details for job: %s", title)
+    return {"title": "N/A", "location": "N/A", "description": "N/A", "company": "N/A"}
 
-                # Navigate back to the job listing page
-                driver.back()
-                time.sleep(random.uniform(2, 3))
 
+async def scrape_jobs_with_playwright():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=False)
+        page = await browser.new_page()
+
+        # Base search URL
+        search_url = f"{BASE_URL}/jobs?q=developer&l="
+        current_page_url = search_url
+        jobs_data = []
+
+        while current_page_url:
+            await page.goto(current_page_url, timeout=60000)
+            logging.info(f"Scraping page: {current_page_url}")
+            logging.info("Page title: %s", await page.title())
+
+            job_elements = await page.locator(".jcs-JobTitle").all()
+            logging.info(f"Found {len(job_elements)} job elements.")
+
+            # Process jobs on the current page
+            for job_element in job_elements:
+                try:
+                    # Extract title directly from the job list as a fallback
+                    list_title = await job_element.locator("span[id^='jobTitle']").text_content(timeout=5000) or "N/A"
+
+                    relative_url = await job_element.get_attribute("href", timeout=10000)
+                    absolute_url = urljoin(BASE_URL, relative_url)
+
+                    logging.info(f"Fetching details for URL: {absolute_url}")
+
+                    # Fetch job details from the detailed job page
+                    details = await fetch_job_details(browser, absolute_url)
+
+                    # Override title if the detailed page title is more descriptive
+                    if details["title"] == "N/A":
+                        details["title"] = list_title.strip()
+
+                    jobs_data.append({
+                        "url": absolute_url,
+                        **details
+                    })
+
+                    # Simulate human behavior by adding a random delay between requests
+                    delay = random.uniform(3, 7)  # Wait between 3 to 7 seconds
+                    logging.info(f"Waiting for {delay:.2f} seconds before processing the next job.")
+                    time.sleep(delay)
+
+                except Exception as e:
+                    logging.error(f"Error processing job on page {current_page_url}: {e}")
+
+            # Check if there's a "Next Page" link
+            try:
+                next_button = page.locator("a[data-testid='pagination-page-next']")
+                if await next_button.is_visible():
+                    next_page_relative_url = await next_button.get_attribute("href")
+                    current_page_url = urljoin(BASE_URL, next_page_relative_url)
+                else:
+                    current_page_url = None  # No more pages to scrape
             except Exception as e:
-                logging.error("Error extracting job: %s", str(e))
-                # Add partial job data with error marker
-                jobs_data.append({"title": title, "url": url, "error": str(e)})
+                logging.error(f"Error finding next page link: {e}")
+                current_page_url = None  # Stop the loop if there's an error
 
-        # Handle pagination
-        try:
-            while True:
-                next_button = wait.until(
-                    EC.element_to_be_clickable((By.CSS_SELECTOR, "a[data-testid='pagination-page-next']"))
+        # Close the main page and browser
+        await page.close()
+        await browser.close()
+
+        # Print all jobs
+        with open("job_details.txt", "w", encoding="utf-8") as file:
+            for i, job in enumerate(jobs_data, start=1):
+                job_info = (
+                    f"Job {i}:\n"
+                    f"  Title: {job['title']}\n"
+                    f"  URL: {job['url']}\n"
+                    f"  Location: {job['location']}\n"
+                    f"  Company: {job['company']}\n"
+                    f"  Description: {job['description']}\n\n"
                 )
-                next_button.click()
-                time.sleep(random.uniform(3, 5))  # Random delay
-
-                # Process the next page of jobs
-                job_elements = wait.until(
-                    EC.presence_of_all_elements_located((By.CLASS_NAME, "jcs-JobTitle"))
-                )
-                logging.info("Found %d job elements on the next page.", len(job_elements))
-        except Exception as e:
-            logging.info("No more pages or pagination error: %s", str(e))
-
-        logging.info("Final Scraped Jobs: %d", len(jobs_data))
-        return jobs_data
-
-    finally:
-        # Ensure the driver quits gracefully
-        try:
-            if driver:
-                driver.quit()
-        except Exception as e:
-            logging.error("Error while quitting the driver: %s", str(e))
-
+                print(job_info)  # Ensure UTF-8 encoding
+                file.write(job_info)
 
 if __name__ == "__main__":
-    jobs_data = scrape_jobs_with_selenium()
-    logging.info("Scraped %d jobs.", len(jobs_data))
-
-    # Print the job details
-    for i, job in enumerate(jobs_data, start=1):
-        print(f"Job {i}:")
-        for key, value in job.items():
-            print(f"  {key.capitalize()}: {value}")
-        print()
+    asyncio.run(scrape_jobs_with_playwright())
