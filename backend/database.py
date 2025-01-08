@@ -25,7 +25,7 @@ if __name__ == "__main__":
     connection = get_connection()
     cursor = connection.cursor()
 
-    # Create Tables
+    # Create Users Table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS Users (
             id INT AUTO_INCREMENT PRIMARY KEY,
@@ -34,6 +34,8 @@ if __name__ == "__main__":
             password VARCHAR(255)
         );
     """)
+
+    # Create Jobs Table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS Jobs (
             id INT AUTO_INCREMENT PRIMARY KEY,
@@ -41,9 +43,29 @@ if __name__ == "__main__":
             company VARCHAR(255) NOT NULL,
             url VARCHAR(255) NOT NULL,
             description TEXT,
-                 date_posted DATE
+            date_posted DATE
         );
     """)
+
+    # Alter the Jobs table to add new columns
+    alter_statements = [
+        "ALTER TABLE Jobs ADD COLUMN location VARCHAR(255)",
+        "ALTER TABLE Jobs ADD COLUMN benefits TEXT",
+        "ALTER TABLE Jobs ADD COLUMN schedule VARCHAR(255)",
+        "ALTER TABLE Jobs ADD COLUMN application_questions TEXT",
+        "ALTER TABLE Jobs ADD COLUMN work_authorisation VARCHAR(255)"
+    ]
+
+    for statement in alter_statements:
+        try:
+            cursor.execute(statement)
+        except mysql.connector.Error as e:
+            if "Duplicate column name" in str(e):
+                print(f"Column already exists: {statement}")
+            else:
+                print(f"Error altering table: {e}")
+
+    # Create Applications Table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS Applications (
             id INT AUTO_INCREMENT PRIMARY KEY,
@@ -55,6 +77,7 @@ if __name__ == "__main__":
         );
     """)
 
+    # Commit changes and close connection
     connection.commit()
     cursor.close()
     connection.close()
