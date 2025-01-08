@@ -1,87 +1,1783 @@
 Job 1:
-  Title: Content Developer - AI Trainer
-  URL: https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0CnM4TERr6XuVBW3VTRACvDXDx9S3Pbn6a0SwhkmoLTiP0a4lYCvtF3t_o9H3z4ilGbSpCm-9yrTB_x4lp8dbglB97pA0F_EIsI7Bdf-ctiliVv50jnz4GKyFBo4CbTUr3EPZK7OFQvtZ2fQZd1tBA0Y5KxYjtPiKlCj0VIMPUjhO0taWMqMDUdwwYTTn1AwriMSmgfDqlAJJybrTwoMMKkY__-occx5onMYsa0BMCJKkxcDvOgDRp_zU0Kbkms34DtYQXofLUcMefgwbSUYU6ig8gdICX2Os3uyL1EjCsEIS_NIEkGacfjbIct1EPPLrBiKCWrmlV7mudDS83bPZs8bffI18ZFarlfNy3NnDqwXPdGglu9S4dXWST-L9E-nvhC7XcPM1a1qr7tLE6AcO0sZs78dWB9DqB6_-3b2MxVctZYR10M7czqi20qEm-C8iBJ-363j1yy1FYL6ZbKuUIo9Ft99d0R7lWB1fFJOE-WGxEAXM2QuOc9qcNf4kYuxbXznPXCSYJdLATDlzV45gKuevVvzeIMdkSMl1rkLf6Umqss2SGJ8MI0-cy_jPAPbjdDsZOd_J3tz_Q3K3FZt_JT66q6we0ENdLGRoh274-aZw74K8f_F3jZWIo3c21Ilj5ImB5vL8jDumAFPUhAI0V3AgItP5aCMG1uy16nKNfFRPdwDs7H0jlUgNnOaHb8IWuuladGJsshD62g-aLt2swKE7xEO8t_1SVcNpOBPoslkidAKIGKVGsywkJ1pMLJIMcGjopjmQPsE0hI3gZ9V_6OWjuG4KdCyL3-3Hfq6V7TIioTIgH0cOuDivUjPgduTjSqR4oVuZneHQ==&xkcb=SoBo6_M33jLSWVzToZ0LbzkdCdPP&camk=nUmJqO2E8rjkyzH0TwxEQw==&p=0&fvj=0&vjs=3
-  Location: Remote
-  Company: DataAnnotation
-  Description: We are looking for a content developer to join our team to train AI models. You will measure the progress of these AI chatbots, evaluate their logic, and solve problems to improve the quality of each model.
-In this role you will need to hold an expert understanding of biology- a completed or in progress Masters/PhD is preferred but not required. Other related fields include, but are not limited to: Microbiology, Cell Biology, Genetics, Physiology, Biochemistry, Molecular Biology, Biotechnology, Environmental Science.
-Benefits:
-
- This is a full-time or part-time REMOTE position
- You’ll be able to choose which projects you want to work on
- You can work on your own schedule
- Projects are paid hourly starting at $40+ USD per hour, with bonuses on high-quality and high-volume work
-
-Responsibilities:
-
- Give AI chatbots diverse and complex biology problems and evaluate their outputs
- Evaluate the quality produced by AI models for correctness and performance
-
-Qualifications:
-
- A current, in progress, or completed Masters and/or PhD is preferred but not required
- Fluency in English (native or bilingual level)
- Detail-oriented
- Proficient in biology and inductive/deductive reasoning, experimental design, data interpretation, and systems-level thinking.
-
-Note: Payment is made via PayPal. We will never ask for any money from you.
-#INDUKBIO
-Job Types: Full-time, Part-time
-Pay: From £31.75 per hour
-Expected hours: 1 – 40 per week
-Work Location: Remote
+  Title: DevOps Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=e7bb579aa1e7a6b7&bb=4OEQzf87lAx4C81i2S_u1M0k5MPCGwyqBzXWSUCgOLtjnAAnFKCJ06Jvqka4BDBIJWs4o8kG3uwyijEHCGPFt5LX3EFMMvQ70BqdYq-BWH9KJ1-h0X_YgA%3D%3D&xkcb=SoD-67M33jXTb4Rq5p0LbzkdCdPP&fccid=200a825acadb9338&vjs=3
+  Location: London
+  Company: BAE Systems
+  Description: Location(s): London
+ 
+  BAE Systems Digital Intelligence is home to 4,500 digital, cyber and intelligence experts. We work collaboratively across 10 countries to collect, connect and understand complex data, so that governments, nation states, armed forces and commercial businesses can unlock digital advantage in the most demanding environments.
+ Are you passionate about working with cutting-edge technology and self-motivated to find innovative solutions to complex challenges as part of a team who help keep the UK safe? Join BAE Systems as an experienced DevOps Engineer.
+ 
+  As a key member of a Software Engineering team, you’ll be working with our National Security Customers to build systems that support their core mission capabilities. You’ll work as part of empowered, autonomous DevOps teams with regular contact with end-users to flexibly and efficiently understand, design, develop, deploy and maintain applications and services. You’ll be encouraged to identify new ways of solving problems and get to work in a range of different teams across our customer organisations. You will work in a small team given as much ownership and responsibility as you have the appetite for but be part of a much bigger Engineering community to give you the support you need to grow in your career.
+ 
+  We fully embrace DevOps ways of working in our teams, and build a very broad range of capabilities for our customers. We therefore value Engineers who enjoy playing a role in the full delivery lifecycle and are flexible to learn and pick up new technologies and approaches. You’ll be playing a role in identifying the right technologies to use for the job and be supported with training as needed through access to services such as Pluralsight.
+ 
+  Not only will your team be directly making a huge impact upon the systems you work on, you’ll be doing it for an organisation who makes a huge impact to the security of the UK.
+ 
+  About you
+ 
+  You will have many of the following:
+ 
+ 
+  Experience working in a similar DevOps / SRE / Infrastructure role
+  An appreciation of Infrastructure as Code, and CI/CD tooling
+  An understanding of live service and how to support critical business systems
+  Scripting abilities with languages such as PowerShell
+  Knowledge of programming languages such as C# and Javascript
+  A working knowledge of Windows infrastructure, Active Directory & Group Policy Management etc
+  Great communication and problem solving skills, and a desire to learn new technologies
+  Working in an Agile environment (e.g. Scrum, Kanban, SAFe, XP, etc)
+ 
+ 
+  It would be great if you also had experience in some of these, but if not we’ll help you with them:
+ 
+ 
+  Configuration Management tools such as Desired State Configuration or Puppet etc
+  Infrastructure as Code tools like Terraform or Cloud formation
+  Cloud technologies such as Azure or AWS
+  Knowledge of automation software such as Selenium
+  Document management systems such as SharePoint
+ 
+ 
+  London based - 4 days in the office, 1 day home based (flexibility depending on scope of work) and full time but condensed week acceptable.
+ 
+  UK Enhanced DV Security Clearance is required for this vacancy.
+ 
+  Why BAE Systems? This is a place where you’ll be able to make a real difference. You’ll be part of an inclusive culture that values diversity, rewards integrity and merit, and where you’ll be empowered to fulfil your potential. We welcome candidates from all backgrounds and particularly from sections of the community who are currently under represented within our industry, including women, ethnic minorities, people with disabilities and LGBTQ+ individuals.
+ 
+  We also want to make sure that our recruitment processes are as inclusive as possible. If you have a disability or health condition (for example dyslexia, autism, an anxiety disorder etc.) that may affect your performance in certain assessment types, please speak to your recruiter about potential reasonable adjustments.
+ 
+  Please be aware that many roles at BAE Systems are subject to both security and export control restrictions. These restrictions mean that factors such as your nationality, any nationalities you may have previously held, and your place of birth can restrict the roles you are eligible to perform within the organisation. All applicants must as a minimum achieve Baseline Personnel Security Standard. Many roles also require higher levels of National Security Vetting where applicants must typically have 5 to 10 years of continuous residency in the UK depending on the vetting level required for the role, to allow for meaningful security vetting checks
+  Life at BAE Systems Digital Intelligence
+ We are embracing Hybrid Working. This means you and your colleagues may be working in different locations, such as from home, another BAE Systems office or client site, some or all of the time, and work might be going on at different times of the day.
+ By embracing technology, we can interact, collaborate and create together, even when we’re working remotely from one another. Hybrid Working allows for increased flexibility in when and where we work, helping us to balance our work and personal life more effectively, and enhance well-being.
+ Diversity and inclusion are integral to the success of BAE Systems Digital Intelligence. We are proud to have an organisational culture where employees with varying perspectives, skills, life experiences and backgrounds – the best and brightest minds – can work together to achieve excellence and realise individual and organisational potential.
+  Division overview: Capabilities
+ At BAE Systems Digital Intelligence, we pride ourselves in being a leader in the cyber defence industry, and Capabilities is the engine that keeps the business moving forward. It is the largest area of Digital Intelligence, containing our Engineering, Consulting and Project Management teams that design and implement the defence solutions and digital transformation projects that make us a globally recognised brand in both the public and private sector.
+ As a member of the Capabilities team, you will be creating and managing the solutions that earn us our place in an ever changing digital world. We all have a role to play in defending our clients, and this is yours.
 
 Job 2:
-  Title: SAP B1 Developer
-  URL: https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AFU_OY1N2Lw3zOFoaEK2_JLVp8vP1yaFYGEZPitkY0HgAfIS8-dvT8M77jYWkO81jlNVz43n6knOiVgn7YlZzu6Ah3VEgyWNlv5-VG7SbdtRXVu--tTzx2reYAMKlNmkeuIxsRaMFyU8L9IoplQXPbXrUktZ7zoRtXQBS4HVcaQUkld5dwpbRCKUpiKDnQi2_ileMUsj7aEBju7o2WoH_b7wacpTfSedT9SrHYSv7R01rZGhbzr4lVE892OGE582-4z-NX49YWEW8Bzl5rYtkRpi7pxFxx7swFABA-vWdAmi7SF_TvwAanbczukE7Km8ubjw-q0Qgf8eSdgVv3w2hbl_QXtDISNzxSWdk2Wie_pIgBqFjKuil-hLdW-GpOdt5P5w5ZEVawYHv_wk5rT-0eENiYKnk0IqFeeQ4cvHyl-kqzg8M0TnPqddrhnuDKzeSvg8aFGaBZksqGum__g-1gQTsxMxJWAdoq8_fAtKeJpM7KGGKUpkXd53UDj2uuaNya988NIpUPcM_I5uC1dThiSdswR9YOvBBzuELLmqMPuXnGkRtbreDRM2eE3C3VXJhURNzCDCoV-w==&xkcb=SoDc6_M33jLSWVzToZ0KbzkdCdPP&camk=nUmJqO2E8rirP93upvCQUQ==&p=1&fvj=0&vjs=3
-  Location: Doncaster
-  Company: Butternut Box
-  Description: A bit about the role:
- As a SAP B1 Developer within our Platform Tribe, you'll play a vital role in driving the growth of Butternut by partnering with fellow SAP engineers, a technical product manager, and a range of senior stakeholders. You will contribute to complex, high-impact projects in warehouse management across our active production and fulfilment sites in Northern England - Rudie's Kitchen and Ace's Pantry - by solving existing challenges and optimising operations. Additionally, as we expand into new European locations, you'll take on the exciting task of establishing SAP B1 solutions from the ground up. This role offers you substantial autonomy, hands on technical challenges and the support of an experienced in-house SAP engineering team.
- In this role, you can expect to:
+  Title: UK - DevOps Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=b83abd758e418b1f&bb=4OEQzf87lAx4C81i2S_u1EBNv3dSdMkWIT9bfA0nQn1hcgi2_ZT5aGHnpF9OCCspZ3CTGa0nSToB7rxnZibGK4Zlo7iKvMwxOHOZ-by1F4ATsUaz16rKR4zoZDc6Iatc&xkcb=SoBK67M33jXTb4Rq5p0KbzkdCdPP&fccid=eadec75cac44c6d5&vjs=3
+  Location: London EC3M
+  Company: ISS Group Holdings Limited
+  Description: Who We Are:
  
-  Troubleshoot technical issues and support SAP B1 users in day-to-day operations.
-  Collaborate with stakeholders and our kitchen team to gather requirements, analyse workflows and provide technical solutions.
-  Design, develop, and implement SAP Business One (B1) customisations to meet business requirements.
+  At Inchcape Shipping Services, our vision is to create a connected world where customers can trade successfully and make informed decisions in every port, everywhere. We achieve this by combining our worldwide infrastructure with local expertise, through our global network of more than 250 proprietary offices and a team of over 3,000 dedicated professionals. Our diverse customer base includes owners and charterers in the oil, cruise, container, and bulk commodity sectors, as well as naval, government, and intergovernmental organisations.
  
-  A bit about you:
+  Role Summary:
  
-  Proven experience as an SAP Business One Developer, with experience in SAP B1 implementation and development.
-  SAP B1 Application and Support Certification.
-  Experience with B1 Usability Package is essential.
-  Excellent hands on coding ability with C# and SQL.
-  Strong analytical and problem-solving skills, with a high attention to detail.
-  Excellent communication skills and the ability to work collaboratively with technical and non-technical stakeholders.
-  It would be a huge bonus if you have knowledge of BPA (Build Process Automation), Kefron AP, Produmex and/or server side networks.
+  We have an exciting opportunity for a DevOps Engineer to join the team. In this role, you will play a key part in embedding continuous quality into the software development lifecycle, with a focus on minimizing defects through strict adherence to shift-left QA principles and shift-right production testing. Leveraging your expertise in automation, you'll drive efficiency and recommend improvements, including cost optimization strategies to enhance overall performance and delivery.
  
- A bit about us:
- At Butternut, we put the food back into dog food. We believe dogs deserve to eat the healthiest, most natural and tastiest food with none of the nasties. That's why we make freshly prepared dog food. Cooked like you would at home. Delivered in perfect portions. #LI-Hybrid
- As a B-Corp certified company; you can be sure you are joining a sustainable company who care about our people, product and our impact on the environment.
- Our goal is to help dogs live healthier, happier and longer lives whilst leaving humans smiling after every interaction. We've come a long way since our co-founders (Kev & Dave) hand-delivered the first Butternut Box, we now feed a lot of dogs across the UK & Europe - but we want to feed dogs everywhere. And to do this, we need a team of brilliant people who share that ambition to come and work with us.
-  A bit about what we offer.
+  Contract type: Permanent
+  Location: London, Fenchurch Street (Hybrid) Salary: £55,000 to £60,000 per annum
  
-  25 days holiday (plus 8 bank holidays) and an additional day for every year of service
-  5 paid 'paws' days per year to support to learning and/or wellbeing
-  £500 personal learning & development budget
-  Butternut Box employee discount
-  Enhanced parental leave
-  Co-working office space.
-  Flexible working hours and work from home options
-  Cycle to work scheme
-  Pension with NEST
-  Private Medical Insurance with Vitality
-  Private Dental Insurance with Bupa
-  Time off for fertility treatments and pregnancy loss
-  Paid sabbaticals for squad members with 5 or more years at Butternut
-  Discounted gym access through MyGymDiscounts
-  Lots of office dogs (Ajax, Brio, Basil, Chorizo, Lenny, Jasper, Peggy, Pip and many more….)
+  In line with company policy, Inchcape does not provide visa sponsorship for candidates and cannot consider applicants who will require this now or in the future.
  
- ❗️A few things to note:
+  Key Responsibilities:
  
-  This role is a hands on engineering role, not a purely consulting role.
-  The interview process is as follows: Initial call with our in house recruiter, a take home technical task, a technical interview and a values interview (team).
-  Butternut Box is an equal opportunity employer and we value diversity and inclusion. We welcome people of different nationalities, backgrounds, experiences, abilities and perspectives.
-  As our business has grown so has our responsibility to our community, our planet and our business. We are not perfect, but we are committed to doing business the right way and continually improving our social and environmental performance.
  
+  Review and understand ISS enterprise IT and applications architecture, product management and product delivery frameworks.
+  Implement, transition and scale AWS environments with IAC and terraform.
+  Review and understand product specific architecture, design, and technology stack, define and setup development, test, release, update, and support processes for DevOps operations.
+  Implement best practices across environments and CI process.
+  Configure DevOps tools and monitoring for automation and observability monitoring.
+  Site Reliability Engineering, implement processes for analysis and troubleshooting, monitor environments focusing on performance and availability.
+  Strive for continuous improvement and build continuous integration, continuous development, and constant deployment pipeline.
+  Incident, Problem and Change Management and root cause analysis.
+  Coordination and communication within the team and with product stakeholders.
+  Mentoring and guiding the team members.
+  Ownership of DevOps projects and BAU.
+  Monitoring and measuring user experience and product KPIs.
+  Flexible working providing support out of hours if required.
+ 
+ 
+  Candidate Requirements:
+ 
+  Knowledge -
+ 
+ 
+  Agile practitioner with great experience in using tools like Jira, Confluence
+  Expert level knowledge of DevOps tools like Bitbucket, Sonar Cube, Team City, Testrail and Ansible
+  Expert level knowledge of telemetry and observability platforms like ELK stack, Grafana, AWS Cloud Watch and any other APM tool
+  Database technologies preferably RDS Postgres, Aurora, and MongoDB
+  Infrastructure as code focused in Terraform
+  Expertise in one or more technologies: XML, JSON, YAML
+  Pipeline as code
+  Rabbit MQ or AWS MQ
+  AWS cloud native development using EC2, Lambda, S3, Simple Que Service etc
+  C#, .NET, NodeJS, Web API web experience
+  Scripting languages preferably python, PowerShell
+  Understanding of SDLC, ITIL processes beneficial
+ 
+ 
+  Skills -
+ 
+ 
+  Effective verbal & written communication skills
+ 
+ 
+  Excellent analytical, problem solving and trouble shooting skills
+ 
+ 
+  Strong collaborative and partner approach working with global teams
+ 
+ 
+  Software engineering skills with high tech resilience
+ 
+ 
+  Agile development methodologies
+ 
+ 
+  DevOps mindset and Live site first approach
+ 
+ 
+  Education, Qualifications and Experience -
+ 
+ 
+  6+ years of experience in AWS and DevOps tools for CI/CD pipeline and all the DevOps phases
+  AWS Solutions Architect Associate certification or Sysops/Devops
+ 
+ 
+  Experience in configuration management tools such as Ansible
+ 
+ 
+  Experience in coding and scripting solutions such as bash, python and power shell
+ 
+ 
+  Experience in building containerization using Kubernetes or ECS with Docker
+ 
+ 
+  Excellent knowledge of Linux and Windows operating systems
+ 
+ 
+  You will receive:
+ 
+ 
+  25 days annual leave entitlement plus bank holidays
+  Cycle to Work scheme
+  Employee discount scheme for retail/travel/leisure
+  Life assurance cover
+  Remote GP and second medical opinion service which gives you, and your family members that live in the same household, timely access to medical advice 24/7, 365 days a year
+  Contributory company pension scheme
+  Values Award celebration events
+  Team building days
+ 
+ 
+  Plus, much more!
+ 
+  Why Inchcape Shipping Services?
+ 
+  We believe in building a diverse and high-performing workforce, that works together to provide our customers with the exceptional service they deserve. To reach the highest standards we depend on our people, their welfare, training, and expertise. We realise the value of our staff and know that your unique experiences, skills, and passions will help you to build a rich and rewarding career in our dynamic industry.
+ 
+  Our values are at the centre of everything we do, and the successful candidate will be expected to demonstrate and fully adopt these:
+ 
+  Global Perspective - we connect the world and see the bigger picture.
+  The Power of People - we rely on the strength of local agent knowledge and relationships.
+  Progress - we adopt new thinking and push for positive change in our industry.
+ 
+ Inchcape is an Equal Opportunities Employer - equality, diversity, and inclusion are at the heart of everything we do. Working in a diverse society, we recognise that our customers, colleagues, and contractors are central to our success.
+ 
+  Additional Information:
+ 
+ Appointment to this role will be subject to satisfactory references and possession of a valid Right to Work documentation depending upon your geographical location.
+ 
+  To protect the interests of all parties, Inchcape will not accept unsolicited or speculative resumes from recruitment agencies and will not be responsible for any fees associated with them.
+ 
+  #LI-KT1
  #LI-Hybrid
+
+Job 3:
+  Title: Site Reliability Engineer II
+  URL: https://uk.indeed.com/rc/clk?jk=5f1eafdde107cb85&bb=4OEQzf87lAx4C81i2S_u1B_JCkAQR6jLgXmVLIDEP7BHFGbersHWylHmiaH-sozmifYVjKY6oMDlbYB2VEIJjoMCo0l_LQdLrnCG8bS3ypz-Rv9WTJfX5Guf8f4PIb5K&xkcb=SoDX67M33jXTb4Rq5p0JbzkdCdPP&fccid=65a610215742c669&vjs=3
+  Location: London
+  Company: American Express Global Business Travel
+  Description: Amex GBT is a place where colleagues find inspiration in travel as a force for good and – through their work – can make an impact on our industry. We’re here to help our colleagues achieve success and offer an inclusive and collaborative culture where your voice is valued.  Ready to explore a career path? Start your journey.  What You’ll Do on a Typical Day: Design and implement next-generation highly scalable, and reliable applications using SaaS technology. Translate functional specifications into logical, component-based technical designs. Own delivery of application features end to end by working with internal and external teams. Innovate and implement new ideas to solve complex software problems. Work closely with geographically distributed team members  What We’re Looking For: Amex GBT Egencia’s Technology organisation is looking for a highly motivated, self-driven, self-starter, and fast-growing potential individual to be part of a growing team of technologists. You are well-versed in SDLC and Agile methodologies. You have at least 1-3 years of experience in software development and troubleshooting. An independent thinker, who works around problems and who isn’t shy of trying new technologies. You have validated experience working in parallel technologies apart from your core technology area (Java). Prior experience in working harmoniously with a cross-geography team will be an added advantage. You should be equally appropriate in development, test, and debugging roles and be ready to wear many hats. This team values “fail-fast” learners and technology enthusiasts who view learning new technology as a fun experience. Strong knowledge of Object Oriented Programming, Data Structures, and Algorithms Good proficiency in any of the programming languages from Java, Golang, Python, or Bash Proven ability to develop and support large-sized highly scalable software systems Experience in AWS Services Good knowledge of container orchestration frameworks primarily Kubernetes Basic understanding of logging and monitoring frameworks Knowledge of cloud computing concepts along with an understanding of application communication and routing is a plus Good experience in developing and deploying AWS cloud-based platforms Good understanding of network topologies with experience in hybrid cloud architecture will be a plus Experience with the Agile Tool set and Programming Practices Knowledge of CI-CD principles Knowledge of server-side design patterns is a plus Ability to quickly pick up new technologies, and languages with ease A standout colleague who collaborates and incorporates feedback from all partners Excellent written and verbal communication skills BS or MS in Computer Science or equivalent degree  #GBTJobs  Location London, United Kingdom  The #TeamGBT Experience Work and life: Find your happy medium at Amex GBT.  Flexible benefits are tailored to each country and start the day you do. These include health and welfare insurance plans, retirement programs, parental leave, adoption assistance, and more.  Travel perks: get a choice of deals each week from major travel providers on everything from flights to hotels to cruises and car rentals.  Develop the skills you want when the time is right for you, with global tuition assistance, access to over 20,000 courses on our learning platform, leadership courses, and new job openings available to internal candidates first.  We strive to champion Diversity, Equity, and Inclusion in every aspect of our business at GBT. You can connect with colleagues through our global Inclusion Groups, centered around common identities or initiatives, to discuss challenges, obstacles, achievements, and drive company awareness and action.  Wellbeing resources to support mental and emotional health for you and your immediate family.  And much more!  A ll applicants will receive equal consideration for employment without regard to age, sex, gender (and characteristics related to sex and gender), pregnancy (and related medical conditions), race, color, citizenship, religion, disability, or any other class or characteristic protected by law.  Furthermore, we are committed to providing reasonable accommodation to qualified individuals with disabilities. Please let your recruiter know if you need an accommodation at any point during the hiring process. For details regarding how we protect your data, please consult GBT Recruitment Privacy Statement .  What if I don’t meet every requirement? If you’re passionate about our mission and believe you’d be a phenomenal addition to our team, don’t worry about “checking every box;" please apply anyway. You may be exactly the person we’re looking for!
+
+Job 4:
+  Title: Senior Site Reliability Engineer, IgniteTech (Remote) - $100,000/year USD
+  URL: https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0Bp-pWyh_yd7-BMq_HjiKF8q-wDEEHI6K3EhZcTze0zErH7UYtV_384uO_fiMSDWwMX91h8qwMiKWgOFkR1y_2vtmsK5EV4kbFzApIQp9PzVRYvG5X7XRungBCHmppnbStYx85S-7oqXb0k-Qx5TotxrMz7jv_gM8lPvP-HxTi_DAuEh_V0oyG6bYHaakybQ-pwIhNgL2LRd_6UCOK1cUgvGjc5OM4iZh8h_JnONBEQBLuBjwCMrJ5jIxrdetsz3CkYT2DTOPLroKw5epz68ISOOWtmhaaSubapDJjx29q05WajgKSLfXRAsO7Sbk-DCT24qu2TCUuKGZCP7AYYjBUyNow41Cmn-O0k0uOVhAhUbco43nPoFoHnOnhk4BSnPCqNgxbjTMt4V56T34MYRB5Gd7iKiTX9emxJhZuZm3f3sTvLWvyAd8NFH9ySBEIrZMJS_wkyn2FsvtlWX85B7mBckrfcXqP6Vae54hKfEc9yQ0w9xjEmQdMAQm0bW3bArDK2yz5yQ3Ixhk8sWIITAuehcpLbFtmzxgfSN5dFdON1V31ysr-e98YwIsZHEOGxzI9YAJ1BX99xoYN8hKOBVJeXhAjHEEaV14qztJP_piwy0jSd-JeeYllzmDaoLScUVJUV3k8SrEUBlTnKq9rlW0E6SWKFc_0Clv7kQZrmE4PFjxNxlj0zL6zKx36CiVhBuT6vghBBcbbe0d5HTF69o-3FaDVs1iC3ZX_-ekb14dWZTl0tZjpAgyYbWjRzLTCSnQ9AI-XAxpU0HrjQNyudpc1peLqyB9zUGHO9TLK6Q7Z6y3ObCcUvCy7yWdGlPuotBx2zmMaYJ9RNYvZ7vlssa3n9gyOCVviUqSIkXlNjkLyDGlwWerUH4QtG1W_ud3a_oehWX5H297Wx0FO-Eljjlq7kw9d1vVWs_FssTS_V3bpteaDHtzn4kZQNgtUrU40yyeAU2WHIX7QIoS0YrYDWOR0mT4e-gZkwr71h_gomXNJE0Ub2ST4rZp9pnRTqiAcT7-FYqIsm4LuzUhyeGXZZWDY6oSzG6cHRmRBPOUk-tizpqA==&xkcb=SoCX6_M33jXTb4Rq5p0IbzkdCdPP&camk=nUmJqO2E8riZ4WpAttJM8A==&p=3&fvj=0&vjs=3
+  Location: London
+  Company: Crossover
+  Description: It's no secret that traditional site reliability teams struggle to keep pace with manual monitoring, reactive troubleshooting, and labor-intensive deployments. The rise of AI presents a solution, but many companies fail to fully leverage its potential, resulting in systems that underperform and bottlenecks that stifle innovation. Data shows that 73% of companies struggle with deployment delays and operational downtime, primarily due to outdated processes and lack of AI-driven automation.
+ At IgniteTech, we are tackling these issues head-on by building AI-first cloud solutions that are designed to anticipate and prevent problems before they arise. We focus on integrating AI and machine learning into every facet of cloud infrastructure management, from automated monitoring systems to intelligent CI/CD pipelines. This approach creates environments that not only self-heal but also continuously evolve, reducing downtime, improving performance, and pushing the boundaries of what cloud services can do.
+ This isn’t your typical site reliability role, where you'd be reacting to problems and manually intervening when things go wrong. Here, you’ll lead the charge in building AI-enhanced monitoring systems that detect and resolve 95% of issues before they ever reach end users. You’ll also architect and manage AI-automated CI/CD pipelines that reduce deployment times by 30% while slashing manual interventions. The ideal candidate thrives in an AI-driven environment, is excited by the prospect of automation-first solutions, and enjoys pushing the envelope of cloud infrastructure design.
+ In this role, you’ll join a global team of innovators who are redefining cloud infrastructure. Your work will play a key role in our mission to deliver next-gen, AI-driven operational excellence. We’re seeking someone who is passionate about AI and ready to make a lasting impact on the future of cloud services. If that’s you, we encourage you to apply and be part of something revolutionary.
+ 
+  What you will be doing
+ 
+ 
+  Implementing AI-based monitoring services to automatically detect, predict, and resolve issues before they impact operations
+  Managing CI/CD pipelines with AI-driven automation to enhance deployment efficiency and reduce manual intervention
+ 
+ 
+  What you will NOT be doing
+ 
+ 
+  Focusing solely on manual monitoring, troubleshooting, and maintenance of systems; your goal will be to get AI to do these things for you
+ 
+ 
+  Key Responsibilities
+ 
+ 
+  Achieve seamless scalability and optimize performance for AI-powered cloud services, ensuring 99.99% uptime while delivering AI-enhanced software upgrades and customizations that meet clients' evolving needs
+ 
+ 
+  Candidate Requirements
+ 
+ 
+  2+ years of DevOps experience, including automation of CI/CD pipelines and infrastructure management
+  2+ years of experience with Amazon Web Services (AWS) or Google Cloud Platform (GCP)
+  Proficiency in AI and machine learning tools used for monitoring, automation, and predictive analytics (or strong willingness to learn and adapt to AI-driven technologies)
+  Strong programming and scripting skills, with experience in automating tasks and building AI-driven processes
+ 
+ 
+  This position is also known as:
+ 
+  Cloud Architect
+  DevOps Consultant
+  AI Cloud Engineer
+  Cloud Engineer
+  DevOps Engineer
+  AI Cloud DevOps Engineer
+  DevOps Specialist
+  AI Site Reliability Engineer
+  AI DevOps Engineer
+
+Job 5:
+  Title: DevOps Engineer, IgniteTech (Remote) - $100,000/year USD
+  URL: https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0Bp-pWyh_yd7-BMq_HjiKF8q-wDEEHI6K3EhZcTze0zErH7UYtV_384uO_fiMSDWwMX91h8qwMiKY1IHiSHC0GJwbYRFlv_hmF9-pTBsDNfPj2FI_oBYdEj9sZAW-JANDm1_yZrtNscjKptfQEeFZnGMsBUQGo8U_lTLzyK8iQarrIvkvsF_vUdtq5kGR8kXQMurLzNhKLekwHXF13SSigkh7oHWYgI5Fj5y94q1Md4RrmWmG6VM9qTBOT4cFfDfHrhau0Nz592JmQLE10AzhanYyimLaf3OfKeNtp8nLMgfX3jh60bXp3c2euZVWaQUYnn0q5ueP_pIqL9uVs_z98NL1WtCh_x3Vmmydw_GWfMScNKFntx4r1fgztN04XCnzcg05X4DHx11l8uFfbz5QvjlEXVE3ZSYBaqtdHqTBVwE9shyBx8x9h75pmycDgKjdfuY5L9FdYQyKUavbMTAHLUIkfdPlQwGBAPdx2qn-pklRrqMsI9JJWD5vrfO7UZR1g80Llcjc13czlCLFaM4hYTRZ5LM7iRtvf67cseBzWE8Tw-tWVNexSyh0IqJ2DQX4hjnorquN9bwvUdZ9k3-lhsCguVih6D_ugRoXR_INWehXUB323XilJlz-MFQGt33j3Lrl9gtNZNB2WXqkMQDmHkNwn9QDMJxoWP_qZOUTP5RhnfRSjWT4TQhHw15viIbrWcW6tVDf_PfkjXav-ugXPs7pDJhzsoljFek3ap193gHbyEz-3vlWVuP5k6nX19w3UkxzPjvo4KPDXKbd5C7WT3KSrq6dCZ5gx45rkybjYcS6o2dbTwsFQ-tvkSMUGcNgw-vlJJGTMqzkVOmMJkpwkdccfmVq_oYN6qJ1NzTG4HRNa7gsrRjUwxrIfUC9bJQrq2pjk5OOWPTb18mxJ_nLb5_CNehpQDzihrBUsYo9w4H2OjIkT3CglM-HydnNkeCTzSyp0eOu_HpMcYH4BibCQpcy7Mhm4FVy3aJC04C4UB7_Qo_US8VXcEgWVhdWyydp1XYTXQ31wBlPkAlu2TRLSz&xkcb=SoAZ6_M33jXTb4Rq5p0PbzkdCdPP&camk=nUmJqO2E8riZ4WpAttJM8A==&p=4&fvj=0&vjs=3
+  Location: London
+  Company: Crossover
+  Description: It's no secret that traditional site reliability teams struggle to keep pace with manual monitoring, reactive troubleshooting, and labor-intensive deployments. The rise of AI presents a solution, but many companies fail to fully leverage its potential, resulting in systems that underperform and bottlenecks that stifle innovation. Data shows that 73% of companies struggle with deployment delays and operational downtime, primarily due to outdated processes and lack of AI-driven automation.
+ At IgniteTech, we are tackling these issues head-on by building AI-first cloud solutions that are designed to anticipate and prevent problems before they arise. We focus on integrating AI and machine learning into every facet of cloud infrastructure management, from automated monitoring systems to intelligent CI/CD pipelines. This approach creates environments that not only self-heal but also continuously evolve, reducing downtime, improving performance, and pushing the boundaries of what cloud services can do.
+ This isn’t your typical site reliability role, where you'd be reacting to problems and manually intervening when things go wrong. Here, you’ll lead the charge in building AI-enhanced monitoring systems that detect and resolve 95% of issues before they ever reach end users. You’ll also architect and manage AI-automated CI/CD pipelines that reduce deployment times by 30% while slashing manual interventions. The ideal candidate thrives in an AI-driven environment, is excited by the prospect of automation-first solutions, and enjoys pushing the envelope of cloud infrastructure design.
+ In this role, you’ll join a global team of innovators who are redefining cloud infrastructure. Your work will play a key role in our mission to deliver next-gen, AI-driven operational excellence. We’re seeking someone who is passionate about AI and ready to make a lasting impact on the future of cloud services. If that’s you, we encourage you to apply and be part of something revolutionary.
+ 
+  What you will be doing
+ 
+ 
+  Implementing AI-based monitoring services to automatically detect, predict, and resolve issues before they impact operations
+  Managing CI/CD pipelines with AI-driven automation to enhance deployment efficiency and reduce manual intervention
+ 
+ 
+  What you will NOT be doing
+ 
+ 
+  Focusing solely on manual monitoring, troubleshooting, and maintenance of systems; your goal will be to get AI to do these things for you
+ 
+ 
+  Key Responsibilities
+ 
+ 
+  Achieve seamless scalability and optimize performance for AI-powered cloud services, ensuring 99.99% uptime while delivering AI-enhanced software upgrades and customizations that meet clients' evolving needs
+ 
+ 
+  Candidate Requirements
+ 
+ 
+  2+ years of DevOps experience, including automation of CI/CD pipelines and infrastructure management
+  2+ years of experience with Amazon Web Services (AWS) or Google Cloud Platform (GCP)
+  Proficiency in AI and machine learning tools used for monitoring, automation, and predictive analytics (or strong willingness to learn and adapt to AI-driven technologies)
+  Strong programming and scripting skills, with experience in automating tasks and building AI-driven processes
+ 
+ 
+  This position is also known as:
+ 
+  Cloud Architect
+  Site Reliability Engineer
+  DevOps Consultant
+  AI Cloud Engineer
+  Senior Site Reliability Engineer
+  Cloud Engineer
+  AI Cloud DevOps Engineer
+  DevOps Specialist
+  AI Site Reliability Engineer
+  AI DevOps Engineer
+
+Job 6:
+  Title: DevOps Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=76dc1b8876bb6ec8&bb=4OEQzf87lAx4C81i2S_u1H6lUljce1FOUqtNW2sIJtX98VSRpWOIHLTEDOM1DTiwG08l_OMBN46BRlEsFP54LSOxJAx5J_QeIdN5aAg7OdIOtwiOmRUWx6fQg10lhbXN&xkcb=SoBZ67M33jXTb4Rq5p0ObzkdCdPP&fccid=9d407c143e4dc5d8&vjs=3
+  Location: London W6 0NQ
+  Company: Lamington Group
+  Description: Lamington Group is working on an innovative software solution for the hospitality industry that leverages AI to automate critical hotel operations, such as reservations and customer support. The product integrates with Property Management Systems (PMS) and Customer Relationship Management (CRM) tools to streamline workflows and enhance guest experiences.
+  Lamington Group is a pioneering UK real-estate and hospitality company on an ambitious journey to open 5000 beautifully-designed net-zero carbon hotel rooms by 2030. room2 Hometels is our core focus, an award winning hospitality brand with industry leading sustainability initiatives. Aside from the hotel operations, we operate a residential and commercial property portfolio, co-working operation and multiple development projects.
+  We are a family-run organisation focussed on providing world-class guest experiences and with a pipeline of growth to 2030 it's a great time to start your journey with us. We are a dynamic team with sustainability woven into every department and are passionate about creating new ways to do business, enabling both our guests and our colleagues to become the best version of themselves whilst giving more than we take to our local & global communities.
+  
+    What’s in it for you:
+   We’re a team of people-focussed individuals, creating an environment where our guests and team always feel comfortable and able to be their best. You’ll also receive:
+   
+   
+    1 free night stay at any of our properties per year, with generous employee discount thereafter
+    Competitive salary and discretionary bonus scheme
+    Pension scheme
+    Loyalty rewards and referral bonuses
+    Company sick pay scheme
+    2 paid volunteer days per year and annual fundraisers for charities aligned to our core pillars
+    Additional annual leave with length of service
+    Cycle to work scheme use of gym facilities in our hotels
+    Access to activity workshops we host for our guests and the community
+    Employee Assistance Programme for you and your immediate family
+    Regular social activities including monthly people & planet focused engagement activities
+    Personal development programmes and opportunities to grow as we do
+   
+  
+  
+    Job Summary: We are seeking an experienced DevOps Engineer to join our growing team. The ideal candidate will be responsible for building robust CI/CD pipelines and ensuring the reliability and performance of our systems through advanced monitoring solutions. This role is pivotal in bridging development and operations to accelerate software delivery. It also requires development skills in python.
+    Project Overview:
+   You will be working on an innovative software solution for the hospitality industry that leverages AI to automate critical hotel operations, such as reservations and customer support. The product integrates with Property Management Systems (PMS) and Customer Relationship Management (CRM) tools to streamline workflows and enhance guest experiences. As part of this dynamic project, you'll play a key role in developing scalable infrastructure, automating deployments, and ensuring seamless operations in a high-availability environment.
+    Key Responsibilities:
+   
+     Kubernetes Implementation & Management: Deploy, configure, and maintain Kubernetes clusters to streamline container orchestration and scaling.
+     CI/CD Pipelines: Design, implement, and manage continuous integration and continuous delivery pipelines for GitLab.
+     Monitoring & Performance: Implement and manage monitoring and alerting systems to ensure system health and uptime.
+     Infrastructure as Code: Utilize IaC tools such as Terraform or Ansible for infrastructure automation.
+   
+    Required Qualifications:
+   
+    Proven experience with Kubernetes, including cluster management, scaling, and troubleshooting.
+    Expertise in CI/CD tools like GitLab CI or similar.
+    Strong understanding of containerization technologies (e.g., Docker).
+    Proficiency with Python for automation and development.
+    Knowledge of cloud platforms such as Google Cloud.
+    Familiarity with Infrastructure as Code.
+    Excellent problem-solving skills and the ability to work collaboratively.
+   
+    Preferred Qualifications:
+   
+    Certification in Kubernetes (e.g., CKA, CKAD).
+    Experience with logging tools like ELK Stack or Fluentd.
+    Familiarity with microservices architecture.
+   
+  
+  INDHEADOFFICE
+
+Job 7:
+  Title: Site Reliability Engineer III
+  URL: https://uk.indeed.com/rc/clk?jk=7ef6fca2be0e9230&bb=4OEQzf87lAx4C81i2S_u1ATwhUK_qqSGkNAlf7kiTssf2Cy58zOqvd9TQ7NdrGVNOXHkGIH_acCki66mjNp4BBHBo8psc1zelieYjQbiE0h62NobRNsSUlb3MF9LVQzS&xkcb=SoDE67M33jXTb4Rq5p0NbzkdCdPP&fccid=65a610215742c669&vjs=3
+  Location: London
+  Company: American Express Global Business Travel
+  Description: Amex GBT is a place where colleagues find inspiration in travel as a force for good and – through their work – can make an impact on our industry. We’re here to help our colleagues achieve success and offer an inclusive and collaborative culture where your voice is valued.  Ready to explore a career path? Start your journey.  What You’ll Do on a Typical Day: Design and implement next-generation highly scalable, and reliable applications using SaaS technology. Translate functional specifications into logical, component-based technical designs. Own delivery of application features end to end by working with internal and external teams. Innovate and implement new ideas to solve complex software problems. Work closely with geographically distributed team members  What We’re Looking For: Amex GBT Egencia’s Technology organisation is looking for a highly motivated, self-driven, self-starter, and fast-growing potential individual to be part of a growing team of technologists. You are well-versed in SDLC and Agile methodologies. You have at least 3-5 years of experience in software development and troubleshooting. An independent thinker, who works around problems and who isn’t shy of trying new technologies. You have validated experience working in parallel technologies apart from your core technology area (Java). Prior experience in working harmoniously with a cross-geography team will be an added advantage. You should be equally appropriate in development, test, and debugging roles and be ready to wear many hats. This team values “fail-fast” learners and technology enthusiasts who view learning new technology as a fun experience. Strong knowledge of Object Oriented Programming, Data Structures, and Algorithms Good proficiency in any of the programming languages from Java, Golang, Python, or Bash Proven ability to develop and support large-sized highly scalable software systems Experience in AWS Services Good knowledge of container orchestration frameworks primarily Kubernetes Basic understanding of logging and monitoring frameworks Knowledge of cloud computing concepts along with an understanding of application communication and routing is a plus Good experience in developing and deploying AWS cloud-based platforms Good understanding of network topologies with experience in hybrid cloud architecture will be a plus Experience with the Agile Tool set and Programming Practices Knowledge of CI-CD principles Knowledge of server-side design patterns is a plus Ability to quickly pick up new technologies, and languages with ease A standout colleague who collaborates and incorporates feedback from all partners Excellent written and verbal communication skills BS or MS in Computer Science or equivalent degree  #GBTJobs  Location London, United Kingdom  The #TeamGBT Experience Work and life: Find your happy medium at Amex GBT.  Flexible benefits are tailored to each country and start the day you do. These include health and welfare insurance plans, retirement programs, parental leave, adoption assistance, and more.  Travel perks: get a choice of deals each week from major travel providers on everything from flights to hotels to cruises and car rentals.  Develop the skills you want when the time is right for you, with global tuition assistance, access to over 20,000 courses on our learning platform, leadership courses, and new job openings available to internal candidates first.  We strive to champion Diversity, Equity, and Inclusion in every aspect of our business at GBT. You can connect with colleagues through our global Inclusion Groups, centered around common identities or initiatives, to discuss challenges, obstacles, achievements, and drive company awareness and action.  Wellbeing resources to support mental and emotional health for you and your immediate family.  And much more!  A ll applicants will receive equal consideration for employment without regard to age, sex, gender (and characteristics related to sex and gender), pregnancy (and related medical conditions), race, color, citizenship, religion, disability, or any other class or characteristic protected by law.  Furthermore, we are committed to providing reasonable accommodation to qualified individuals with disabilities. Please let your recruiter know if you need an accommodation at any point during the hiring process. For details regarding how we protect your data, please consult GBT Recruitment Privacy Statement .  What if I don’t meet every requirement? If you’re passionate about our mission and believe you’d be a phenomenal addition to our team, don’t worry about “checking every box;" please apply anyway. You may be exactly the person we’re looking for!
+
+Job 8:
+  Title: DevOps/Data Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=7b0546acdb51fd28&bb=4OEQzf87lAx4C81i2S_u1POaXjEpmmiTHW3YQ32KeYMqhpKMs83EXy6XzJw2mqX_0VZLiQUf6kOYbFYEnk4X7EwKK7YIUnJBtqlBFWvwuKurjRuYx0i2k-pxYN6eUsjv&xkcb=SoBw67M33jXTb4Rq5p0MbzkdCdPP&fccid=07faab521b42d062&vjs=3
+  Location: London EC3N
+  Company: Vixio
+  Description: Vixio is the leading provider of regulatory intelligence. Our trusted insights and analysis give our clients a true picture of what’s happening in an ever-changing landscape.
+ We combine world-class content with advanced technology to help our clients make informed strategic decisions to mitigate risks, capitalise on business opportunities and find competitive advantage. 
+ Position: 
+ Mid-Senior DevOps/Data Engineer (AWS)
+ 
+  We are looking for a highly skilled DevOps/Data Engineer with strong proficiency in AWS to join our dynamic team. The ideal candidate will play a crucial role in building scalable architecture on AWS and providing support to engineering teams with DevOps practices. This role requires a blend of expertise in cloud infrastructure, data engineering, and DevOps to ensure robust, secure, and efficient operations.
+  Requirements: 
+ AWS Architecture and Implementation:
+ 
+  Design, build, and maintain scalable and reliable cloud infrastructure on AWS.
+  Implement infrastructure as code (IaC) using tools such as Terraform or CloudFormation.
+  Ensure the security, availability, and performance of all cloud environments.
+ 
+ 
+  Data Engineering:
+ 
+  Develop and manage data pipelines and ETL processes to support data analytics and business intelligence.
+  Optimise data storage and retrieval processes for performance and scalability.
+  Ensure data quality, integrity, and compliance with data governance standards.
+ 
+ 
+  DevOps Practices:
+ 
+  Implement and maintain CI/CD pipelines to automate the software development lifecycle.
+  Develop and manage monitoring and alerting solutions to ensure system reliability and performance.
+  Collaborate with engineering teams to improve deployment processes and operational efficiency.
+ 
+ 
+  Collaboration and Support:
+ 
+  Work closely with engineering teams to provide DevOps and data engineering support.
+  Assist in troubleshooting and resolving infrastructure and application issues.
+  Provide guidance and training to team members on best practices in cloud infrastructure, data engineering, and DevOps.
+  Collaborate with wider business stakeholders where necessary.
+  Present to wider business stakeholders where necessary.
+ 
+ 
+  Continuous Improvement:
+ 
+  Stay up-to-date with the latest AWS services, DevOps tools, and data engineering technologies.
+  Identify opportunities for automation, optimisation, and improvement in existing processes.
+  Contribute to the development and implementation of product and technology roadmaps and strategies.
+ 
+ 
+  Qualifications:
+ 
+  Bachelor’s degree in Computer Science, Engineering, or a related field, or equivalent experience.
+  Proven experience as a DevOps Engineer, Data Engineer, or similar role with a strong focus on AWS.
+  Proficiency in AWS services, including EC2, EB, Redshift, S3, RDS, Lambda, and others.
+  Experience with infrastructure as code (IaC) tools such as Terraform or CloudFormation.
+  Strong knowledge of CI/CD tools such as Jenkins, GitLab CI, or similar.
+  Proficiency in scripting and programming languages (e.g., Python, Bash).
+  Experience with data engineering tools and frameworks (e.g., Apache Spark, Kafka, Airflow).
+  Strong understanding of monitoring and logging tools (e.g., Prometheus, Grafana, ELK stack).
+  Excellent problem-solving skills and the ability to troubleshoot complex issues.
+  Strong communication and collaboration skills with the ability to work effectively in a team environment.
+ 
+ 
+  Preferred Qualifications
+ AWS certifications such as AWS Certified Solutions Architect, AWS Certified DevOps Engineer, or AWS Certified Data Analytics.
+ 
+  Experience with containerisation and orchestration tools (e.g., Docker, Kubernetes).
+  Familiarity with data warehousing solutions (e.g., Redshift, BigQuery).
+  Knowledge of security best practices and compliance standards in cloud environments.
+ 
+ 
+  Key Attributes
+ 
+  Proactive and self-motivated with strong attention to detail.
+  Commitment to continuous learning and professional development.
+  Strong focus on delivering high-quality and reliable solutions.
+ 
+ 
+  Person Specification
+ 
+  Be self-directed, self-motivated, proactive and able to work independently with minimal oversight
+  Ability to adapt to a fast-paced, dynamic work environment.
+  Be open minded and curious with all aspects of the business
+  Have clear and effective verbal and written communication skills in English
+  Have a high attention to detail
+  Have the ability to learn new software and project requirements quickly
+  Be forward thinking and adaptable
+ 
+ 
+  Our Benefits:
+ 
+  Hybrid Working (2 days in the office)
+  Flexible working hours
+  20 days working abroad
+  Salary sacrifice car scheme
+  Pension
+  Health Insurance
+  Cycle to work scheme
+  Dental
+  Mental Health wellbeing Support
+ 
+ 
+  Our Core Values:
+ https://www.vixio.com/vixio-values
+
+Job 9:
+  Title: Production Engineer (University Grad)
+  URL: https://uk.indeed.com/rc/clk?jk=56cceae4352aea9b&bb=4OEQzf87lAx4C81i2S_u1Mz6RHsp3t_oGzUPPA3ji-4oQz2aBvZ6GRmvtkk3K1aL3MXeQxWRzhVuCl63e_ecvF3ousAldYnost4wofvmkJIvQ0dWDFro9A%3D%3D&xkcb=SoCZ67M33jXTb4Rq5p0DbzkdCdPP&fccid=ba07516c418dda52&vjs=3
+  Location: 1 Rathbone Square, London
+  Company: Meta
+  Description: Production Engineers at Meta are software engineers who focus on the reliability, scalability, performance, privacy and security of Meta Products - such as WhatsApp, Instagram or Messenger and our business platforms such as Ads, Business Messaging and Commerce.Through a deep understanding of production services, and a passion for automation, they allow our product teams to deliver new features quickly while maintaining an awesome user experience. They are embedded in Meta's product teams and are core participants in every significant engineering effort.Our team members come with varying levels of experience and diverse backgrounds. Relevant industry experience is important (Software Engineer, Site Reliability Engineer (SRE), Systems Engineer, DevOps Engineer, Network Engineer, Database Administrator or similar role), but ultimately less so than your demonstrated abilities and attitude. We sail into uncharted waters every day at Meta in Production Engineering, and we are always learning. This position is full time.  
+ Production Engineer (University Grad) Responsibilities: 
+ 
+  Develop a strong understanding of relevant product area, codebase, and/or systems
+  Demonstrate proficiency in data analysis, programming and software engineering
+  Produce high quality code with good test coverage, using modern abstractions and frameworks
+  Work independently, use available resources to get unblocked, and complete tasks on-schedule by exercising strong judgement and problem solving skills
+  Master Meta’s development standards from developing to releasing code in order to take on tasks and projects with increasing levels of complexity
+  Actively seek and give feedback in alignment with Meta’s Performance Philosophy
+   
+ Minimum Qualifications:
+ 
+  Experience in *nix (Linux, BSDs, or another UNIX-like OS)
+  Currently has, or is in the process of obtaining a Bachelor's degree in Computer Science, Computer Engineering, relevant technical field, or equivalent practical experience. Degree must be completed prior to joining Meta.
+  Experience coding in an industry-standard language (e.g. Java, Python, C++, PHP)
+  Experience picking up software, frameworks and APIs
+  Must obtain work authorization in country of employment at the time of hire, and maintain ongoing work authorization during employment
+   
+ Preferred Qualifications:
+ 
+  Understanding of TCP/IP networking fundamentals
+  Experience with an RDBMS like MySQL or Postgres
+  Knowledge of internet service architectures (such as load balancing, LAMP, CDN's)
+  Experience performing 'guerrilla capacity planning' for internet service architectures
+  Experience solving complex problems and comparing alternative solutions, tradeoffs, and diverse points of view to determine a path forward
+  Experience working and communicating cross functionally in a team environment
+   
+ About Meta: Meta builds technologies that help people connect, find communities, and grow businesses. When Facebook launched in 2004, it changed the way people connect. Apps like Messenger, Instagram and WhatsApp further empowered billions around the world. Now, Meta is moving beyond 2D screens toward immersive experiences like augmented and virtual reality to help build the next evolution in social technology. People who choose to build their careers by building with us at Meta help shape a future that will take us beyond what digital connection makes possible today—beyond the constraints of screens, the limits of distance, and even the rules of physics.       Individual compensation is determined by skills, qualifications, experience, and location. Compensation details listed in this posting reflect the base hourly rate, monthly rate, or annual salary only, and do not include bonus, equity or sales incentives, if applicable. In addition to base compensation, Meta offers benefits. Learn more about benefits at Meta.
+
+Job 10:
+  Title: Senior DevOps Engineer (the UK)
+  URL: https://uk.indeed.com/rc/clk?jk=b6fef076d97e844f&bb=4OEQzf87lAx4C81i2S_u1CKGmmoNSWLi9SPFCtVG03cxNfU4Ha0al8jgrPU7QqhTpBsH8iIOfah6L-Xq_ypKZ05het6r44vIvmxVyUZErDLiPJWD40oRQM-xAFvBJNu0&xkcb=SoAt67M33jXTb4Rq5p0CbzkdCdPP&fccid=5305417a66c923d5&vjs=3
+  Location: London
+  Company: CommIT
+  Description: The company develops and operates a cutting-edge, cloud-based core banking platform tailored for the financial sector. Our technology is the powerhouse behind some of the most sophisticated online decision-making services, already implemented in Tier 1 banks. Located in Herzliya, our office is a vibrant hub of bright, creative, and enthusiastic people who thrive on collaboration to create exceptional solutions. If you're drawn to a dynamic startup environment where the latest technologies and an energetic team come together, we invite you to see what we have to offer.
+  What Will YOU Do?
+ As a Mid-Level DevOps Engineer at ezbob, you will:
+ 
+  Manage and orchestrate microservices in Kubernetes environments, utilizing frameworks and languages such as Spring Boot, .NET Core, and React.
+  Support and optimize SQL, MongoDB, and RDS databases to enhance data management.
+  Implement robust disaster recovery strategies with tools like Velero in Kubernetes.
+  Develop and enforce security policies throughout CI/CD processes, aiming for performance optimization.
+  Create and maintain automation scripts in Bash, Groovy, and Python.
+  Orchestrate and manage Kubernetes deployments both on-premises and in cloud environments, with a focus on EKS and also ECS - MUST.
+  KMaintain and develop GitOps configurations and Jenkins pipelines to support environmental promotions.
+  Ensure compliance with the AWS Well-Architected Framework and utilize DORA metrics to achieve DevOps excellence.
+  Deploy applications using Argo Rollouts, implementing blue/green and canary deployment strategies.
+  Manage application releases using Helm to streamline deployment processes and adhere to CI/CD best practices.
+  Requirements: 
+ 
+ 
+  Proficiency in debugging and supporting services built with technologies like Spring Boot, .NET Core, React, SQL, and MongoDB.
+  Solid experience with Jenkins, Kubernetes, EKS, Velero, GitOps, and Helm.
+  A good understanding of the AWS Well-Architected Framework, DORA metrics, and Argo Rollouts.
+  Proven ability in incident management, collaboration, and troubleshooting within an SRE framework.
+  Strong grasp of security policies, performance optimization, and CI/CD pipelines.
+  Experienced with core AWS services and working knowledge of Terraform.
+  At least 3 years of experience in a similar role or environment.
+ 
+  Nice-to-have:
+ 
+  Experience configuring DevLake for seamless integration with various tools.
+  Practical knowledge of managing service mesh architectures like Istio and familiarity with the Lua language.
+  Exposure to Gen AI integrations and applications.
+ 
+ Join us in shaping the future of banking technology and become a part of our innovative journey at ezbob!
+
+Job 11:
+  Title: Senior DevOps Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=cd88a9d16a5a1d4e&bb=4OEQzf87lAx4C81i2S_u1MEHeE5vNzM-iONMCcxCepPS_4NwTfuRUSWvc4c5062720r1hH5m6x_173cWdWz6qEFH2crlDJkViRKRoQ4QjrkX0Ska5L7bdJt1j2VAv2AN&xkcb=SoCw67M33jXTb4Rq5p0BbzkdCdPP&fccid=bc08d699d841b541&vjs=3
+  Location: London
+  Company: With Intelligence
+  Description: With Intelligence is seeking a Senior DevOps Engineer to join our dynamic and innovative technical team. As a Senior DevOps Engineer, you will play a crucial role in designing, implementing, and maintaining our cloud infrastructure and development processes.
+ With Intelligence provides exclusive editorial, research, data and events for senior executives within the asset management industry. Our editorial brands are seen as market leaders in providing asset manager sales and IR execs with actionable information to help them raise and retain assets. With offices in the UK, US, Philippines, Singapore, and Hong Kong, we are a global organisation with a passion for delivering exceptional services to our clients.
+ 
+  Responsibilities:
+ 
+  Design, implement, and maintain a scalable and secure cloud infrastructure.
+  Develop and automate deployment processes, ensuring efficient and reliable delivery of software releases
+  Collaborate with cross-functional teams to understand infrastructure requirements and optimize system performance
+  Monitor system performance, troubleshoot and resolve issues in a timely manner
+  Implement and maintain CI/CD pipelines and configuration management tools
+  Ensure compliance with security best practices and data protection regulations
+  Stay up to date with emerging technologies and provide recommendations for continuous improvement
+ 
+ Requirements
+ 
+  Proven experience as a DevOps Engineer or similar role
+  Strong knowledge of AWS
+  Experience with containerization technologies like Amazon Elastic Container Service
+  Proficient in scripting and automation using languages such as Python, Bash, or PowerShell
+  Hands-on experience with CI/CD pipelines using tools like Jenkins
+  Solid understanding of networking principles and infrastructure security
+  Ability to troubleshoot complex issues and perform root cause analysis
+  Excellent communication and collaboration skills
+  Strong problem-solving and analytical abilities
+  Desire to stay up to date with industry trends and technologies
+  Support junior memebers of the team
+ 
+ Preferred Qualifications:
+ 
+  Certifications in AWS
+  Experience with infrastructure as code tools like Terraform
+  Knowledge of monitoring and logging tools such as ELK Stack or Prometheus
+  Experience with agile development methodologies
+  Understanding of microservices architecture
+ 
+ Benefits
+ 
+ 
+  24 days annual leave rising to 29 days
+  Enhanced parental leave
+  Medicash (Health Cash Plans)
+  Wellness Days
+  Flexible Fridays (Opportunity to finish early)
+  Birthday day off
+  Employee assistance program
+  Travel loan scheme
+  Charity days
+  Breakfast provided
+  Social Events throughout the year
+  Hybrid Working
+ 
+ 
+ We are an Equal Opportunity Employer. Our policy is not to discriminate against any applicant or employee based on actual or perceived race, age, sex or gender (including pregnancy), marital status, national origin, ancestry, citizenship status, mental or physical disability, religion, creed, colour, sexual orientation, gender identity or expression (including transgender status), veteran status, genetic information, or any other characteristic protected by applicable law.
+
+Job 12:
+  Title: Site Reliability Engineer (SRE) - Object Storage
+  URL: https://uk.indeed.com/rc/clk?jk=174e550f7d187a18&bb=4OEQzf87lAx4C81i2S_u1O9xelZVg0IcLB24OCjeWUO7E0FyrFj5j--ZqjlsbC-ZCp9rBJg7e3P7sjmNeke2Zgh04rP4xsgb5ugXt4Z-d6Exgykrvf12wQ%3D%3D&xkcb=SoAE67M33jXTb4Rq5p0AbzkdCdPP&fccid=c1099851e9794854&vjs=3
+  Location: London
+  Company: Apple
+  Description: Summary  Posted: 31 May 2024   Weekly Hours: 35   Role Number:200541645  People at Apple don’t just build products - they craft the kind of experience that have revolutionized entire industries. The diverse collection of our people and their ideas inspire innovation in everything we do. Imagine what you could do here! Join Apple, and help us leave the world better than we found it. Apple Cloud infrastructure is BIG. The storage SRE teams of Apple Cloud are building and running the next generation distributed storage systems to support Apple’s most critical services. Operating at our scale, across multiple geographically dispersed data centers, and servicing users with vast data need presents unique challenges. As a Storage SRE at Apple, you'll need to solve these problems using your deep understanding of storage, data analysis, programming, teamwork, and expertise in Linux system internals. Storage SREs at Apple involve themselves across the full infrastructure stack; from tuning the block storage layer to content delivery network traffic management.   Description  We are looking for seasoned software and systems engineers to join the Object Storage SRE team at Apple. The role involves tremendous amount of individual responsibility and influence over the direction the platform, shaping its use by many critical Apple Cloud services for years to come. You are solution-oriented and have a passion for software delivered as a service to improve reuse, efficiency, and simplicity. Your work will affect hundreds of millions of users and be essential to the success of some of the most visible current and future Apple features. The role involves understanding the team's priorities; taking ownership of projects or deliverables; designing solutions and building buy-in for those designs; and successful delivery of those designs in order to meet the project goal. The role involves giving technical feedback to colleagues to assist them in the delivery of their designs, features and projects, as well as driving technical standards across the two-site team in collaboration with other senior members of the team. The team has an on-call rota including the week-ends and the successful candidate should expect to handle alerts and other escalations in order to maintain a high level of availability and functionality for our provided services. The team is divided into two shards in UK and US and cross-timezone meetings are a core feature of how our team collaborates, reaches agreements, and executes to deliver projects. At Apple Cloud, we run a mix of open source, vendor licensed, and internally developed tools to perform functions such as system configuration management, provisioning, software development & deployment, logging, and monitoring. You'll learn these tools and have opportunities to improve them. We think critically and strive to balance the best solution with the need to get things done for each engineering challenge we face. Good ideas are heard and results are rewarded. The candidate may be expected to travel to other Apple locations from time to time e.g. the USA.   Minimum Qualifications  Key Qualifications
+ 
+  Experience in building, operating, and scaling distributed storage systems in a private, public, or hybrid cloud environment.
+  The ability to design, author, understand, and release code in languages like Go (preferred), Java, Python, or Rust.
+  Good understanding of block, object, and file storage solutions in Linux (such as LVM, XFS, ext4, S3, Ceph, Gluster, NFS).
+  Understanding of Linux internals, standard networking protocols, and distributed systems.
+  Experience with provisioning, data migration, backup & recovery, at-scale testing, disaster recovery, and capacity planning.
+  Education & Experience  Bachelors degree in Computer Science or related field, or equivalent employment   Additional Requirements
+ 
+  Acute drive to automate manual operations and to improve them through repeated iteration.
+  Awareness of best practices for deployment of storage systems - implication of physical and virtual deployment models to change management. failure domains, hardware lifecycle management, etc.
+  Hands-on experience managing large numbers of diverse systems with configuration management or software delivery platforms (such as Puppet, Chef, Ansible, and Spinnaker).
+  Experience with deploying, supporting and monitoring new and existing services, platforms, and application stacks.
+  Familiarity with microservices architecture and container orchestration with Kubernetes.
+  Familiarity with relational & non-relational databases (such as Cassandra, Postgres, & RocksDB)
+
+Job 13:
+  Title: Cloud Architect, IgniteTech (Remote) - $100,000/year USD
+  URL: https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0Bp-pWyh_yd7-BMq_HjiKF8q-wDEEHI6K3EhZcTze0zErH7UYtV_384uO_fiMSDWwMX91h8qwMiKQhsjyi7yblNJ1edqSSztAGEMhGQbNLIOQKCw12Te2Z7hdLQ8YCT-AVsMlpT9fepAkQtGpu58aZtSgaX7XaJGlcXmWjIDIQE88Sw2pWZPLFo0K3W4HU3BqoZ7umIaogFopgA8WBkplBWstsBlmnbXtMCRFi8QRXXyEJh6f4f5AJaimlGzs9GoXpQl-2Ca_HO1M9TquvnSboUMv3Fk_Av4_EzzzyV1Lrc_ZqeA4pVQz-yw6Xyq5aBR7J535xGsM9gzp1nAtvwMjfJ7RRlwXRAo0rsnZWtXWl-ezOX6KXBttyAHqBSQJtZVZpt1uW3xL_GWEOgJ4y1gafQm3xLY5oHq0D-JKYq9pENauP0rxsuW0DVdgkCzeRnQXLNKAJmTA5rmONNSygAGPPvOHxAtjMxeiTdi3MhGGgzvHmHQM9HYc6698p0a9VEB3tB5pgz58jJYHg-7KBY9tU784YAEif0BN_DSnkI759uOvL0GY4iYfZ3CEs66edFpuVO0IZL0ru720dGQDq2-KOrCUm0VppTuXXTfiVL64w2-LloE9DgVzjbFkSbd-XYf788Qeyf6rmbZCHhGT6XIUMbWqQsjnntVNI_bIH0KbfvEJ7Bpfkkbl1NuKl8AES4Sp7TDQkF6Ft4OJkSLl42fO7TCIeqxxouVookCeJj_OEiOvKGgmvTYDXyNlXSMt2UQtDGTlIH6_UcTE_YLNpwfahYRGo1zLgqTf8lp2ntcyJaQUyyzxW-o1hK_d6TnWmXpCKm-7u4hmlsLrEWISkCGSb_9PQOFLyzeqTr_0vKwjv1FKRfU1A-guu59lk-Mh4B2FL86JQH8RFj_0oZ_T4n-kXoZEtYB3BIVy4EpEZTdj4Rnh45j0NDubL5w2_q5ocJYzan4BneH1dkJ1xA_TozbIan8fRaw-ycKvYUQF-Yx9bmeKFjP4M6LY9orsIPnXnSdlmjc7a1mugbdtQ86HprhQit&xkcb=SoB-6_M33jXTb4Rq5p0HbzkdCdPP&camk=nUmJqO2E8riZ4WpAttJM8A==&p=12&fvj=0&vjs=3
+  Location: London
+  Company: Crossover
+  Description: It's no secret that traditional site reliability teams struggle to keep pace with manual monitoring, reactive troubleshooting, and labor-intensive deployments. The rise of AI presents a solution, but many companies fail to fully leverage its potential, resulting in systems that underperform and bottlenecks that stifle innovation. Data shows that 73% of companies struggle with deployment delays and operational downtime, primarily due to outdated processes and lack of AI-driven automation.
+ At IgniteTech, we are tackling these issues head-on by building AI-first cloud solutions that are designed to anticipate and prevent problems before they arise. We focus on integrating AI and machine learning into every facet of cloud infrastructure management, from automated monitoring systems to intelligent CI/CD pipelines. This approach creates environments that not only self-heal but also continuously evolve, reducing downtime, improving performance, and pushing the boundaries of what cloud services can do.
+ This isn’t your typical site reliability role, where you'd be reacting to problems and manually intervening when things go wrong. Here, you’ll lead the charge in building AI-enhanced monitoring systems that detect and resolve 95% of issues before they ever reach end users. You’ll also architect and manage AI-automated CI/CD pipelines that reduce deployment times by 30% while slashing manual interventions. The ideal candidate thrives in an AI-driven environment, is excited by the prospect of automation-first solutions, and enjoys pushing the envelope of cloud infrastructure design.
+ In this role, you’ll join a global team of innovators who are redefining cloud infrastructure. Your work will play a key role in our mission to deliver next-gen, AI-driven operational excellence. We’re seeking someone who is passionate about AI and ready to make a lasting impact on the future of cloud services. If that’s you, we encourage you to apply and be part of something revolutionary.
+ 
+  What you will be doing
+ 
+ 
+  Implementing AI-based monitoring services to automatically detect, predict, and resolve issues before they impact operations
+  Managing CI/CD pipelines with AI-driven automation to enhance deployment efficiency and reduce manual intervention
+ 
+ 
+  What you will NOT be doing
+ 
+ 
+  Focusing solely on manual monitoring, troubleshooting, and maintenance of systems; your goal will be to get AI to do these things for you
+ 
+ 
+  Key Responsibilities
+ 
+ 
+  Achieve seamless scalability and optimize performance for AI-powered cloud services, ensuring 99.99% uptime while delivering AI-enhanced software upgrades and customizations that meet clients' evolving needs
+ 
+ 
+  Candidate Requirements
+ 
+ 
+  2+ years of DevOps experience, including automation of CI/CD pipelines and infrastructure management
+  2+ years of experience with Amazon Web Services (AWS) or Google Cloud Platform (GCP)
+  Proficiency in AI and machine learning tools used for monitoring, automation, and predictive analytics (or strong willingness to learn and adapt to AI-driven technologies)
+  Strong programming and scripting skills, with experience in automating tasks and building AI-driven processes
+ 
+ 
+  This position is also known as:
+ 
+  Site Reliability Engineer
+  DevOps Consultant
+  AI Cloud Engineer
+  Senior Site Reliability Engineer
+  Cloud Engineer
+  DevOps Engineer
+  AI Cloud DevOps Engineer
+  DevOps Specialist
+  AI Site Reliability Engineer
+  AI DevOps Engineer
+
+Job 14:
+  Title: Principal Site Reliability Engineer - EMEA
+  URL: https://uk.indeed.com/rc/clk?jk=8c8287c8b28db390&bb=4OEQzf87lAx4C81i2S_u1PUXma4C_-NH9uMgV-PZpWpfdMrl-1apNCaThQjQOIo4Svn3cjvd94omoMKh4FCXago2pbkuiDQGcJ7bFGlPSIZsmp6tKZQ-8DBAoLhKcd98&xkcb=SoA-67M33jXTb4Rq5p0GbzkdCdPP&fccid=0d5fb7883a7f9f9e&vjs=3
+  Location: London
+  Company: Ashby
+  Description: We’re looking for a curious, rigorous, problem-hungry platform engineer (who codes!) to carry the ball as we bring Ashby to the big leagues. Ashby builds software that lets talent teams build an efficient, delightful, respectful hiring process. Similarly, you’re an engineer who wants to build a “paved road” that excellent engineering teams can safely take to the moon and back.
+ 
+ We’ve listed this role twice: as a Platform Engineer and Site Reliability Engineer – our team does both, and we are open to candidates who lean towards one or the other.
+ 
+  About the role and how we work
+ I’m Elénie, a Director of Engineering at Ashby. I’ve been an SRE for a long time, but I didn’t begin there. I started my career building algorithms to process large 3D models for civil engineers and route packets faster for telecommunications (“real infrastructure”). There, I found that what makes or breaks the customer experience is the result of often unseen but critical infrastructure work. This critical work makes the admin UI on the website load fast at the airport, the drafts of your models recoverable if your laptop crashes, the data you dearly value, safe.
+ That’s why I switched from working on product to infrastructure: we’ve all seen those outages first reported by a customer because there’s no monitoring, those cute sadface graphics so you’ll be less angry at the software when it inevitably crashes, those late nights your coworkers spend toiling away at failed releases, missing database rows, or misbehaving firewalls. I wanted to create fully-automated solutions to those reliability issues, and use software instead of processes to make infrastructure updates, inter-team schema changes, or data access safe. This can work very well: the systems I built reduced yearly downtime to minutes, and some were even fun. I believe training people starts with meeting them where they are, and infrastructure engineers have empathy as a core skill.
+ As a Platform Engineer at Ashby, you’ll do that and more. Every Product Engineer owns their projects and ships with minimal oversight. We, as SREs, approach this from a practical view. We don’t put roadblocks to ensure security when common sense will do and we don’t build processes like change management boards around the lowest common denominator. But with great power comes great responsibility: we handle personal and confidential data about some of the biggest decisions we ever make at work. As we grow, more and bigger customers rely on us to be reliable and secure and how we operate internally will need to evolve.
+ We’re at an inflection point where our ability to scale and deliver a seamless experience has a make-or-break impact – we have some of the fastest growing companies using our platform every day to hire hundreds of people per month. We need someone like you to make good decisions, debug thorny issues, and build us a future-proof platform that can withstand this scale. Our small but mighty infrastructure team has set up a secure and simple environment (we don’t believe in spinning up a new service unless necessary!) for our growing product team to build in. That’s where you come in: you, too, will own projects end-to-end and have an impact on core parts of the Ashby developer and user experience. For instance, you could work on:
+ 
+  Optimize our homegrown ultra-dynamic recruiting DSL-to-SQL compiler, and create tools to help developers do so
+  Create automated guardrails for the security and privacy of our customer data
+  Help our developers ship features fast through canary deploys, gradual rollouts and feature flags, while keeping complexity manageable and reducing downtime
+  Work with the business and the engineering team to define SLOs and implement the corresponding SLIs.
+  Ensure all communication with external services supports retries and circuit-breakers.
+  Implement the infrastructure to support an event-driven architecture and data warehouse.
+ 
+ 
+ We’re looking for someone who can build systems that an engineer would like to work with: mature and boring but open-minded and approachable. We have to balance reliability with flexibility. Software and its availability are now mission critical to almost every working professional. To be in an SRE in today’s world, you have to be extremely comfortable evaluating risk, those you take and those others take.
+ 
+  Why you should or shouldn’t apply
+ You should apply if:
+ 
+  You never stop. You get weirdly obsessed about a problem that doesn’t yet make sense, turn it every which way in your head until the explanation dawns. You’ll search every rock, inventory every clue, hunt every mismatch. We do that, too - together we’ll be armed with state-of-the-art monitoring tools and an impressive amount of data, and join you in the adventure.
+  You don’t take shortcuts. You’re speaking up for the future user, the edge case, the doomsday design. You know product engineers want to build it with you, and see them as allies, where you give them the power and knowledge to access greater things.
+  You’re someone who cares about what you do and the team you do it with, and want to work with others who do as well. You’ll be on interview panels choosing your next colleagues, and you’ll take that seriously. You only want to work with people who make you better, and want to make you better.
+  You’ve built infrastructure at a slightly later stage than Ashby is at - you know how to deal with millions of data points, have seen great (or not great) infrastructure make or break customer experience, and have automated everything from provisioning to monitoring and release process.
+  You’re a Swiss army knife (all nationalities welcome ;) ). You’ll be the third SRE, so you’ll get every hard problem the company faces. You’ll get to do infrastructure updates, security enforcements, database optimization, Kubernetes debugging, and digging through Typescript traces figuring out what doesn’t work. You probably don’t feel like an expert at at least some of that... and that appeals to you.
+ 
+ 
+ All that makes for a pretty specific kind of role, and the job isn’t to everyone’s tastes! You should not apply if:
+ 
+  You don’t want to make your own decisions on what is the best paved road to build for Ashby, and expect a lead or manager to make the final call on what that is. Our leads (and managers) give ample commentary and feedback on technical decisions and how they’re made, but you ship what you want to build and are accountable for it.
+  You hate SQL. We have a lot of features built around making the best out of data, and our platform engineers also sometimes dive into a gnarly report or advise engineers on a more performant data model to use.
+  You don’t want to code. Our SREs are some of our best software engineers and they are just as responsible for the application as the other engineering teams - albeit at a platform level. Reviewing code and submitting code changes will be part of your day to day.
+  Your primary mode of communicating best practices to engineers is live meetings. We’re a very async culture and written communication (and code) is how changes get made. As an Ashby SRE, you will need to share new tooling and best practices with engineers faster than your next meeting opportunity will take you.
+  You’ve never delivered a project, on your own, without someone prodding you for updates. We have no project or delivery managers to fill your calendar with busy work, but the flip side is you have to do your project management, seek the help you need to get unstuck and cut scope when it’s worthwhile.
+ 
+ 
+  Technology Stack
+ I’m sharing our tech stack with the caveat that we don’t require previous experience in it: TypeScript (frontend & backend), Node.js, React, Apollo GraphQL, Postgres, Redis.
+ We use Datadog and Sentry on 100% cloud-based (AWS) infra. We take developer experience and reliability seriously: all engineers are on call in a follow-the-sun model, and everyone contributes to developer tooling.
+ 
+  What We’re Building
+ Talent teams aspire to build a hiring process that identifies great candidates, moves them quickly through the interview process, and provides an excellent experience for the candidate. To accomplish this, recruiters perform thousands of daily tasks to coordinate and relay information between candidates, interviewers, and hiring managers. Teams struggle to keep up!
+ Scheduling a final round is an excellent example of our customers' challenges. A recruiter needs to collect availability from the candidate, identify potential interviewers, perform “Calendar Tetris” to find who is available to interview the candidate, schedule on the earliest date possible, and perform any last-minute adjustments as availability changes. They must perform this while considering the interview load on each individual and whether interviewers need to be trained and shadowing others.
+ Ashby provides talent teams with intelligent and powerful software that provides insights into where they’re failing and automates or simplifies many of the tasks they’re underwater with. We put a lot of effort into designing products that are approachable to beginners but mastered and extended by power users. In many ways, spreadsheets set the bar here.
+ We have many customers, great revenue growth, years of runway, and amazing investors like YCombinator, Elad Gil, and Lachy Groom. I’ll share more once we meet.
+ 
+  Engineering Culture
+ Our engineering culture is motivated by Abhik and Benji’s (our co-founders) belief that a small talented team, given the right environment, can build high-quality software fast (and work regular hours!).
+ 
+  Collaboration is Natural, Communication is Deliberate
+ Our engineering team (and the team at large) consists of lifelong learners who are humble and kind (meet them here!). These attributes create an environment where collaboration happens naturally (we filter for it in interviews). We combine this with research, prototyping, and written proposals to see around corners and get feedback from the team across time zones. Focus time is something that we hold sacred, and, with thoughtful and deliberate communication, engineers can focus 36h out of a 40h work week (Abhik wrote about it here). Even managers can rely on getting consistent time (and support to make, if necessary) to focus and do creative work without the demand of constant meetings.
+ 
+  Increase Leverage, not Team Size
+ We built Ashby with the quality, breadth, and depth that many customers would expect from much larger teams over larger time scales. We’ve done this through investment in:
+ 
+   Great developer tooling. Our CI/CD takes ~10m, and we deploy at least 5x a day. Everyone on the team has contributed to developer experience
+  Building blocks to create powerful and customizable products fast. At the core of Ashby is a set of common components (analytics modeling and query language, policy engine, workflow engine, design system) which we are constantly improving. Each improvement to a common component cascades throughout our app (short video on it here).
+ 
+ 
+ Here’s an impromptu quote from Arjun in our company Slack of what it’s like to build a feature at Ashby:
+ 
+ “Working on a generic framework for Surveys is really paying off! I was able to add the Automation Rules feature to EEOC Forms really quickly because I had some generic components and backend code. Took about 10 minutes and ~50 lines of code to do!”
+ 
+  Give Engineers Ownership & Autonomy
+ We, as engineers, find clever ways to solve problems, which amplifies when we deeply understand the problem. All of us in technical leadership did our best work as engineers when we had a deep understanding of the end-user and the business and ownership over the solution. Our engineering culture reflects this experience: engineers own projects end-to-end, from speaking with users to writing product specs to UX design. These are skills that we often don’t get to practice as engineers, and, as a manager at Ashby, you’ll provide mentorship and feedback to engineers to ensure they are successful when delivering projects.
+ 
+  Put Effort into Diversity
+ Diverse teams drive innovation and better outcomes. Having seen his mother and partner build their careers as minority women in non-diverse fields, Abhik wants to make sure Ashby creates opportunities for the next generation of engineers from underrepresented groups (including my daughter!).
+ Today, 26% of engineers at Ashby are from underrepresented groups. It’s not great, and we are taking conscious steps to improve, like sourcing diverse candidates, providing generous paid family leave, no leetcode interviews, and more.
+ 
+  Interview Process
+ At Ashby, our team and interview process want to help you show your best self. We’ll dive into past projects and simulate working together via pair programming, writing tech specs collaboratively, and talking through decisions (no leetcode or whiteboard exercises). Our interview process is three rounds:
+ 
+  30-minute introduction call
+  A technical screen (60-minute in-person)
+  A virtual on-site of 2 hours and 45 minutes (can be split across two days)
+ 
+ Our VP of Engineering, Abhik will be your main point of contact and prep you for interviews. You’ll meet your manager, 4 to 6 people in engineering (with 15 minutes in each interview to ask them questions) including our entire current SRE team. If we don’t give an offer, we’ll provide feedback!
+ 
+  Your First Two Months at Ashby
+ We want an exceptional onboarding experience for every new hire. At Ashby, your dev environment sets up with a single script, you push your first change on day one, and we spend the rest of the time building your confidence in our codebase and practices culminating in the delivery of a prominent, impactful feature. We’ll pair you with a peer who’ll guide you through your first tasks and be someone you rely on, from answering questions to pair programming.
+ 
+  Benefits
+ 
+  Competitive salary and equity.
+   10-year exercise window for stock options. You shouldn’t feel pressure to purchase stock options if you leave Ashby —do it when you feel financially comfortable.
+  Unlimited PTO with four weeks recommended per year. Expect “Vacation?” in our one-on-one agenda until you start taking it .
+   Twelve weeks of fully paid family leave in the US. We plan to expand this to employees in other countries as situations arise.
+  Generous equipment, software, and office furniture budget. Get what you need to be happy and productive!
+  $100/month education budget with more expensive items (like conferences) covered with manager approval.
+  If you’re in the US, top-notch health insurance for you and your dependents with all premiums covered by us.
+ 
+ Ashby’s success hinges on hiring great people and creating an environment where we can be happy, feel challenged, and do our best work. We’re being deliberate about building that environment from the ground up. I hope that excites you enough to apply.
+ 
+ Ashby provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, sex, national origin, age, disability, genetics, sexual orientation, gender identity, or gender expression. We are committed to a diverse and inclusive workforce and welcome people from all backgrounds, experiences, perspectives, and abilities.
+ Compensation Range: €100K - €190K
+
+Job 15:
+  Title: Lead DevOps Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=fb7e41cc0ad5c45d&bb=4OEQzf87lAx4C81i2S_u1JKmo_sCvz5ALLGQWz1EqEMk9_-bYu-nF5gmICk32Z6-KY0EINEW3otkq92JE7UEUOoDAeby52r-FCechFImPacEAzE2Mg_0sgGPfWViwSn5&xkcb=SoCj67M33jXTb4Rq5p0FbzkdCdPP&fccid=b48307bf8a1f6e19&vjs=3
+  Location: London
+  Company: QiH Group
+  Description: Our Company:
+ QiH is a global digital marketing group specialising in the iGaming sector, operating across various international markets. Our companies include Digital Adventures, which provides traffic to leading iGaming operators; Wizard Interactive, an affiliate partner for top US online casinos; and Tau Marketing Services, which offers three consumer-focused casino brands through the Aspire network.
+ 
+ QiH is a fast-growing, innovative, and progressive scale-up business headquartered in London with a collective of brilliant brains in Skopje. We are at the start of an exciting journey as we build out our internal engineering capability, spearheading our tech transformation, building best in class products and tackling exciting and complex challenges along the way!
+ 
+ Data is at the core of what we do at QiH, but our people are at the heart of our success! At QiH, we have created an energetic and target-driven culture and continuously invest in each individual.
+ 
+  The Role:
+ Our Engineering team is growing! We’re looking for a highly skilled and experienced Lead DevOps Engineer to shape, maintain, and scale the security and operations strategies of our cloud-based infrastructure built and JavaScript-driven applications.
+ 
+ In this role you will act as the lead architect for all security, automation, and infrastructure-as-code initiatives, playing a pivotal role in bridging the gap between development, security, and operations. This is an individual contributor role, where you will spearhead initiatives and guide the team on best practices without direct management responsibilities.
+ 
+  Key Responsibilities:
+ 
+  Design, implement, and maintain secure cloud infrastructure in GCP.
+  Develop and manage infrastructure as code (Terraform, Kubernetes) to ensure repeatable, scalable, and secure environments.
+  Automate workflows, build scripts, and operational tasks to improve efficiency and scalability.
+  Ensure compliance with security standards and protocols (e.g., SOC2, ISO27001).
+  Automate security processes, such as key management, vulnerability scanning, and incident response.
+  Lead the response to security breaches or system failures, including incident analysis, mitigation, and recovery.
+  Own the continuous integration and delivery (CI/CD) pipelines, ensuring rapid, secure, and reliable deployment of JavaScript applications.
+  Develop and maintain automated security tools for static code analysis, penetration testing, and threat modelling.
+  Implement real-time monitoring, alerting, and response strategies for security incidents
+ 
+ 
+  About You:
+ 
+  Strong proficiency in Cloud Environment ideally in GCP services (Compute Engine, Cloud Functions, IAM, Kubernetes Engine, etc.).
+  In-depth knowledge of DevSecOps tools such as Jenkins, GitLab CI/CD, Docker, Kubernetes, and Helm.
+  Hands-on experience with security practices like vulnerability scanning, encryption, authentication, and secrets management (Vault, Key Management Service).
+  Experience with SIEM platforms (Splunk, Datadog, or equivalent) for monitoring and threat detection.
+ 
+ 
+  You thrive when working as part of a team
+  Comfortable in a fast-paced environment
+  Have excellent written and verbal English skills
+  Last but not least, you’ll have no ego!
+ 
+ 
+  What You’ll Get:
+ 
+  Competitive Basic Salary
+  Quarterly Bonuses
+  Hybrid working
+  Private Health Care
+  Market Leading Training Programme
+  Recognition & Reward Scheme
+  Annual Company Conference (previous destinations Bologna, Dubrovnik, Belgrade and Thessaloniki)
+  Regular Happy Hour / Team Lunches
+  Free Coffee, Drinks & Snacks
+ 
+ 
+  What’s the next step?
+ Our hiring process ensures we're recruiting the right people for the role. We ensure that people are as suitable for us as we are for them.
+ 
+ If you like the sound of what we're all about at QiH and want to join a team where you can make an impact, please apply or contact us at careers@qih-group.com.
+
+Job 16:
+  Title: Site Reliability Engineer II
+  URL: https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0Bt1HG2_G4s9DfM95wihm34QSkUWW_Jom_NyBF_b40qYU6-LBYdUbGFDK6HX8JC7XDCjshAlBa1KCvtOhxaXx4XWMK07KLkb33PCcHSVZ5GD6n84KImrWtAHflRMS3VkrRzV5RlykZNAJBrIu_JF2wlrXO2NI45uzdhg18UekkJU6mfa9vRjaK2znZtjPkXlHKIygmaXHkk3ZciQcuYK6CDOzopxeB6_CW7ab9fE-DpkhYayq2_N4I2hNsCXcEXayFidVA5MAhdr1p6CAueNNgtwDKUN9htJIc3KJiYpjJo4K6aRPwk47Z7Jhij5eWtzG1CMT9NBvaeHrNxTohBGXxrgCeSggODBFlwcqwBMhZXNkRioNcl1-KRhwU4VxabORv8GscfXSkr92ev_cGLQsn9n_2XStEv9SCFOAbnZQUc75ThZOpB4NH5anU3Wyh6IkHCFUybGwZObzhgRa45B4oVO5WWL_RTYTt02i6_ebaM5_xqkwwlDjPoOvZy7dqbCJSTKaRGJaqkQnd62Ez00BF9arC5aXiqMQtqvs0ohztJsVYddA2pa_lP4ry-AGT2S3oa1aukJlpRRv4lbP6DZAb9O5E9G9l2lHX1l6BL9dzkd8p6CgjlktJKE7m1tyJ0vIboCLkmdeTVY7kN7Vhtqfy1sqsL0hiNMVbUqwu_PPmShRLnvBU0xpEb466b1hBryeUyluU78zb6em6QdqhLINNY3LLXRnlZckGRVeVhxatzZuxxUWUjzdluJz3qCH_aE5X7g6ligLkTwxqbVUh4XIjaDT4EBqJw5PMebgPxk2XhiEPbKEG0rs-mxmnZMMOeM8Y4Ve_yP8pIqOrLEpVu93pLSyerri4E-Qu-xCsJkxcWJr6i4cpqJBnLbjQKdVlhiQFtI1cud5XHHGS8iv0Ty_krCvq7FzWD3ccE7hFxtvmwRwK3ESXA5x6jXJLEttq13uGlQltd6wmUK3XBuXO2wZ8SjGgg9vOSLeNadrO3G1yw9VasRd46Np8u1sNkal5uba8qjozHwjEfN7FZJ3IrAqqqPCigaJcA3dbdRYpBlk5UaSbOIEIJqv9DA1EoO0hrtAhFJVlCvcuGBXSw_QZmXClzXsnA3cyevKAfza_oPgVnh_MVJO9FOqweZjfR2Wjf9Z7iIaqWtp3QBEbWQVsnshhnxpRvlKHN4lMOQfsuThZx-IPbfugbNBDP0S453RsQOF5PaIEE1Jq8kzqN1I_R0ppjd6g7UAGgALn6KplNtbokYGdKEWQ06DmsG4aPicUIqalPgo93I8lcuEG-Ne8CyPk_K3-P2cMsHG9cR4e0ai17dF0FyTsHWCBSQMDwzflzExPTQydoh2RGlZZWopHM96Qb4KAnGpEM5Ezv184GYWvGNIeYs1S3QvufuGlbhTr97OdwvwpvLLs3c9sIpoqV2cevGiAAdQALuXg=&xkcb=SoBD6_M33jX3vbxq5p0LbzkdCdPP&camk=ethIe0s0heea19MPIIqgyw==&p=0&fvj=0&vjs=3
+  Location: London
+  Company: American Express Global Business Travel
+  Description: Amex GBT is a place where colleagues find inspiration in travel as a force for good and – through their work – can make an impact on our industry. We’re here to help our colleagues achieve success and offer an inclusive and collaborative culture where your voice is valued.
+ 
+  Ready to explore a career path? Start your journey.
+ 
+  What You’ll Do on a Typical Day: 
+ 
+  Design and implement next-generation highly scalable, and reliable applications using SaaS technology.
+  Translate functional specifications into logical, component-based technical designs.
+  Own delivery of application features end to end by working with internal and external teams.
+  Innovate and implement new ideas to solve complex software problems.
+  Work closely with geographically distributed team members
+ 
+ 
+  What We’re Looking For:
+ 
+  Amex GBT Egencia’s Technology organisation is looking for a highly motivated, self-driven, self-starter, and fast-growing potential individual to be part of a growing team of technologists. You are well-versed in SDLC and Agile methodologies.
+  You have at least 1-3 years of experience in software development and troubleshooting.
+  An independent thinker, who works around problems and who isn’t shy of trying new technologies. You have validated experience working in parallel technologies apart from your core technology area (Java).
+  Prior experience in working harmoniously with a cross-geography team will be an added advantage. You should be equally appropriate in development, test, and debugging roles and be ready to wear many hats. This team values “fail-fast” learners and technology enthusiasts who view learning new technology as a fun experience.
+  Strong knowledge of Object Oriented Programming, Data Structures, and Algorithms
+  Good proficiency in any of the programming languages from Java, Golang, Python, or Bash
+  Proven ability to develop and support large-sized highly scalable software systems
+  Experience in AWS Services
+  Good knowledge of container orchestration frameworks primarily Kubernetes
+  Basic understanding of logging and monitoring frameworks
+  Knowledge of cloud computing concepts along with an understanding of application communication and routing is a plus
+  Good experience in developing and deploying AWS cloud-based platforms
+  Good understanding of network topologies with experience in hybrid cloud architecture will be a plus
+  Experience with the Agile Tool set and Programming Practices
+  Knowledge of CI-CD principles
+  Knowledge of server-side design patterns is a plus
+  Ability to quickly pick up new technologies, and languages with ease
+  A standout colleague who collaborates and incorporates feedback from all partners
+  Excellent written and verbal communication skills
+  BS or MS in Computer Science or equivalent degree
+ 
+ 
+ #GBTJobs
+ 
+  Location London, United Kingdom
+ 
+  The #TeamGBT Experience
+ Work and life: Find your happy medium at Amex GBT.
+ 
+   Flexible benefits are tailored to each country and start the day you do. These include health and welfare insurance plans, retirement programs, parental leave, adoption assistance, and more.
+   Travel perks: get a choice of deals each week from major travel providers on everything from flights to hotels to cruises and car rentals.
+   Develop the skills you want when the time is right for you, with global tuition assistance, access to over 20,000 courses on our learning platform, leadership courses, and new job openings available to internal candidates first.
+   We strive to champion Diversity, Equity, and Inclusion in every aspect of our business at GBT. You can connect with colleagues through our global Inclusion Groups, centered around common identities or initiatives, to discuss challenges, obstacles, achievements, and drive company awareness and action.
+   Wellbeing resources to support mental and emotional health for you and your immediate family.
+  And much more!
+ 
+ 
+ All applicants will receive equal consideration for employment without regard to age, sex, gender (and characteristics related to sex and gender), pregnancy (and related medical conditions), race, color, citizenship, religion, disability, or any other class or characteristic protected by law.
+ 
+ Furthermore, we are committed to providing reasonable accommodation to qualified individuals with disabilities. Please let your recruiter know if you need an accommodation at any point during the hiring process. For details regarding how we protect your data, please consult GBT Recruitment Privacy Statement.
+ 
+  What if I don’t meet every requirement? If you’re passionate about our mission and believe you’d be a phenomenal addition to our team, don’t worry about “checking every box;" please apply anyway. You may be exactly the person we’re looking for!
+
+Job 17:
+  Title: DevOps Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=e7bb579aa1e7a6b7&bb=mLvtVWCw9NgBvs0eBRdmzfIMmtTDCvcyi13eo-PKke43tYQOwaJ5G1NzhKIQl3vapZtEEndCYXK9chuf-wecYUcrRjjfZOuJmZsBs7AziI9P4TDWilOk8Q%3D%3D&xkcb=SoAD67M33jX3vbxq5p0KbzkdCdPP&fccid=200a825acadb9338&vjs=3
+  Location: London
+  Company: BAE Systems
+  Description: Location(s): London
+ 
+  BAE Systems Digital Intelligence is home to 4,500 digital, cyber and intelligence experts. We work collaboratively across 10 countries to collect, connect and understand complex data, so that governments, nation states, armed forces and commercial businesses can unlock digital advantage in the most demanding environments.
+ Are you passionate about working with cutting-edge technology and self-motivated to find innovative solutions to complex challenges as part of a team who help keep the UK safe? Join BAE Systems as an experienced DevOps Engineer.
+ 
+  As a key member of a Software Engineering team, you’ll be working with our National Security Customers to build systems that support their core mission capabilities. You’ll work as part of empowered, autonomous DevOps teams with regular contact with end-users to flexibly and efficiently understand, design, develop, deploy and maintain applications and services. You’ll be encouraged to identify new ways of solving problems and get to work in a range of different teams across our customer organisations. You will work in a small team given as much ownership and responsibility as you have the appetite for but be part of a much bigger Engineering community to give you the support you need to grow in your career.
+ 
+  We fully embrace DevOps ways of working in our teams, and build a very broad range of capabilities for our customers. We therefore value Engineers who enjoy playing a role in the full delivery lifecycle and are flexible to learn and pick up new technologies and approaches. You’ll be playing a role in identifying the right technologies to use for the job and be supported with training as needed through access to services such as Pluralsight.
+ 
+  Not only will your team be directly making a huge impact upon the systems you work on, you’ll be doing it for an organisation who makes a huge impact to the security of the UK.
+ 
+  About you
+ 
+  You will have many of the following:
+ 
+ 
+  Experience working in a similar DevOps / SRE / Infrastructure role
+  An appreciation of Infrastructure as Code, and CI/CD tooling
+  An understanding of live service and how to support critical business systems
+  Scripting abilities with languages such as PowerShell
+  Knowledge of programming languages such as C# and Javascript
+  A working knowledge of Windows infrastructure, Active Directory & Group Policy Management etc
+  Great communication and problem solving skills, and a desire to learn new technologies
+  Working in an Agile environment (e.g. Scrum, Kanban, SAFe, XP, etc)
+ 
+ 
+  It would be great if you also had experience in some of these, but if not we’ll help you with them:
+ 
+ 
+  Configuration Management tools such as Desired State Configuration or Puppet etc
+  Infrastructure as Code tools like Terraform or Cloud formation
+  Cloud technologies such as Azure or AWS
+  Knowledge of automation software such as Selenium
+  Document management systems such as SharePoint
+ 
+ 
+  London based - 4 days in the office, 1 day home based (flexibility depending on scope of work) and full time but condensed week acceptable.
+ 
+  UK Enhanced DV Security Clearance is required for this vacancy.
+ 
+  Why BAE Systems? This is a place where you’ll be able to make a real difference. You’ll be part of an inclusive culture that values diversity, rewards integrity and merit, and where you’ll be empowered to fulfil your potential. We welcome candidates from all backgrounds and particularly from sections of the community who are currently under represented within our industry, including women, ethnic minorities, people with disabilities and LGBTQ+ individuals.
+ 
+  We also want to make sure that our recruitment processes are as inclusive as possible. If you have a disability or health condition (for example dyslexia, autism, an anxiety disorder etc.) that may affect your performance in certain assessment types, please speak to your recruiter about potential reasonable adjustments.
+ 
+  Please be aware that many roles at BAE Systems are subject to both security and export control restrictions. These restrictions mean that factors such as your nationality, any nationalities you may have previously held, and your place of birth can restrict the roles you are eligible to perform within the organisation. All applicants must as a minimum achieve Baseline Personnel Security Standard. Many roles also require higher levels of National Security Vetting where applicants must typically have 5 to 10 years of continuous residency in the UK depending on the vetting level required for the role, to allow for meaningful security vetting checks
+  Life at BAE Systems Digital Intelligence
+ We are embracing Hybrid Working. This means you and your colleagues may be working in different locations, such as from home, another BAE Systems office or client site, some or all of the time, and work might be going on at different times of the day.
+ By embracing technology, we can interact, collaborate and create together, even when we’re working remotely from one another. Hybrid Working allows for increased flexibility in when and where we work, helping us to balance our work and personal life more effectively, and enhance well-being.
+ Diversity and inclusion are integral to the success of BAE Systems Digital Intelligence. We are proud to have an organisational culture where employees with varying perspectives, skills, life experiences and backgrounds – the best and brightest minds – can work together to achieve excellence and realise individual and organisational potential.
+  Division overview: Capabilities
+ At BAE Systems Digital Intelligence, we pride ourselves in being a leader in the cyber defence industry, and Capabilities is the engine that keeps the business moving forward. It is the largest area of Digital Intelligence, containing our Engineering, Consulting and Project Management teams that design and implement the defence solutions and digital transformation projects that make us a globally recognised brand in both the public and private sector.
+ As a member of the Capabilities team, you will be creating and managing the solutions that earn us our place in an ever changing digital world. We all have a role to play in defending our clients, and this is yours.
+
+Job 18:
+  Title: UK - DevOps Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=b83abd758e418b1f&bb=mLvtVWCw9NgBvs0eBRdmzcrccAn50eyOLzfgB71aRRcAySTYTRNh09ntWCjcIWCpvTvtHzkKVVuMGZpNUlRAekzef2uWsba108LJ1OGTt-pl_xQZuMe77Vhah86nAd35&xkcb=SoCe67M33jX3vbxq5p0JbzkdCdPP&fccid=eadec75cac44c6d5&vjs=3
+  Location: London EC3M
+  Company: ISS Group Holdings Limited
+  Description: Who We Are:
+ 
+  At Inchcape Shipping Services, our vision is to create a connected world where customers can trade successfully and make informed decisions in every port, everywhere. We achieve this by combining our worldwide infrastructure with local expertise, through our global network of more than 250 proprietary offices and a team of over 3,000 dedicated professionals. Our diverse customer base includes owners and charterers in the oil, cruise, container, and bulk commodity sectors, as well as naval, government, and intergovernmental organisations.
+ 
+  Role Summary:
+ 
+  We have an exciting opportunity for a DevOps Engineer to join the team. In this role, you will play a key part in embedding continuous quality into the software development lifecycle, with a focus on minimizing defects through strict adherence to shift-left QA principles and shift-right production testing. Leveraging your expertise in automation, you'll drive efficiency and recommend improvements, including cost optimization strategies to enhance overall performance and delivery.
+ 
+  Contract type: Permanent
+  Location: London, Fenchurch Street (Hybrid) Salary: £55,000 to £60,000 per annum
+ 
+  In line with company policy, Inchcape does not provide visa sponsorship for candidates and cannot consider applicants who will require this now or in the future.
+ 
+  Key Responsibilities:
+ 
+ 
+  Review and understand ISS enterprise IT and applications architecture, product management and product delivery frameworks.
+  Implement, transition and scale AWS environments with IAC and terraform.
+  Review and understand product specific architecture, design, and technology stack, define and setup development, test, release, update, and support processes for DevOps operations.
+  Implement best practices across environments and CI process.
+  Configure DevOps tools and monitoring for automation and observability monitoring.
+  Site Reliability Engineering, implement processes for analysis and troubleshooting, monitor environments focusing on performance and availability.
+  Strive for continuous improvement and build continuous integration, continuous development, and constant deployment pipeline.
+  Incident, Problem and Change Management and root cause analysis.
+  Coordination and communication within the team and with product stakeholders.
+  Mentoring and guiding the team members.
+  Ownership of DevOps projects and BAU.
+  Monitoring and measuring user experience and product KPIs.
+  Flexible working providing support out of hours if required.
+ 
+ 
+  Candidate Requirements:
+ 
+  Knowledge -
+ 
+ 
+  Agile practitioner with great experience in using tools like Jira, Confluence
+  Expert level knowledge of DevOps tools like Bitbucket, Sonar Cube, Team City, Testrail and Ansible
+  Expert level knowledge of telemetry and observability platforms like ELK stack, Grafana, AWS Cloud Watch and any other APM tool
+  Database technologies preferably RDS Postgres, Aurora, and MongoDB
+  Infrastructure as code focused in Terraform
+  Expertise in one or more technologies: XML, JSON, YAML
+  Pipeline as code
+  Rabbit MQ or AWS MQ
+  AWS cloud native development using EC2, Lambda, S3, Simple Que Service etc
+  C#, .NET, NodeJS, Web API web experience
+  Scripting languages preferably python, PowerShell
+  Understanding of SDLC, ITIL processes beneficial
+ 
+ 
+  Skills -
+ 
+ 
+  Effective verbal & written communication skills
+ 
+ 
+  Excellent analytical, problem solving and trouble shooting skills
+ 
+ 
+  Strong collaborative and partner approach working with global teams
+ 
+ 
+  Software engineering skills with high tech resilience
+ 
+ 
+  Agile development methodologies
+ 
+ 
+  DevOps mindset and Live site first approach
+ 
+ 
+  Education, Qualifications and Experience -
+ 
+ 
+  6+ years of experience in AWS and DevOps tools for CI/CD pipeline and all the DevOps phases
+  AWS Solutions Architect Associate certification or Sysops/Devops
+ 
+ 
+  Experience in configuration management tools such as Ansible
+ 
+ 
+  Experience in coding and scripting solutions such as bash, python and power shell
+ 
+ 
+  Experience in building containerization using Kubernetes or ECS with Docker
+ 
+ 
+  Excellent knowledge of Linux and Windows operating systems
+ 
+ 
+  You will receive:
+ 
+ 
+  25 days annual leave entitlement plus bank holidays
+  Cycle to Work scheme
+  Employee discount scheme for retail/travel/leisure
+  Life assurance cover
+  Remote GP and second medical opinion service which gives you, and your family members that live in the same household, timely access to medical advice 24/7, 365 days a year
+  Contributory company pension scheme
+  Values Award celebration events
+  Team building days
+ 
+ 
+  Plus, much more!
+ 
+  Why Inchcape Shipping Services?
+ 
+  We believe in building a diverse and high-performing workforce, that works together to provide our customers with the exceptional service they deserve. To reach the highest standards we depend on our people, their welfare, training, and expertise. We realise the value of our staff and know that your unique experiences, skills, and passions will help you to build a rich and rewarding career in our dynamic industry.
+ 
+  Our values are at the centre of everything we do, and the successful candidate will be expected to demonstrate and fully adopt these:
+ 
+  Global Perspective - we connect the world and see the bigger picture.
+  The Power of People - we rely on the strength of local agent knowledge and relationships.
+  Progress - we adopt new thinking and push for positive change in our industry.
+ 
+ Inchcape is an Equal Opportunities Employer - equality, diversity, and inclusion are at the heart of everything we do. Working in a diverse society, we recognise that our customers, colleagues, and contractors are central to our success.
+ 
+  Additional Information:
+ 
+ Appointment to this role will be subject to satisfactory references and possession of a valid Right to Work documentation depending upon your geographical location.
+ 
+  To protect the interests of all parties, Inchcape will not accept unsolicited or speculative resumes from recruitment agencies and will not be responsible for any fees associated with them.
+ 
+  #LI-KT1
+ #LI-Hybrid
+
+Job 19:
+  Title: DevOps Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=76dc1b8876bb6ec8&bb=mLvtVWCw9NgBvs0eBRdmzSk3UY7vuXUmaZonlM2Dp3kFnY22CqrH5Q_TSf6YdYRKP4qnxfVnF96yE4U3C7XZXKtFOrqKIdS7WwiyFXC1JNGqZ9Pz2tPOjzDucmrpeCat&xkcb=SoAq67M33jX3vbxq5p0IbzkdCdPP&fccid=9d407c143e4dc5d8&vjs=3
+  Location: London W6 0NQ
+  Company: Lamington Group
+  Description: Lamington Group is working on an innovative software solution for the hospitality industry that leverages AI to automate critical hotel operations, such as reservations and customer support. The product integrates with Property Management Systems (PMS) and Customer Relationship Management (CRM) tools to streamline workflows and enhance guest experiences.
+  Lamington Group is a pioneering UK real-estate and hospitality company on an ambitious journey to open 5000 beautifully-designed net-zero carbon hotel rooms by 2030. room2 Hometels is our core focus, an award winning hospitality brand with industry leading sustainability initiatives. Aside from the hotel operations, we operate a residential and commercial property portfolio, co-working operation and multiple development projects.
+  We are a family-run organisation focussed on providing world-class guest experiences and with a pipeline of growth to 2030 it's a great time to start your journey with us. We are a dynamic team with sustainability woven into every department and are passionate about creating new ways to do business, enabling both our guests and our colleagues to become the best version of themselves whilst giving more than we take to our local & global communities.
+  
+    What’s in it for you:
+   We’re a team of people-focussed individuals, creating an environment where our guests and team always feel comfortable and able to be their best. You’ll also receive:
+   
+   
+    1 free night stay at any of our properties per year, with generous employee discount thereafter
+    Competitive salary and discretionary bonus scheme
+    Pension scheme
+    Loyalty rewards and referral bonuses
+    Company sick pay scheme
+    2 paid volunteer days per year and annual fundraisers for charities aligned to our core pillars
+    Additional annual leave with length of service
+    Cycle to work scheme use of gym facilities in our hotels
+    Access to activity workshops we host for our guests and the community
+    Employee Assistance Programme for you and your immediate family
+    Regular social activities including monthly people & planet focused engagement activities
+    Personal development programmes and opportunities to grow as we do
+   
+  
+  
+    Job Summary: We are seeking an experienced DevOps Engineer to join our growing team. The ideal candidate will be responsible for building robust CI/CD pipelines and ensuring the reliability and performance of our systems through advanced monitoring solutions. This role is pivotal in bridging development and operations to accelerate software delivery. It also requires development skills in python.
+    Project Overview:
+   You will be working on an innovative software solution for the hospitality industry that leverages AI to automate critical hotel operations, such as reservations and customer support. The product integrates with Property Management Systems (PMS) and Customer Relationship Management (CRM) tools to streamline workflows and enhance guest experiences. As part of this dynamic project, you'll play a key role in developing scalable infrastructure, automating deployments, and ensuring seamless operations in a high-availability environment.
+    Key Responsibilities:
+   
+     Kubernetes Implementation & Management: Deploy, configure, and maintain Kubernetes clusters to streamline container orchestration and scaling.
+     CI/CD Pipelines: Design, implement, and manage continuous integration and continuous delivery pipelines for GitLab.
+     Monitoring & Performance: Implement and manage monitoring and alerting systems to ensure system health and uptime.
+     Infrastructure as Code: Utilize IaC tools such as Terraform or Ansible for infrastructure automation.
+   
+    Required Qualifications:
+   
+    Proven experience with Kubernetes, including cluster management, scaling, and troubleshooting.
+    Expertise in CI/CD tools like GitLab CI or similar.
+    Strong understanding of containerization technologies (e.g., Docker).
+    Proficiency with Python for automation and development.
+    Knowledge of cloud platforms such as Google Cloud.
+    Familiarity with Infrastructure as Code.
+    Excellent problem-solving skills and the ability to work collaboratively.
+   
+    Preferred Qualifications:
+   
+    Certification in Kubernetes (e.g., CKA, CKAD).
+    Experience with logging tools like ELK Stack or Fluentd.
+    Familiarity with microservices architecture.
+   
+  
+  INDHEADOFFICE
+
+Job 20:
+  Title: DevOps/Data Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=7b0546acdb51fd28&bb=mLvtVWCw9NgBvs0eBRdmzX-gYRRX56ZMzMoLYOyNIpkY4zTgR9BbWdB6rXJVDIWuAvhkLwrzXpwDhGZavRSs3vgP9DaMO0ufqParqW4DDz3p7YDOYlx4mxBfa4g6Xmhz&xkcb=SoCk67M33jX3vbxq5p0PbzkdCdPP&fccid=07faab521b42d062&vjs=3
+  Location: London EC3N
+  Company: Vixio
+  Description: Vixio is the leading provider of regulatory intelligence. Our trusted insights and analysis give our clients a true picture of what’s happening in an ever-changing landscape.
+ We combine world-class content with advanced technology to help our clients make informed strategic decisions to mitigate risks, capitalise on business opportunities and find competitive advantage. 
+ Position: 
+ Mid-Senior DevOps/Data Engineer (AWS)
+ 
+  We are looking for a highly skilled DevOps/Data Engineer with strong proficiency in AWS to join our dynamic team. The ideal candidate will play a crucial role in building scalable architecture on AWS and providing support to engineering teams with DevOps practices. This role requires a blend of expertise in cloud infrastructure, data engineering, and DevOps to ensure robust, secure, and efficient operations.
+  Requirements: 
+ AWS Architecture and Implementation:
+ 
+  Design, build, and maintain scalable and reliable cloud infrastructure on AWS.
+  Implement infrastructure as code (IaC) using tools such as Terraform or CloudFormation.
+  Ensure the security, availability, and performance of all cloud environments.
+ 
+ 
+  Data Engineering:
+ 
+  Develop and manage data pipelines and ETL processes to support data analytics and business intelligence.
+  Optimise data storage and retrieval processes for performance and scalability.
+  Ensure data quality, integrity, and compliance with data governance standards.
+ 
+ 
+  DevOps Practices:
+ 
+  Implement and maintain CI/CD pipelines to automate the software development lifecycle.
+  Develop and manage monitoring and alerting solutions to ensure system reliability and performance.
+  Collaborate with engineering teams to improve deployment processes and operational efficiency.
+ 
+ 
+  Collaboration and Support:
+ 
+  Work closely with engineering teams to provide DevOps and data engineering support.
+  Assist in troubleshooting and resolving infrastructure and application issues.
+  Provide guidance and training to team members on best practices in cloud infrastructure, data engineering, and DevOps.
+  Collaborate with wider business stakeholders where necessary.
+  Present to wider business stakeholders where necessary.
+ 
+ 
+  Continuous Improvement:
+ 
+  Stay up-to-date with the latest AWS services, DevOps tools, and data engineering technologies.
+  Identify opportunities for automation, optimisation, and improvement in existing processes.
+  Contribute to the development and implementation of product and technology roadmaps and strategies.
+ 
+ 
+  Qualifications:
+ 
+  Bachelor’s degree in Computer Science, Engineering, or a related field, or equivalent experience.
+  Proven experience as a DevOps Engineer, Data Engineer, or similar role with a strong focus on AWS.
+  Proficiency in AWS services, including EC2, EB, Redshift, S3, RDS, Lambda, and others.
+  Experience with infrastructure as code (IaC) tools such as Terraform or CloudFormation.
+  Strong knowledge of CI/CD tools such as Jenkins, GitLab CI, or similar.
+  Proficiency in scripting and programming languages (e.g., Python, Bash).
+  Experience with data engineering tools and frameworks (e.g., Apache Spark, Kafka, Airflow).
+  Strong understanding of monitoring and logging tools (e.g., Prometheus, Grafana, ELK stack).
+  Excellent problem-solving skills and the ability to troubleshoot complex issues.
+  Strong communication and collaboration skills with the ability to work effectively in a team environment.
+ 
+ 
+  Preferred Qualifications
+ AWS certifications such as AWS Certified Solutions Architect, AWS Certified DevOps Engineer, or AWS Certified Data Analytics.
+ 
+  Experience with containerisation and orchestration tools (e.g., Docker, Kubernetes).
+  Familiarity with data warehousing solutions (e.g., Redshift, BigQuery).
+  Knowledge of security best practices and compliance standards in cloud environments.
+ 
+ 
+  Key Attributes
+ 
+  Proactive and self-motivated with strong attention to detail.
+  Commitment to continuous learning and professional development.
+  Strong focus on delivering high-quality and reliable solutions.
+ 
+ 
+  Person Specification
+ 
+  Be self-directed, self-motivated, proactive and able to work independently with minimal oversight
+  Ability to adapt to a fast-paced, dynamic work environment.
+  Be open minded and curious with all aspects of the business
+  Have clear and effective verbal and written communication skills in English
+  Have a high attention to detail
+  Have the ability to learn new software and project requirements quickly
+  Be forward thinking and adaptable
+ 
+ 
+  Our Benefits:
+ 
+  Hybrid Working (2 days in the office)
+  Flexible working hours
+  20 days working abroad
+  Salary sacrifice car scheme
+  Pension
+  Health Insurance
+  Cycle to work scheme
+  Dental
+  Mental Health wellbeing Support
+ 
+ 
+  Our Core Values:
+ https://www.vixio.com/vixio-values
+
+Job 21:
+  Title: Production Engineer (University Grad)
+  URL: https://uk.indeed.com/rc/clk?jk=56cceae4352aea9b&bb=mLvtVWCw9NgBvs0eBRdmzcxbtmZ_qDb6T5fnEMJ-IVQoIW5c7zZqHZQ3s-YBL8mSsTkjYHufg8zJ7S3LVy_o2B11MCHDvKUsmIYe_RBdRsWnrO_TPj1eWw%3D%3D&xkcb=SoAQ67M33jX3vbxq5p0ObzkdCdPP&fccid=ba07516c418dda52&vjs=3
+  Location: 1 Rathbone Square, London
+  Company: Meta
+  Description: Production Engineers at Meta are software engineers who focus on the reliability, scalability, performance, privacy and security of Meta Products - such as WhatsApp, Instagram or Messenger and our business platforms such as Ads, Business Messaging and Commerce.Through a deep understanding of production services, and a passion for automation, they allow our product teams to deliver new features quickly while maintaining an awesome user experience. They are embedded in Meta's product teams and are core participants in every significant engineering effort.Our team members come with varying levels of experience and diverse backgrounds. Relevant industry experience is important (Software Engineer, Site Reliability Engineer (SRE), Systems Engineer, DevOps Engineer, Network Engineer, Database Administrator or similar role), but ultimately less so than your demonstrated abilities and attitude. We sail into uncharted waters every day at Meta in Production Engineering, and we are always learning. This position is full time.  
+ Production Engineer (University Grad) Responsibilities: 
+ 
+  Develop a strong understanding of relevant product area, codebase, and/or systems
+  Demonstrate proficiency in data analysis, programming and software engineering
+  Produce high quality code with good test coverage, using modern abstractions and frameworks
+  Work independently, use available resources to get unblocked, and complete tasks on-schedule by exercising strong judgement and problem solving skills
+  Master Meta’s development standards from developing to releasing code in order to take on tasks and projects with increasing levels of complexity
+  Actively seek and give feedback in alignment with Meta’s Performance Philosophy
+   
+ Minimum Qualifications:
+ 
+  Experience in *nix (Linux, BSDs, or another UNIX-like OS)
+  Currently has, or is in the process of obtaining a Bachelor's degree in Computer Science, Computer Engineering, relevant technical field, or equivalent practical experience. Degree must be completed prior to joining Meta.
+  Experience coding in an industry-standard language (e.g. Java, Python, C++, PHP)
+  Experience picking up software, frameworks and APIs
+  Must obtain work authorization in country of employment at the time of hire, and maintain ongoing work authorization during employment
+   
+ Preferred Qualifications:
+ 
+  Understanding of TCP/IP networking fundamentals
+  Experience with an RDBMS like MySQL or Postgres
+  Knowledge of internet service architectures (such as load balancing, LAMP, CDN's)
+  Experience performing 'guerrilla capacity planning' for internet service architectures
+  Experience solving complex problems and comparing alternative solutions, tradeoffs, and diverse points of view to determine a path forward
+  Experience working and communicating cross functionally in a team environment
+   
+ About Meta: Meta builds technologies that help people connect, find communities, and grow businesses. When Facebook launched in 2004, it changed the way people connect. Apps like Messenger, Instagram and WhatsApp further empowered billions around the world. Now, Meta is moving beyond 2D screens toward immersive experiences like augmented and virtual reality to help build the next evolution in social technology. People who choose to build their careers by building with us at Meta help shape a future that will take us beyond what digital connection makes possible today—beyond the constraints of screens, the limits of distance, and even the rules of physics.       Individual compensation is determined by skills, qualifications, experience, and location. Compensation details listed in this posting reflect the base hourly rate, monthly rate, or annual salary only, and do not include bonus, equity or sales incentives, if applicable. In addition to base compensation, Meta offers benefits. Learn more about benefits at Meta.
+
+Job 22:
+  Title: Senior DevOps Engineer (the UK)
+  URL: https://uk.indeed.com/rc/clk?jk=b6fef076d97e844f&bb=mLvtVWCw9NgBvs0eBRdmzUWhPFe2S_3hj7GuEeG7RSYzegCAf5vCweFVaf7lvBCqJcO2OvOaFWNpnMjsTIwySPVpG3JL4ZmKnWOVrq2l-YbQU5-MsWQgRBEuQWLlQ8j8&xkcb=SoCN67M33jX3vbxq5p0NbzkdCdPP&fccid=5305417a66c923d5&vjs=3
+  Location: London
+  Company: CommIT
+  Description: The company develops and operates a cutting-edge, cloud-based core banking platform tailored for the financial sector. Our technology is the powerhouse behind some of the most sophisticated online decision-making services, already implemented in Tier 1 banks. Located in Herzliya, our office is a vibrant hub of bright, creative, and enthusiastic people who thrive on collaboration to create exceptional solutions. If you're drawn to a dynamic startup environment where the latest technologies and an energetic team come together, we invite you to see what we have to offer.
+  What Will YOU Do?
+ As a Mid-Level DevOps Engineer at ezbob, you will:
+ 
+  Manage and orchestrate microservices in Kubernetes environments, utilizing frameworks and languages such as Spring Boot, .NET Core, and React.
+  Support and optimize SQL, MongoDB, and RDS databases to enhance data management.
+  Implement robust disaster recovery strategies with tools like Velero in Kubernetes.
+  Develop and enforce security policies throughout CI/CD processes, aiming for performance optimization.
+  Create and maintain automation scripts in Bash, Groovy, and Python.
+  Orchestrate and manage Kubernetes deployments both on-premises and in cloud environments, with a focus on EKS and also ECS - MUST.
+  KMaintain and develop GitOps configurations and Jenkins pipelines to support environmental promotions.
+  Ensure compliance with the AWS Well-Architected Framework and utilize DORA metrics to achieve DevOps excellence.
+  Deploy applications using Argo Rollouts, implementing blue/green and canary deployment strategies.
+  Manage application releases using Helm to streamline deployment processes and adhere to CI/CD best practices.
+  Requirements: 
+ 
+ 
+  Proficiency in debugging and supporting services built with technologies like Spring Boot, .NET Core, React, SQL, and MongoDB.
+  Solid experience with Jenkins, Kubernetes, EKS, Velero, GitOps, and Helm.
+  A good understanding of the AWS Well-Architected Framework, DORA metrics, and Argo Rollouts.
+  Proven ability in incident management, collaboration, and troubleshooting within an SRE framework.
+  Strong grasp of security policies, performance optimization, and CI/CD pipelines.
+  Experienced with core AWS services and working knowledge of Terraform.
+  At least 3 years of experience in a similar role or environment.
+ 
+  Nice-to-have:
+ 
+  Experience configuring DevLake for seamless integration with various tools.
+  Practical knowledge of managing service mesh architectures like Istio and familiarity with the Lua language.
+  Exposure to Gen AI integrations and applications.
+ 
+ Join us in shaping the future of banking technology and become a part of our innovative journey at ezbob!
+
+Job 23:
+  Title: Senior DevOps Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=cd88a9d16a5a1d4e&bb=mLvtVWCw9NgBvs0eBRdmzeqfOs5cd_SlK9odTiM3EfB53P0Kwuso4OshpVwSUT9aC2ZowZ5wZCoFfrtqSoSIECFmck85zfE9mrpEjIuJgLsWUPAfKGEnKwxXWOcG6KF9&xkcb=SoA567M33jX3vbxq5p0MbzkdCdPP&fccid=bc08d699d841b541&vjs=3
+  Location: London
+  Company: With Intelligence
+  Description: With Intelligence is seeking a Senior DevOps Engineer to join our dynamic and innovative technical team. As a Senior DevOps Engineer, you will play a crucial role in designing, implementing, and maintaining our cloud infrastructure and development processes.
+ With Intelligence provides exclusive editorial, research, data and events for senior executives within the asset management industry. Our editorial brands are seen as market leaders in providing asset manager sales and IR execs with actionable information to help them raise and retain assets. With offices in the UK, US, Philippines, Singapore, and Hong Kong, we are a global organisation with a passion for delivering exceptional services to our clients.
+ 
+  Responsibilities:
+ 
+  Design, implement, and maintain a scalable and secure cloud infrastructure.
+  Develop and automate deployment processes, ensuring efficient and reliable delivery of software releases
+  Collaborate with cross-functional teams to understand infrastructure requirements and optimize system performance
+  Monitor system performance, troubleshoot and resolve issues in a timely manner
+  Implement and maintain CI/CD pipelines and configuration management tools
+  Ensure compliance with security best practices and data protection regulations
+  Stay up to date with emerging technologies and provide recommendations for continuous improvement
+ 
+ Requirements
+ 
+  Proven experience as a DevOps Engineer or similar role
+  Strong knowledge of AWS
+  Experience with containerization technologies like Amazon Elastic Container Service
+  Proficient in scripting and automation using languages such as Python, Bash, or PowerShell
+  Hands-on experience with CI/CD pipelines using tools like Jenkins
+  Solid understanding of networking principles and infrastructure security
+  Ability to troubleshoot complex issues and perform root cause analysis
+  Excellent communication and collaboration skills
+  Strong problem-solving and analytical abilities
+  Desire to stay up to date with industry trends and technologies
+  Support junior memebers of the team
+ 
+ Preferred Qualifications:
+ 
+  Certifications in AWS
+  Experience with infrastructure as code tools like Terraform
+  Knowledge of monitoring and logging tools such as ELK Stack or Prometheus
+  Experience with agile development methodologies
+  Understanding of microservices architecture
+ 
+ Benefits
+ 
+ 
+  24 days annual leave rising to 29 days
+  Enhanced parental leave
+  Medicash (Health Cash Plans)
+  Wellness Days
+  Flexible Fridays (Opportunity to finish early)
+  Birthday day off
+  Employee assistance program
+  Travel loan scheme
+  Charity days
+  Breakfast provided
+  Social Events throughout the year
+  Hybrid Working
+ 
+ 
+ We are an Equal Opportunity Employer. Our policy is not to discriminate against any applicant or employee based on actual or perceived race, age, sex or gender (including pregnancy), marital status, national origin, ancestry, citizenship status, mental or physical disability, religion, creed, colour, sexual orientation, gender identity or expression (including transgender status), veteran status, genetic information, or any other characteristic protected by applicable law.
+
+Job 24:
+  Title: Site Reliability Engineer (SRE) - Object Storage
+  URL: https://uk.indeed.com/rc/clk?jk=174e550f7d187a18&bb=mLvtVWCw9NgBvs0eBRdmzbLJsvUTZUiuiZftOhxN-qJXxojPtoXZAAiArcbpgeeHU8SrJTy0H_gaHix6Lu4mDcy7jj6uSJyu3-c6J13VQkzvxYjAto1vhg%3D%3D&xkcb=SoDQ67M33jX3vbxq5p0DbzkdCdPP&fccid=c1099851e9794854&vjs=3
+  Location: London
+  Company: Apple
+  Description: Summary  Posted: 31 May 2024   Weekly Hours: 35   Role Number:200541645  People at Apple don’t just build products - they craft the kind of experience that have revolutionized entire industries. The diverse collection of our people and their ideas inspire innovation in everything we do. Imagine what you could do here! Join Apple, and help us leave the world better than we found it. Apple Cloud infrastructure is BIG. The storage SRE teams of Apple Cloud are building and running the next generation distributed storage systems to support Apple’s most critical services. Operating at our scale, across multiple geographically dispersed data centers, and servicing users with vast data need presents unique challenges. As a Storage SRE at Apple, you'll need to solve these problems using your deep understanding of storage, data analysis, programming, teamwork, and expertise in Linux system internals. Storage SREs at Apple involve themselves across the full infrastructure stack; from tuning the block storage layer to content delivery network traffic management.   Description  We are looking for seasoned software and systems engineers to join the Object Storage SRE team at Apple. The role involves tremendous amount of individual responsibility and influence over the direction the platform, shaping its use by many critical Apple Cloud services for years to come. You are solution-oriented and have a passion for software delivered as a service to improve reuse, efficiency, and simplicity. Your work will affect hundreds of millions of users and be essential to the success of some of the most visible current and future Apple features. The role involves understanding the team's priorities; taking ownership of projects or deliverables; designing solutions and building buy-in for those designs; and successful delivery of those designs in order to meet the project goal. The role involves giving technical feedback to colleagues to assist them in the delivery of their designs, features and projects, as well as driving technical standards across the two-site team in collaboration with other senior members of the team. The team has an on-call rota including the week-ends and the successful candidate should expect to handle alerts and other escalations in order to maintain a high level of availability and functionality for our provided services. The team is divided into two shards in UK and US and cross-timezone meetings are a core feature of how our team collaborates, reaches agreements, and executes to deliver projects. At Apple Cloud, we run a mix of open source, vendor licensed, and internally developed tools to perform functions such as system configuration management, provisioning, software development & deployment, logging, and monitoring. You'll learn these tools and have opportunities to improve them. We think critically and strive to balance the best solution with the need to get things done for each engineering challenge we face. Good ideas are heard and results are rewarded. The candidate may be expected to travel to other Apple locations from time to time e.g. the USA.   Minimum Qualifications  Key Qualifications
+ 
+  Experience in building, operating, and scaling distributed storage systems in a private, public, or hybrid cloud environment.
+  The ability to design, author, understand, and release code in languages like Go (preferred), Java, Python, or Rust.
+  Good understanding of block, object, and file storage solutions in Linux (such as LVM, XFS, ext4, S3, Ceph, Gluster, NFS).
+  Understanding of Linux internals, standard networking protocols, and distributed systems.
+  Experience with provisioning, data migration, backup & recovery, at-scale testing, disaster recovery, and capacity planning.
+  Education & Experience  Bachelors degree in Computer Science or related field, or equivalent employment   Additional Requirements
+ 
+  Acute drive to automate manual operations and to improve them through repeated iteration.
+  Awareness of best practices for deployment of storage systems - implication of physical and virtual deployment models to change management. failure domains, hardware lifecycle management, etc.
+  Hands-on experience managing large numbers of diverse systems with configuration management or software delivery platforms (such as Puppet, Chef, Ansible, and Spinnaker).
+  Experience with deploying, supporting and monitoring new and existing services, platforms, and application stacks.
+  Familiarity with microservices architecture and container orchestration with Kubernetes.
+  Familiarity with relational & non-relational databases (such as Cassandra, Postgres, & RocksDB)
+
+Job 25:
+  Title: Lead DevOps Engineer
+  URL: https://uk.indeed.com/rc/clk?jk=fb7e41cc0ad5c45d&bb=mLvtVWCw9NgBvs0eBRdmzbl-tajEXrYF62Zi1l3W0kLTCUaotiPoVE67E2Mh8-ABaZ595bbXgiXjXzC8W5GNYBGDM9zUkHpIhOxJITofHdxupX1AKtYgC9HmW4ckfWJ0&xkcb=SoBk67M33jX3vbxq5p0CbzkdCdPP&fccid=b48307bf8a1f6e19&vjs=3
+  Location: London
+  Company: QiH Group
+  Description: Our Company:
+ QiH is a global digital marketing group specialising in the iGaming sector, operating across various international markets. Our companies include Digital Adventures, which provides traffic to leading iGaming operators; Wizard Interactive, an affiliate partner for top US online casinos; and Tau Marketing Services, which offers three consumer-focused casino brands through the Aspire network.
+ 
+ QiH is a fast-growing, innovative, and progressive scale-up business headquartered in London with a collective of brilliant brains in Skopje. We are at the start of an exciting journey as we build out our internal engineering capability, spearheading our tech transformation, building best in class products and tackling exciting and complex challenges along the way!
+ 
+ Data is at the core of what we do at QiH, but our people are at the heart of our success! At QiH, we have created an energetic and target-driven culture and continuously invest in each individual.
+ 
+  The Role:
+ Our Engineering team is growing! We’re looking for a highly skilled and experienced Lead DevOps Engineer to shape, maintain, and scale the security and operations strategies of our cloud-based infrastructure built and JavaScript-driven applications.
+ 
+ In this role you will act as the lead architect for all security, automation, and infrastructure-as-code initiatives, playing a pivotal role in bridging the gap between development, security, and operations. This is an individual contributor role, where you will spearhead initiatives and guide the team on best practices without direct management responsibilities.
+ 
+  Key Responsibilities:
+ 
+  Design, implement, and maintain secure cloud infrastructure in GCP.
+  Develop and manage infrastructure as code (Terraform, Kubernetes) to ensure repeatable, scalable, and secure environments.
+  Automate workflows, build scripts, and operational tasks to improve efficiency and scalability.
+  Ensure compliance with security standards and protocols (e.g., SOC2, ISO27001).
+  Automate security processes, such as key management, vulnerability scanning, and incident response.
+  Lead the response to security breaches or system failures, including incident analysis, mitigation, and recovery.
+  Own the continuous integration and delivery (CI/CD) pipelines, ensuring rapid, secure, and reliable deployment of JavaScript applications.
+  Develop and maintain automated security tools for static code analysis, penetration testing, and threat modelling.
+  Implement real-time monitoring, alerting, and response strategies for security incidents
+ 
+ 
+  About You:
+ 
+  Strong proficiency in Cloud Environment ideally in GCP services (Compute Engine, Cloud Functions, IAM, Kubernetes Engine, etc.).
+  In-depth knowledge of DevSecOps tools such as Jenkins, GitLab CI/CD, Docker, Kubernetes, and Helm.
+  Hands-on experience with security practices like vulnerability scanning, encryption, authentication, and secrets management (Vault, Key Management Service).
+  Experience with SIEM platforms (Splunk, Datadog, or equivalent) for monitoring and threat detection.
+ 
+ 
+  You thrive when working as part of a team
+  Comfortable in a fast-paced environment
+  Have excellent written and verbal English skills
+  Last but not least, you’ll have no ego!
+ 
+ 
+  What You’ll Get:
+ 
+  Competitive Basic Salary
+  Quarterly Bonuses
+  Hybrid working
+  Private Health Care
+  Market Leading Training Programme
+  Recognition & Reward Scheme
+  Annual Company Conference (previous destinations Bologna, Dubrovnik, Belgrade and Thessaloniki)
+  Regular Happy Hour / Team Lunches
+  Free Coffee, Drinks & Snacks
+ 
+ 
+  What’s the next step?
+ Our hiring process ensures we're recruiting the right people for the role. We ensure that people are as suitable for us as we are for them.
+ 
+ If you like the sound of what we're all about at QiH and want to join a team where you can make an impact, please apply or contact us at careers@qih-group.com.
+
+Job 26:
+  Title: Principal Site Reliability Engineer - EMEA
+  URL: https://uk.indeed.com/rc/clk?jk=8c8287c8b28db390&bb=mLvtVWCw9NgBvs0eBRdmzaiESPhYmGqH_Zo4EUAQi0QuNkSX5otXRrm2YGyDSDJea88CVzJwOBMjvi13frHAlbEOFjYZYOxP77dxqr6kM5-fuPRlMJllRJIvx4UX7pD8&xkcb=SoD567M33jX3vbxq5p0BbzkdCdPP&fccid=0d5fb7883a7f9f9e&vjs=3
+  Location: London
+  Company: Ashby
+  Description: We’re looking for a curious, rigorous, problem-hungry platform engineer (who codes!) to carry the ball as we bring Ashby to the big leagues. Ashby builds software that lets talent teams build an efficient, delightful, respectful hiring process. Similarly, you’re an engineer who wants to build a “paved road” that excellent engineering teams can safely take to the moon and back.
+ 
+ We’ve listed this role twice: as a Platform Engineer and Site Reliability Engineer – our team does both, and we are open to candidates who lean towards one or the other.
+ 
+  About the role and how we work
+ I’m Elénie, a Director of Engineering at Ashby. I’ve been an SRE for a long time, but I didn’t begin there. I started my career building algorithms to process large 3D models for civil engineers and route packets faster for telecommunications (“real infrastructure”). There, I found that what makes or breaks the customer experience is the result of often unseen but critical infrastructure work. This critical work makes the admin UI on the website load fast at the airport, the drafts of your models recoverable if your laptop crashes, the data you dearly value, safe.
+ That’s why I switched from working on product to infrastructure: we’ve all seen those outages first reported by a customer because there’s no monitoring, those cute sadface graphics so you’ll be less angry at the software when it inevitably crashes, those late nights your coworkers spend toiling away at failed releases, missing database rows, or misbehaving firewalls. I wanted to create fully-automated solutions to those reliability issues, and use software instead of processes to make infrastructure updates, inter-team schema changes, or data access safe. This can work very well: the systems I built reduced yearly downtime to minutes, and some were even fun. I believe training people starts with meeting them where they are, and infrastructure engineers have empathy as a core skill.
+ As a Platform Engineer at Ashby, you’ll do that and more. Every Product Engineer owns their projects and ships with minimal oversight. We, as SREs, approach this from a practical view. We don’t put roadblocks to ensure security when common sense will do and we don’t build processes like change management boards around the lowest common denominator. But with great power comes great responsibility: we handle personal and confidential data about some of the biggest decisions we ever make at work. As we grow, more and bigger customers rely on us to be reliable and secure and how we operate internally will need to evolve.
+ We’re at an inflection point where our ability to scale and deliver a seamless experience has a make-or-break impact – we have some of the fastest growing companies using our platform every day to hire hundreds of people per month. We need someone like you to make good decisions, debug thorny issues, and build us a future-proof platform that can withstand this scale. Our small but mighty infrastructure team has set up a secure and simple environment (we don’t believe in spinning up a new service unless necessary!) for our growing product team to build in. That’s where you come in: you, too, will own projects end-to-end and have an impact on core parts of the Ashby developer and user experience. For instance, you could work on:
+ 
+  Optimize our homegrown ultra-dynamic recruiting DSL-to-SQL compiler, and create tools to help developers do so
+  Create automated guardrails for the security and privacy of our customer data
+  Help our developers ship features fast through canary deploys, gradual rollouts and feature flags, while keeping complexity manageable and reducing downtime
+  Work with the business and the engineering team to define SLOs and implement the corresponding SLIs.
+  Ensure all communication with external services supports retries and circuit-breakers.
+  Implement the infrastructure to support an event-driven architecture and data warehouse.
+ 
+ 
+ We’re looking for someone who can build systems that an engineer would like to work with: mature and boring but open-minded and approachable. We have to balance reliability with flexibility. Software and its availability are now mission critical to almost every working professional. To be in an SRE in today’s world, you have to be extremely comfortable evaluating risk, those you take and those others take.
+ 
+  Why you should or shouldn’t apply
+ You should apply if:
+ 
+  You never stop. You get weirdly obsessed about a problem that doesn’t yet make sense, turn it every which way in your head until the explanation dawns. You’ll search every rock, inventory every clue, hunt every mismatch. We do that, too - together we’ll be armed with state-of-the-art monitoring tools and an impressive amount of data, and join you in the adventure.
+  You don’t take shortcuts. You’re speaking up for the future user, the edge case, the doomsday design. You know product engineers want to build it with you, and see them as allies, where you give them the power and knowledge to access greater things.
+  You’re someone who cares about what you do and the team you do it with, and want to work with others who do as well. You’ll be on interview panels choosing your next colleagues, and you’ll take that seriously. You only want to work with people who make you better, and want to make you better.
+  You’ve built infrastructure at a slightly later stage than Ashby is at - you know how to deal with millions of data points, have seen great (or not great) infrastructure make or break customer experience, and have automated everything from provisioning to monitoring and release process.
+  You’re a Swiss army knife (all nationalities welcome ;) ). You’ll be the third SRE, so you’ll get every hard problem the company faces. You’ll get to do infrastructure updates, security enforcements, database optimization, Kubernetes debugging, and digging through Typescript traces figuring out what doesn’t work. You probably don’t feel like an expert at at least some of that... and that appeals to you.
+ 
+ 
+ All that makes for a pretty specific kind of role, and the job isn’t to everyone’s tastes! You should not apply if:
+ 
+  You don’t want to make your own decisions on what is the best paved road to build for Ashby, and expect a lead or manager to make the final call on what that is. Our leads (and managers) give ample commentary and feedback on technical decisions and how they’re made, but you ship what you want to build and are accountable for it.
+  You hate SQL. We have a lot of features built around making the best out of data, and our platform engineers also sometimes dive into a gnarly report or advise engineers on a more performant data model to use.
+  You don’t want to code. Our SREs are some of our best software engineers and they are just as responsible for the application as the other engineering teams - albeit at a platform level. Reviewing code and submitting code changes will be part of your day to day.
+  Your primary mode of communicating best practices to engineers is live meetings. We’re a very async culture and written communication (and code) is how changes get made. As an Ashby SRE, you will need to share new tooling and best practices with engineers faster than your next meeting opportunity will take you.
+  You’ve never delivered a project, on your own, without someone prodding you for updates. We have no project or delivery managers to fill your calendar with busy work, but the flip side is you have to do your project management, seek the help you need to get unstuck and cut scope when it’s worthwhile.
+ 
+ 
+  Technology Stack
+ I’m sharing our tech stack with the caveat that we don’t require previous experience in it: TypeScript (frontend & backend), Node.js, React, Apollo GraphQL, Postgres, Redis.
+ We use Datadog and Sentry on 100% cloud-based (AWS) infra. We take developer experience and reliability seriously: all engineers are on call in a follow-the-sun model, and everyone contributes to developer tooling.
+ 
+  What We’re Building
+ Talent teams aspire to build a hiring process that identifies great candidates, moves them quickly through the interview process, and provides an excellent experience for the candidate. To accomplish this, recruiters perform thousands of daily tasks to coordinate and relay information between candidates, interviewers, and hiring managers. Teams struggle to keep up!
+ Scheduling a final round is an excellent example of our customers' challenges. A recruiter needs to collect availability from the candidate, identify potential interviewers, perform “Calendar Tetris” to find who is available to interview the candidate, schedule on the earliest date possible, and perform any last-minute adjustments as availability changes. They must perform this while considering the interview load on each individual and whether interviewers need to be trained and shadowing others.
+ Ashby provides talent teams with intelligent and powerful software that provides insights into where they’re failing and automates or simplifies many of the tasks they’re underwater with. We put a lot of effort into designing products that are approachable to beginners but mastered and extended by power users. In many ways, spreadsheets set the bar here.
+ We have many customers, great revenue growth, years of runway, and amazing investors like YCombinator, Elad Gil, and Lachy Groom. I’ll share more once we meet.
+ 
+  Engineering Culture
+ Our engineering culture is motivated by Abhik and Benji’s (our co-founders) belief that a small talented team, given the right environment, can build high-quality software fast (and work regular hours!).
+ 
+  Collaboration is Natural, Communication is Deliberate
+ Our engineering team (and the team at large) consists of lifelong learners who are humble and kind (meet them here!). These attributes create an environment where collaboration happens naturally (we filter for it in interviews). We combine this with research, prototyping, and written proposals to see around corners and get feedback from the team across time zones. Focus time is something that we hold sacred, and, with thoughtful and deliberate communication, engineers can focus 36h out of a 40h work week (Abhik wrote about it here). Even managers can rely on getting consistent time (and support to make, if necessary) to focus and do creative work without the demand of constant meetings.
+ 
+  Increase Leverage, not Team Size
+ We built Ashby with the quality, breadth, and depth that many customers would expect from much larger teams over larger time scales. We’ve done this through investment in:
+ 
+   Great developer tooling. Our CI/CD takes ~10m, and we deploy at least 5x a day. Everyone on the team has contributed to developer experience
+  Building blocks to create powerful and customizable products fast. At the core of Ashby is a set of common components (analytics modeling and query language, policy engine, workflow engine, design system) which we are constantly improving. Each improvement to a common component cascades throughout our app (short video on it here).
+ 
+ 
+ Here’s an impromptu quote from Arjun in our company Slack of what it’s like to build a feature at Ashby:
+ 
+ “Working on a generic framework for Surveys is really paying off! I was able to add the Automation Rules feature to EEOC Forms really quickly because I had some generic components and backend code. Took about 10 minutes and ~50 lines of code to do!”
+ 
+  Give Engineers Ownership & Autonomy
+ We, as engineers, find clever ways to solve problems, which amplifies when we deeply understand the problem. All of us in technical leadership did our best work as engineers when we had a deep understanding of the end-user and the business and ownership over the solution. Our engineering culture reflects this experience: engineers own projects end-to-end, from speaking with users to writing product specs to UX design. These are skills that we often don’t get to practice as engineers, and, as a manager at Ashby, you’ll provide mentorship and feedback to engineers to ensure they are successful when delivering projects.
+ 
+  Put Effort into Diversity
+ Diverse teams drive innovation and better outcomes. Having seen his mother and partner build their careers as minority women in non-diverse fields, Abhik wants to make sure Ashby creates opportunities for the next generation of engineers from underrepresented groups (including my daughter!).
+ Today, 26% of engineers at Ashby are from underrepresented groups. It’s not great, and we are taking conscious steps to improve, like sourcing diverse candidates, providing generous paid family leave, no leetcode interviews, and more.
+ 
+  Interview Process
+ At Ashby, our team and interview process want to help you show your best self. We’ll dive into past projects and simulate working together via pair programming, writing tech specs collaboratively, and talking through decisions (no leetcode or whiteboard exercises). Our interview process is three rounds:
+ 
+  30-minute introduction call
+  A technical screen (60-minute in-person)
+  A virtual on-site of 2 hours and 45 minutes (can be split across two days)
+ 
+ Our VP of Engineering, Abhik will be your main point of contact and prep you for interviews. You’ll meet your manager, 4 to 6 people in engineering (with 15 minutes in each interview to ask them questions) including our entire current SRE team. If we don’t give an offer, we’ll provide feedback!
+ 
+  Your First Two Months at Ashby
+ We want an exceptional onboarding experience for every new hire. At Ashby, your dev environment sets up with a single script, you push your first change on day one, and we spend the rest of the time building your confidence in our codebase and practices culminating in the delivery of a prominent, impactful feature. We’ll pair you with a peer who’ll guide you through your first tasks and be someone you rely on, from answering questions to pair programming.
+ 
+  Benefits
+ 
+  Competitive salary and equity.
+   10-year exercise window for stock options. You shouldn’t feel pressure to purchase stock options if you leave Ashby —do it when you feel financially comfortable.
+  Unlimited PTO with four weeks recommended per year. Expect “Vacation?” in our one-on-one agenda until you start taking it .
+   Twelve weeks of fully paid family leave in the US. We plan to expand this to employees in other countries as situations arise.
+  Generous equipment, software, and office furniture budget. Get what you need to be happy and productive!
+  $100/month education budget with more expensive items (like conferences) covered with manager approval.
+  If you’re in the US, top-notch health insurance for you and your dependents with all premiums covered by us.
+ 
+ Ashby’s success hinges on hiring great people and creating an environment where we can be happy, feel challenged, and do our best work. We’re being deliberate about building that environment from the ground up. I hope that excites you enough to apply.
+ 
+ Ashby provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, sex, national origin, age, disability, genetics, sexual orientation, gender identity, or gender expression. We are committed to a diverse and inclusive workforce and welcome people from all backgrounds, experiences, perspectives, and abilities.
+ Compensation Range: €100K - €190K
+
+Job 27:
+  Title: Principal Platform Engineer - EMEA
+  URL: https://uk.indeed.com/rc/clk?jk=7a9994d2ff3beced&bb=mLvtVWCw9NgBvs0eBRdmzQ_zImxRDbrTxcSI373OJejQQ2jxzX3vdgp2Xu7YM3N4KDSMNrcxVH_yXUfO0EzEvAiIQIrM5d0omlv0ZH2aNAG2PcNd4j9BpVHMlxpC__PC&xkcb=SoBN67M33jX3vbxq5p0AbzkdCdPP&fccid=0d5fb7883a7f9f9e&vjs=3
+  Location: London
+  Company: Ashby
+  Description: We’re looking for a curious, rigorous, problem-hungry platform engineer (who codes!) to carry the ball as we bring Ashby to the big leagues. Ashby builds software that lets talent teams build an efficient, delightful, respectful hiring process. Similarly, you’re an engineer who wants to build a “paved road” that excellent engineering teams can safely take to the moon and back.
+ 
+ We’ve listed this role twice: as a Platform Engineer and Site Reliability Engineer – our team does both, and we are open to candidates who lean towards one or the other.
+ 
+  About the role and how we work
+ I’m Elénie, a Director of Engineering at Ashby. I’ve been an SRE for a long time, but I didn’t begin there. I started my career building algorithms to process large 3D models for civil engineers and route packets faster for telecommunications (“real infrastructure”). There, I found that what makes or breaks the customer experience is the result of often unseen but critical infrastructure work. This critical work makes the admin UI on the website load fast at the airport, the drafts of your models recoverable if your laptop crashes, the data you dearly value, safe.
+ That’s why I switched from working on product to infrastructure: we’ve all seen those outages first reported by a customer because there’s no monitoring, those cute sadface graphics so you’ll be less angry at the software when it inevitably crashes, those late nights your coworkers spend toiling away at failed releases, missing database rows, or misbehaving firewalls. I wanted to create fully-automated solutions to those reliability issues, and use software instead of processes to make infrastructure updates, inter-team schema changes, or data access safe. This can work very well: the systems I built reduced yearly downtime to minutes, and some were even fun. I believe training people starts with meeting them where they are, and infrastructure engineers have empathy as a core skill.
+ As a Platform Engineer at Ashby, you’ll do that and more. Every Product Engineer owns their projects and ships with minimal oversight. We, as SREs, approach this from a practical view. We don’t put roadblocks to ensure security when common sense will do and we don’t build processes like change management boards around the lowest common denominator. But with great power comes great responsibility: we handle personal and confidential data about some of the biggest decisions we ever make at work. As we grow, more and bigger customers rely on us to be reliable and secure and how we operate internally will need to evolve.
+ We’re at an inflection point where our ability to scale and deliver a seamless experience has a make-or-break impact – we have some of the fastest growing companies using our platform every day to hire hundreds of people per month. We need someone like you to make good decisions, debug thorny issues, and build us a future-proof platform that can withstand this scale. Our small but mighty infrastructure team has set up a secure and simple environment (we don’t believe in spinning up a new service unless necessary!) for our growing product team to build in. That’s where you come in: you, too, will own projects end-to-end and have an impact on core parts of the Ashby developer and user experience. For instance, you could work on:
+ 
+  Optimize our homegrown ultra-dynamic recruiting DSL-to-SQL compiler, and create tools to help developers do so
+  Create automated guardrails for the security and privacy of our customer data
+  Help our developers ship features fast through canary deploys, gradual rollouts and feature flags, while keeping complexity manageable and reducing downtime
+  Work with the business and the engineering team to define SLOs and implement the corresponding SLIs.
+  Ensure all communication with external services supports retries and circuit-breakers.
+  Implement the infrastructure to support an event-driven architecture and data warehouse.
+ 
+ 
+ We’re looking for someone who can build systems that an engineer would like to work with: mature and boring but open-minded and approachable. We have to balance reliability with flexibility. Software and its availability are now mission critical to almost every working professional. To be in an SRE in today’s world, you have to be extremely comfortable evaluating risk, those you take and those others take.
+ 
+  Why you should or shouldn’t apply
+ You should apply if:
+ 
+  You never stop. You get weirdly obsessed about a problem that doesn’t yet make sense, turn it every which way in your head until the explanation dawns. You’ll search every rock, inventory every clue, hunt every mismatch. We do that, too - together we’ll be armed with state-of-the-art monitoring tools and an impressive amount of data, and join you in the adventure.
+  You don’t take shortcuts. You’re speaking up for the future user, the edge case, the doomsday design. You know product engineers want to build it with you, and see them as allies, where you give them the power and knowledge to access greater things.
+  You’re someone who cares about what you do and the team you do it with, and want to work with others who do as well. You’ll be on interview panels choosing your next colleagues, and you’ll take that seriously. You only want to work with people who make you better, and want to make you better.
+  You’ve built infrastructure at a slightly later stage than Ashby is at - you know how to deal with millions of data points, have seen great (or not great) infrastructure make or break customer experience, and have automated everything from provisioning to monitoring and release process.
+  You’re a Swiss army knife (all nationalities welcome ;) ). You’ll be the third SRE, so you’ll get every hard problem the company faces. You’ll get to do infrastructure updates, security enforcements, database optimization, Kubernetes debugging, and digging through Typescript traces figuring out what doesn’t work. You probably don’t feel like an expert at at least some of that... and that appeals to you.
+ 
+ 
+ All that makes for a pretty specific kind of role, and the job isn’t to everyone’s tastes! You should not apply if:
+ 
+  You don’t want to make your own decisions on what is the best paved road to build for Ashby, and expect a lead or manager to make the final call on what that is. Our leads (and managers) give ample commentary and feedback on technical decisions and how they’re made, but you ship what you want to build and are accountable for it.
+  You hate SQL. We have a lot of features built around making the best out of data, and our platform engineers also sometimes dive into a gnarly report or advise engineers on a more performant data model to use.
+  You don’t want to code. Our SREs are some of our best software engineers and they are just as responsible for the application as the other engineering teams - albeit at a platform level. Reviewing code and submitting code changes will be part of your day to day.
+  Your primary mode of communicating best practices to engineers is live meetings. We’re a very async culture and written communication (and code) is how changes get made. As an Ashby SRE, you will need to share new tooling and best practices with engineers faster than your next meeting opportunity will take you.
+  You’ve never delivered a project, on your own, without someone prodding you for updates. We have no project or delivery managers to fill your calendar with busy work, but the flip side is you have to do your project management, seek the help you need to get unstuck and cut scope when it’s worthwhile.
+ 
+ 
+  Technology Stack
+ I’m sharing our tech stack with the caveat that we don’t require previous experience in it: TypeScript (frontend & backend), Node.js, React, Apollo GraphQL, Postgres, Redis.
+ We use Datadog and Sentry on 100% cloud-based (AWS) infra. We take developer experience and reliability seriously: all engineers are on call in a follow-the-sun model, and everyone contributes to developer tooling.
+ 
+  What We’re Building
+ Talent teams aspire to build a hiring process that identifies great candidates, moves them quickly through the interview process, and provides an excellent experience for the candidate. To accomplish this, recruiters perform thousands of daily tasks to coordinate and relay information between candidates, interviewers, and hiring managers. Teams struggle to keep up!
+ Scheduling a final round is an excellent example of our customers' challenges. A recruiter needs to collect availability from the candidate, identify potential interviewers, perform “Calendar Tetris” to find who is available to interview the candidate, schedule on the earliest date possible, and perform any last-minute adjustments as availability changes. They must perform this while considering the interview load on each individual and whether interviewers need to be trained and shadowing others.
+ Ashby provides talent teams with intelligent and powerful software that provides insights into where they’re failing and automates or simplifies many of the tasks they’re underwater with. We put a lot of effort into designing products that are approachable to beginners but mastered and extended by power users. In many ways, spreadsheets set the bar here.
+ We have many customers, great revenue growth, years of runway, and amazing investors like YCombinator, Elad Gil, and Lachy Groom. I’ll share more once we meet.
+ 
+  Engineering Culture
+ Our engineering culture is motivated by Abhik and Benji’s (our co-founders) belief that a small talented team, given the right environment, can build high-quality software fast (and work regular hours!).
+ 
+  Collaboration is Natural, Communication is Deliberate
+ Our engineering team (and the team at large) consists of lifelong learners who are humble and kind (meet them here!). These attributes create an environment where collaboration happens naturally (we filter for it in interviews). We combine this with research, prototyping, and written proposals to see around corners and get feedback from the team across time zones. Focus time is something that we hold sacred, and, with thoughtful and deliberate communication, engineers can focus 36h out of a 40h work week (Abhik wrote about it here). Even managers can rely on getting consistent time (and support to make, if necessary) to focus and do creative work without the demand of constant meetings.
+ 
+  Increase Leverage, not Team Size
+ We built Ashby with the quality, breadth, and depth that many customers would expect from much larger teams over larger time scales. We’ve done this through investment in:
+ 
+   Great developer tooling. Our CI/CD takes ~10m, and we deploy at least 5x a day. Everyone on the team has contributed to developer experience
+  Building blocks to create powerful and customizable products fast. At the core of Ashby is a set of common components (analytics modeling and query language, policy engine, workflow engine, design system) which we are constantly improving. Each improvement to a common component cascades throughout our app (short video on it here).
+ 
+ 
+ Here’s an impromptu quote from Arjun in our company Slack of what it’s like to build a feature at Ashby:
+ 
+ “Working on a generic framework for Surveys is really paying off! I was able to add the Automation Rules feature to EEOC Forms really quickly because I had some generic components and backend code. Took about 10 minutes and ~50 lines of code to do!”
+ 
+  Give Engineers Ownership & Autonomy
+ We, as engineers, find clever ways to solve problems, which amplifies when we deeply understand the problem. All of us in technical leadership did our best work as engineers when we had a deep understanding of the end-user and the business and ownership over the solution. Our engineering culture reflects this experience: engineers own projects end-to-end, from speaking with users to writing product specs to UX design. These are skills that we often don’t get to practice as engineers, and, as a manager at Ashby, you’ll provide mentorship and feedback to engineers to ensure they are successful when delivering projects.
+ 
+  Put Effort into Diversity
+ Diverse teams drive innovation and better outcomes. Having seen his mother and partner build their careers as minority women in non-diverse fields, Abhik wants to make sure Ashby creates opportunities for the next generation of engineers from underrepresented groups (including my daughter!).
+ Today, 26% of engineers at Ashby are from underrepresented groups. It’s not great, and we are taking conscious steps to improve, like sourcing diverse candidates, providing generous paid family leave, no leetcode interviews, and more.
+ 
+  Interview Process
+ At Ashby, our team and interview process want to help you show your best self. We’ll dive into past projects and simulate working together via pair programming, writing tech specs collaboratively, and talking through decisions (no leetcode or whiteboard exercises). Our interview process is three rounds:
+ 
+  30-minute introduction call
+  A technical screen (60-minute in-person)
+  A virtual on-site of 2 hours and 45 minutes (can be split across two days)
+ 
+ Our VP of Engineering, Abhik will be your main point of contact and prep you for interviews. You’ll meet your manager, 4 to 6 people in engineering (with 15 minutes in each interview to ask them questions) including our entire current SRE team. If we don’t give an offer, we’ll provide feedback!
+ 
+  Your First Two Months at Ashby
+ We want an exceptional onboarding experience for every new hire. At Ashby, your dev environment sets up with a single script, you push your first change on day one, and we spend the rest of the time building your confidence in our codebase and practices culminating in the delivery of a prominent, impactful feature. We’ll pair you with a peer who’ll guide you through your first tasks and be someone you rely on, from answering questions to pair programming.
+ 
+  Benefits
+ 
+  Competitive salary and equity.
+   10-year exercise window for stock options. You shouldn’t feel pressure to purchase stock options if you leave Ashby —do it when you feel financially comfortable.
+  Unlimited PTO with four weeks recommended per year. Expect “Vacation?” in our one-on-one agenda until you start taking it .
+   Twelve weeks of fully paid family leave in the US. We plan to expand this to employees in other countries as situations arise.
+  Generous equipment, software, and office furniture budget. Get what you need to be happy and productive!
+  $100/month education budget with more expensive items (like conferences) covered with manager approval.
+  If you’re in the US, top-notch health insurance for you and your dependents with all premiums covered by us.
+ 
+ Ashby’s success hinges on hiring great people and creating an environment where we can be happy, feel challenged, and do our best work. We’re being deliberate about building that environment from the ground up. I hope that excites you enough to apply.
+ 
+ Ashby provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, sex, national origin, age, disability, genetics, sexual orientation, gender identity, or gender expression. We are committed to a diverse and inclusive workforce and welcome people from all backgrounds, experiences, perspectives, and abilities.
+ Compensation Range: €100K - €190K
+
+Job 28:
+  Title: Platform Lead - Audit Engineering
+  URL: https://uk.indeed.com/rc/clk?jk=03eca251de76119a&bb=mLvtVWCw9NgBvs0eBRdmzZrUubCjVs4Vl4nXAyQy9Fao1hNWK7Gm05U5w_usGD2g5MuS53wgRyhir1Y98TzOrJmb32MAWIfmPSKMczPUwvwC4AYrs11-mQ%3D%3D&xkcb=SoDD67M33jX3vbxq5p0HbzkdCdPP&fccid=2dd390c3a48a7ed0&vjs=3
+  Location: London
+  Company: KPMG
+  Description: Job details
+   Location: London, Watford
+   Capability: Technology & Engineering
+   Experience Level: Senior Manager
+   Type: Full Time
+   Service Line: EWT Plat Eng & Ops
+   Contract type: Permanent
+  
+ 
+ 
+  
+   Job description
+   
+   Grade: Senior Manager (Grade B) Location: All Department: Audit Technology Delivery Team (ATDT), EWT Function Reports To: Head of Audit Technology Delivery
+   
+    About Us
+   KPMG is part of a global network of firms that offers Audit, Tax & Pensions, Consulting, Deal Advisory, and Technology services. Through the talent of over 16,000 colleagues, we bring our creativity and insight to our clients’ most critical challenges.
+   With offices across the UK, we work with everyone from small start-ups and individuals to major multinationals, in virtually every industry imaginable. Our work is often complex, yet our vision is simple: to be the clear choice for our clients, for our people, and for the communities we work in.
+   
+    Role Purpose
+    What we are looking for…
+   This role will be situated within the Audit Technology Delivery Team (ATDT) within KPMG’s EWT Function and is a direct report to the Head of Audit Technology Delivery.
+   We are seeking an experienced, skilled, and proactive Platform Engineering Lead to join our dynamic team. In this role, you will play a crucial part in establishing and leading a new engineering vertical within ATDT, shaping a modern engineering tower to support developers and cloud engineers. You will oversee the design, development, and maintenance of cloud platform solutions, enabling seamless integration of modern engineering techniques across the team.
+   In addition, you will lead a team of engineers, including specialists in both traditional infrastructure and Azure DevOps, ensuring the stability, availability, and security of the Azure platforms used by product developers. This team will also provide 4th-line SME support for KPMG’s critical Audit applications and other key products hosted in Azure.
+   
+    Key Responsibilities
+   
+     Team Leadership
+     
+      Build and lead a high-performing team of engineers specializing in both traditional infrastructure and Azure DevOps.
+      Foster a culture of collaboration, innovation, and continuous improvement.
+      Transition engineering resources into the new vertical and define the structure and skills required, including capabilities in DevOps, Data & Analytics, and AI.
+     
+     Cloud Platform Build and Maintenance
+     
+      Lead the design, build, and maintenance of resilient and secure cloud-based solutions.
+      Define and implement standardised patterns, practices, and tools to support the development lifecycle.
+      Ensure platforms are optimized for performance, reliability, and scalability.
+     
+     Cloud Optimization
+     
+      Continuously review and optimize cloud resources for cost efficiency and performance improvements.
+      Ensure solutions adhere to best practices for security, compliance, and operational efficiency.
+     
+     SME Technical Cloud Support
+     
+      Provide 4th-line technical support for key applications, including mission-critical Audit platforms hosted on Azure.
+      Troubleshoot complex issues, ensuring minimal downtime and operational continuity.
+      Act as the technical escalation point for complex infrastructure and cloud-related incidents.
+     
+     Environment Stability and Security
+     
+      Ensure the stability, availability, consistency, and security of non-production environments across ATDT.
+      Collaborate with other teams to ensure environments are aligned with production standards and support quality assurance processes.
+     
+     Strategic Contribution
+     
+      Establish and shape the new engineering vertical, integrating seamlessly with existing towers.
+      Develop and execute a strategic roadmap for the vertical, aligning with organizational goals.
+      Act as a trusted advisor to senior leadership, providing insights and recommendations on platform strategy and execution.
+     
+   
+   
+    Skills and Qualifications
+    Essential:
+   
+    Proven experience in leading engineering teams, with expertise in both traditional infrastructure and Azure DevOps.
+    Strong knowledge of cloud platforms, especially Azure, and modern engineering practices such as Infrastructure as Code (IaC), CI/CD, and containerization.
+    Experience managing and optimizing non-production environments to ensure stability and security.
+    Expertise in cost optimization and performance tuning for cloud environments.
+    Exceptional troubleshooting skills, with experience in 4th-line support for critical applications.
+    Strong leadership and team-building skills, with experience in creating and growing teams.
+   
+    Desirable:
+   
+    Experience in integrating Data & Analytics or AI capabilities into engineering practices.
+    Relevant certifications such as Microsoft Azure Solutions Architect, Azure DevOps Engineer, or equivalent.
+    Familiarity with audit-related applications or regulated industries.
+   
+   
+    Key Competencies
+   
+    Strategic thinking and problem-solving.
+    Excellent communication and stakeholder management skills.
+    Adaptability and innovation in a dynamic environment.
+    Strong organizational and project management abilities.
+   
+    Key Deliverables for the First 12 Months
+   
+    Establish the new engineering vertical within the team and define its structure.
+    Transition engineering resources into the new structure effectively.
+    Develop a roadmap for skill development, focusing on DevOps, Data & Analytics, and AI.
+    Optimize the Azure platform to support current and future product development.
+    Build and maintain a resilient support model for the Firm’s critical Audit application and other key platforms
+   
+   #LI-AR1
+   
+  
+ 
+ 
+  
+   Why Technology & Engineering at KPMG?
+   Technology is at the heart of what we do and part of the very DNA of our business. That’s why we’ve invested in a single powerful team of connected technologists. 1,500 specialists, creating a step change in the way we work. Broader, deeper expertise, which is delivered to our clients faster than ever. Our connected solutions stretch across a range of specialisms too. From technology transformation, cyber and risk management through to security operations, data and analytics, automation, powered apps and Cloud. This is an opportunity to join a team that combines the entrepreneurial spirit and imagination of a start-up with the resources only a global network can provide. We’re committed to simplified structures and are investing in workplace tools that enable us to collaborate and innovate whether you’re working at home, in our office or at client sites. Read about Technology & Engineering
 
