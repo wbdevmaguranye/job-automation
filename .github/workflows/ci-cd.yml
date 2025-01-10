@@ -37,11 +37,11 @@ jobs:
         echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
         echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
 
-    # Step 4: Start MySQL Service and Verify Connection
-    - name: Start MySQL Service
+    # Step 4: Verify MySQL Service
+    - name: Verify MySQL Connection
       run: |
-        sudo systemctl start mysql || echo "MySQL already started"
-        mysql -uroot -p${{ secrets.DB_PASSWORD }} -e "SHOW DATABASES;"
+        sleep 15  # Give MySQL some time to initialize
+        mysql -h 127.0.0.1 -uroot -p${{ secrets.DB_PASSWORD }} -e "SHOW DATABASES;"
 
     # Step 5: Install dependencies
     - name: Install dependencies
