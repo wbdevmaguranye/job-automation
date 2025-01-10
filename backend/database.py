@@ -14,11 +14,10 @@ db_name = os.getenv("DB_NAME")
 # Function to get a new connection
 def get_connection():
     return mysql.connector.connect(
-        host=os.getenv("DB_HOST", "127.0.0.1"),
-        user=os.getenv("DB_USER", "root"),
-        password=os.getenv("DB_PASSWORD", ""),
-        database=os.getenv("DB_NAME", "job_automation"),
-        port=3306  # Ensure the correct port is explicitly set
+        host=db_host,
+        user=db_user,
+        password=db_password,
+        database=db_name
     )
 
 # Create Tables (Optional for setup scripts)
