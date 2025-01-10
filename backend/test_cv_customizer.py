@@ -11,20 +11,18 @@ def get_job_from_database(job_id):
     cursor = connection.cursor(dictionary=True)
     try:
         cursor.execute("SELECT * FROM jobs WHERE id = %s", (job_id,))
-        job = cursor.fetchone()
-        return job
+        return cursor.fetchone()
     finally:
         cursor.close()
         connection.close()
 
 # Fetch a job from the database
-job_id = 6  # Replace with the actual job ID you want to customize the CV for
+job_id = 7  # Replace with actual job ID
 job_data = get_job_from_database(job_id)
 
 if not job_data:
     print(f"No job found with ID {job_id}")
 else:
-    # Determine the template type
     template_type = "devops" if "devops" in job_data['title'].lower() else "frontend"
     output_dir = "backend/static/customized_cvs"
 
