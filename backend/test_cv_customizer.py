@@ -10,7 +10,7 @@ def get_job_from_database(job_id):
     connection = get_connection()
     cursor = connection.cursor(dictionary=True)
     try:
-        cursor.execute("SELECT * FROM Jobs WHERE id = %s", (job_id,))
+        cursor.execute("SELECT * FROM jobs WHERE id = %s", (job_id,))
         job = cursor.fetchone()
         return job
     finally:
