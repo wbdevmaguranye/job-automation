@@ -9,20 +9,9 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
-    services:
-      mysql:
-        image: mysql:8.0
-        ports:
-        - 3306:3306
-        env:
-          MYSQL_ROOT_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          MYSQL_DATABASE: ${{ secrets.DB_NAME }}
-          MYSQL_USER: ${{ secrets.DB_USER }}
-          MYSQL_PASSWORD: ${{ secrets.DB_PASSWORD }}
-
     steps:
-    # Step 1: Checkout the code
-    - name: Checkout code
+    # Step 1: Checkout the coding branch
+    - name: Checkout coding branch
       uses: actions/checkout@v3
 
     # Step 2: Set up Python
@@ -31,51 +20,96 @@ jobs:
       with:
         python-version: 3.9
 
-    # Step 3: Generate .env file dynamically
-    - name: Add .env Variables
-      run: |
-        echo "DB_HOST=127.0.0.1" >> .env
-        echo "DB_USER=${{ secrets.DB_USER }}" >> .env
-        echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
-        echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
-
-    # Step 4: Install dependencies
+    # Step 3: Install dependencies
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Install spaCy model
-      run: python -m spacy download en_core_web_sm
-
-    # Step 5: Debug file structure
+    # Step 4: Debug file structure
     - name: Debug file structure
       run: ls -R backend
 
-    # Step 6: Run tests
+    # Step 5: Run tests
     - name: Run tests
-      run: pytest
+      run: |
+        pytest  # Replace with your test framework
 
-  merge-coding-to-main:
+  create-pr:
     needs: build-and-test
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the coding branch
+    # Step 1: Checkout coding branch
     - name: Checkout coding branch
       uses: actions/checkout@v3
-      with:
-        ref: coding
 
     # Step 2: Fetch all branches
     - name: Fetch all branches
       run: git fetch --all
 
-    # Step 3: Merge coding into main with unrelated histories
-    - name: Merge coding into main
+    # Step 3: Merge unrelated histories if needed
+    - name: Merge unrelated histories
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
         git checkout main || git checkout -b main
-        git merge coding --allow-unrelated-histories --no-ff --commit -m "Sync coding into main"
-        git push origin main
+        git merge coding --allow-unrelated-histories --no-ff --commit -m "Initial sync of unrelated histories"
+        git push origin main || echo "Push failed - unrelated histories merged but no changes pushed"
+
+    # Step 4: Create a Pull Request from coding to main
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: coding
+        base: main
+        title: "Automated PR: Sync coding with main"
+        body: |
+          This PR was automatically created by GitHub Actions.
+          It ensures synchronization of unrelated histories and changes from `coding` to `main`.
+        commit-message: "Automated sync: Merge coding into main"
+
+  auto-merge:
+    needs: create-pr
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check for open PRs and merge
+    - name: Merge Pull Request
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const { data: pullRequests } = await github.rest.pulls.list({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: "open",
+            head: `${context.repo.owner}:coding`,
+          });
+          if (pullRequests.length > 0) {
+            const prNumber = pullRequests[0].number;
+            await github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              merge_method: "squash",
+            });
+            console.log(`Pull Request #${prNumber} merged successfully.`);
+          } else {
+            console.log("No open pull requests found for the coding branch.");
+          }
+
+  deploy:
+    needs: auto-merge
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the main branch
+    - name: Checkout main branch
+      uses: actions/checkout@v3
+      with:
+        ref: main
+
+    # Step 2: Deploy application
+    - name: Deploy application
+      run: echo "Deploying to production" # Replace with your deployment script
