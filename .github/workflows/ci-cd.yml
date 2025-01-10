@@ -17,8 +17,6 @@ jobs:
         env:
           MYSQL_ROOT_PASSWORD: ${{ secrets.DB_PASSWORD }}
           MYSQL_DATABASE: ${{ secrets.DB_NAME }}
-          MYSQL_USER: ${{ secrets.DB_USER }}
-          MYSQL_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
     steps:
     # Step 1: Checkout the code
@@ -35,19 +33,17 @@ jobs:
     - name: Add .env Variables
       run: |
         echo "DB_HOST=127.0.0.1" >> .env
-        echo "DB_USER=${{ secrets.DB_USER }}" >> .env
+        echo "DB_USER=root" >> .env
         echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
         echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
 
-    # Step 4: Start MySQL Service
+    # Step 4: Start MySQL Service and Verify Connection
     - name: Start MySQL Service
-      run: sudo systemctl start mysql
+      run: |
+        sudo systemctl start mysql || echo "MySQL already started"
+        mysql -uroot -p${{ secrets.DB_PASSWORD }} -e "SHOW DATABASES;"
 
-    # Step 5: Verify MySQL Service Status
-    - name: Verify MySQL Service
-      run: sudo systemctl status mysql
-
-    # Step 6: Install dependencies
+    # Step 5: Install dependencies
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -56,15 +52,39 @@ jobs:
     - name: Install spaCy model
       run: python -m spacy download en_core_web_sm
 
-    # Step 7: Debug file structure
+    # Step 6: Debug file structure
     - name: Debug file structure
       run: ls -R backend
 
-    # Step 8: Test MySQL Connection
-    - name: Test MySQL Connection
-      run: |
-        mysql -h 127.0.0.1 -u${{ secrets.DB_USER }} -p${{ secrets.DB_PASSWORD }} -e "SHOW DATABASES;"
-
-    # Step 9: Run tests
+    # Step 7: Run tests
     - name: Run tests
+      env:
+        DB_HOST: 127.0.0.1
+        DB_USER: root
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        DB_NAME: ${{ secrets.DB_NAME }}
       run: pytest
+
+  merge-coding-to-main:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the coding branch
+    - name: Checkout coding branch
+      uses: actions/checkout@v3
+      with:
+        ref: coding
+
+    # Step 2: Fetch all branches
+    - name: Fetch all branches
+      run: git fetch --all
+
+    # Step 3: Merge coding into main with unrelated histories
+    - name: Merge coding into main
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+        git checkout main || git checkout -b main
+        git merge coding --allow-unrelated-histories --no-ff --commit -m "Sync coding into main"
+        git push origin main
