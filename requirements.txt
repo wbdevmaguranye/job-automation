@@ -2,3 +2,7 @@ flask
 requests
 beautifulsoup4
 pytest
+python-docx
+python-dotenv
+spacy
+mysql-connector-python==8.0.33  # Specify the version compatible with your code
