@@ -1,6 +1,7 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, send_file, abort
 from flask_jwt_extended import jwt_required
-from database import get_connection  # Ensure you're importing get_connection
+from database import get_connection
+import io
 
 # Define a Blueprint for job routes
 jobs_bp = Blueprint('jobs', __name__)
@@ -8,14 +9,14 @@ jobs_bp = Blueprint('jobs', __name__)
 # Route: List All Jobs
 @jobs_bp.route('/jobs', methods=['GET'])
 def get_jobs():
-    connection = get_connection()  # Corrected function call
+    connection = get_connection()
     cursor = connection.cursor(dictionary=True)
     try:
         cursor.execute("SELECT * FROM Jobs")
         jobs = cursor.fetchall()
     finally:
         cursor.close()
-        connection.close()  # Ensure the connection is closed
+        connection.close()
     return jsonify(jobs), 200
 
 # Route: Add a Job
@@ -42,7 +43,7 @@ def add_job():
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         """, (title, company, location, url, description, benefits, schedule, application_questions, work_authorisation, date_posted))
         connection.commit()
-    except mysql.connector.Error as err:
+    except Exception as err:
         return jsonify({"message": f"Database error: {err}"}), 400
     finally:
         cursor.close()
@@ -107,3 +108,56 @@ def delete_job(job_id):
         connection.close()
 
     return jsonify({"message": "Job deleted successfully!"}), 200
+
+# Route: List All CVs (excluding binary content)
+@jobs_bp.route('/cvs', methods=['GET'])
+def get_cvs():
+    connection = get_connection()
+    cursor = connection.cursor(dictionary=True)
+
+    try:
+        # Query to fetch saved CVs excluding the binary field
+        cursor.execute("SELECT id, job_id, customization_status, created_at FROM customized_cvs")
+        cvs = cursor.fetchall()
+        return jsonify(cvs), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    finally:
+        cursor.close()
+        connection.close()
+
+
+
+# Route: Serve a specific CV (Word document)
+# Route: Serve a specific CV (Word document)
+# Route: Serve a specific CV (Word document)
+@jobs_bp.route('/cvs/<int:cv_id>', methods=['GET'])
+def get_cv_file(cv_id):
+    connection = get_connection()
+    cursor = connection.cursor(dictionary=True)
+
+    try:
+        # Fetch the specific CV by ID
+        cursor.execute("SELECT pdf_content, job_id FROM customized_cvs WHERE id = %s", (cv_id,))
+        cv = cursor.fetchone()
+
+        if not cv or not cv["pdf_content"]:
+            return abort(404, description="CV not found or no Word content available.")
+
+        # Convert binary data into a file-like object
+        docx_content = cv["pdf_content"]
+        job_id = cv["job_id"]
+
+        # Serve the Word document file
+        return send_file(
+            io.BytesIO(docx_content),
+            download_name=f"job_{job_id}_CV.docx",
+            mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            as_attachment=True  # This forces the browser/Postman to download the file
+        )
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    finally:
+        cursor.close()
+        connection.close()
+

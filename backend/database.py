@@ -53,7 +53,8 @@ if __name__ == "__main__":
         "ALTER TABLE Jobs ADD COLUMN benefits TEXT",
         "ALTER TABLE Jobs ADD COLUMN schedule VARCHAR(255)",
         "ALTER TABLE Jobs ADD COLUMN application_questions TEXT",
-        "ALTER TABLE Jobs ADD COLUMN work_authorisation VARCHAR(255)"
+        "ALTER TABLE Jobs ADD COLUMN work_authorisation VARCHAR(255)",
+        "ALTER TABLE customized_cvs ADD UNIQUE(job_id)"
     ]
 
     for statement in alter_statements:
@@ -76,6 +77,18 @@ if __name__ == "__main__":
             FOREIGN KEY (job_id) REFERENCES Jobs(id)
         );
     """)
+
+    cursor.execute("""
+        CREATE TABLE customized_cvs (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            job_id INT NOT NULL,
+            pdf_content LONGBLOB NOT NULL,
+            customization_status ENUM('success', 'no_skills_matched') DEFAULT 'success',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (job_id) REFERENCES jobs(id) ON DELETE CASCADE
+        );
+    """)
+    
 
     # Commit changes and close connection
     connection.commit()
