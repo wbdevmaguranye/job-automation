@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 .env
+env/
 venv/
 
 # Node.js
@@ -12,3 +13,6 @@ dist/
 # System Files
 .DS_Store
 Thumbs.db
+# Custom Folders
+backend/backend/static/customized_cvs/
+env

@@ -6,3 +6,10 @@ python-docx
 python-dotenv
 spacy
 mysql-connector-python==8.0.33  # Specify the version compatible with your code
+docx2pdf
+reportlab
+flask_jwt_extended
+flask-bcrypt
+python-dotenv
+mysql-connector-python
+tqdm
