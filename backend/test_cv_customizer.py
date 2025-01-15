@@ -3,7 +3,26 @@ import os
 from utils.cv_customizer import generate_cv
 from database import get_connection
 from tqdm import tqdm
+import boto3
+from dotenv import load_dotenv
+from botocore.exceptions import NoCredentialsError  # Add this import
 
+
+# Load environment variables
+load_dotenv()
+# S3 Configuration
+S3_BUCKET = os.getenv("AWS_S3_BUCKET")
+S3_REGION = os.getenv("AWS_REGION")
+S3_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID")
+S3_SECRET_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+
+# Initialize the S3 client
+s3 = boto3.client(
+    "s3",
+    aws_access_key_id=S3_ACCESS_KEY,
+    aws_secret_access_key=S3_SECRET_KEY,
+    region_name=S3_REGION,
+)
 def ensure_directory_exists(directory_path):
     """
     Ensure the directory exists; if not, create it.
@@ -46,36 +65,52 @@ def is_cv_saved(job_id):
         cursor.close()
         connection.close()
 
-def save_cv_to_database(job_id, docx_path):
+def save_cv_to_s3_and_database(job_id, docx_path):
     """
-    Save the customized CV DOCX content into the database.
+    Upload the customized CV DOCX content to S3 and save its URL in the database.
     :param job_id: ID of the job associated with the CV.
     :param docx_path: Path to the DOCX file.
     """
     connection = get_connection()
     cursor = connection.cursor()
-    try:
-        with open(docx_path, "rb") as docx_file:
-            docx_content = docx_file.read()
 
+    try:
+        # Upload to S3
+        file_name = f"job_{job_id}_cv.docx"
+        with open(docx_path, "rb") as docx_file:
+            s3.upload_fileobj(
+                docx_file,
+                S3_BUCKET,
+                file_name,
+                ExtraArgs={"ACL": "private", "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"},
+            )
+
+        # Generate the file URL
+        file_url = f"https://{S3_BUCKET}.s3.{S3_REGION}.amazonaws.com/{file_name}"
+
+        # Save the URL in the database
         cursor.execute(
             """
-            INSERT INTO customized_cvs (job_id, pdf_content, customization_status)
+            INSERT INTO customized_cvs (job_id, file_url, customization_status)
             VALUES (%s, %s, 'success')
             ON DUPLICATE KEY UPDATE
-                pdf_content = VALUES(pdf_content),
+                file_url = VALUES(file_url),
                 customization_status = VALUES(customization_status),
                 created_at = CURRENT_TIMESTAMP;
             """,
-            (job_id, docx_content)
+            (job_id, file_url),
         )
         connection.commit()
-        print(f"DOCX saved to database for job ID: {job_id}")
+        print(f"CV saved to S3 and database for job ID: {job_id}")
+    except NoCredentialsError:
+        print("AWS credentials not found.")
     except Exception as e:
-        print(f"Error saving DOCX to database for job ID: {job_id} - {e}")
+        print(f"Error saving CV to S3 or database for job ID: {job_id} - {e}")
     finally:
         cursor.close()
         connection.close()
+
+
 
 def process_all_jobs():
     """
@@ -105,12 +140,11 @@ def process_all_jobs():
             # Generate the CV locally and get the path
             customized_cv_path = generate_cv(job, template_type, output_dir)
 
-            # Save the generated CV to the database
-            save_cv_to_database(job_id, customized_cv_path)
+            # Save the generated CV to S3 and database
+            save_cv_to_s3_and_database(job_id, customized_cv_path)
 
         except Exception as e:
             print(f"Error processing job ID: {job['id']} - {e}")
-
 
 if __name__ == "__main__":
     process_all_jobs()
