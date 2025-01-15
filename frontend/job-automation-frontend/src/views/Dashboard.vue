@@ -32,11 +32,12 @@
       </b-col>
       <b-col>
         <b-form-select
-          v-model="selectedSkillMatchLevel"
-          :options="skillMatchOptions"
-          class="mb-3"
-          placeholder="Filter by Skill Match Level"
-        ></b-form-select>
+  v-model="selectedSkillMatchLevel"
+  :options="skillMatchOptions"
+  class="mb-3 custom-select-border"
+  placeholder="Filter by Skill Match Level"
+></b-form-select>
+
       </b-col>
     </b-row>
 
@@ -52,18 +53,19 @@
     >
       <!-- Collapsible Description -->
       <template #cell(description)="data">
-        <b-button
-          size="sm"
-          variant="success"
-          class="toggle-btn"
-          @click="toggleDescription(data.index)"
-        >
-          {{ collapsedRows[data.index] ? "Show More" : "Show Less" }}
-        </b-button>
-        <b-collapse :visible="!collapsedRows[data.index]" class="mt-2">
-          <p>{{ data.value || "N/A" }}</p>
-        </b-collapse>
-      </template>
+  <b-button
+    size="sm"
+    variant="success"
+    class="toggle-btn"
+    @click="toggleDescription(data.index)"
+  >
+    {{ collapsedRows[data.index] ? "Show More" : "Show Less" }}
+  </b-button>
+  <b-collapse :visible="!collapsedRows[data.index]" class="mt-2">
+    <div v-html="formatDescription(data.value || 'N/A')"></div>
+  </b-collapse>
+</template>
+
 
       <!-- Skill Match Level -->
       <template #cell(skill_match_level)="data">
@@ -275,6 +277,12 @@ const applyCV = (fileUrl, jobId) => {
     window.open(job.url, "_blank");
   }
 };
+const formatDescription = (description) => {
+  return description
+    .replace(/•/g, '<li>')
+    .replace(/\n/g, '<br>') 
+    .replace(/([A-Za-z ]+:)/g, '<strong>$1</strong>');
+};
 </script>
 
 <style scoped>
@@ -312,5 +320,22 @@ h1 {
 
 .skill-match-badge {
   font-size: 0.85rem;
+}
+.custom-select-border {
+  border: 1px solid #28a745; 
+  border-radius: 4px; 
+}
+/* Improve readability of formatted job descriptions */
+.formatted-description ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.formatted-description li {
+  margin-bottom: 8px;
+}
+
+.formatted-description strong {
+  color: #28a745;
 }
 </style>
