@@ -1,7 +1,24 @@
 from flask import Blueprint, request, jsonify, send_file, abort
 from flask_jwt_extended import jwt_required
 from database import get_connection
+from botocore.exceptions import NoCredentialsError
+import boto3
+import os
 import io
+
+# Load S3 configuration
+S3_BUCKET = os.getenv("AWS_S3_BUCKET")
+S3_REGION = os.getenv("AWS_REGION")
+S3_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID")
+S3_SECRET_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+
+# Initialize the S3 client
+s3 = boto3.client(
+    "s3",
+    aws_access_key_id=S3_ACCESS_KEY,
+    aws_secret_access_key=S3_SECRET_KEY,
+    region_name=S3_REGION,
+)
 
 # Define a Blueprint for job routes
 jobs_bp = Blueprint('jobs', __name__)
@@ -9,115 +26,25 @@ jobs_bp = Blueprint('jobs', __name__)
 # Route: List All Jobs
 @jobs_bp.route('/jobs', methods=['GET'])
 def get_jobs():
-    connection = get_connection()
-    cursor = connection.cursor(dictionary=True)
     try:
-        cursor.execute("SELECT * FROM Jobs")
+        connection = get_connection()
+        cursor = connection.cursor(dictionary=True)
+        cursor.execute("SELECT * FROM jobs")
         jobs = cursor.fetchall()
-    finally:
-        cursor.close()
-        connection.close()
-    return jsonify(jobs), 200
-
-# Route: Add a Job
-@jobs_bp.route('/jobs', methods=['POST'])
-@jwt_required()
-def add_job():
-    data = request.json
-    title = data.get("title")
-    company = data.get("company")
-    location = data.get("location")
-    url = data.get("url")
-    description = data.get("description")
-    benefits = data.get("benefits")
-    schedule = data.get("schedule")
-    application_questions = data.get("application_questions")
-    work_authorisation = data.get("work_authorisation")
-    date_posted = data.get("date_posted")
-
-    connection = get_connection()
-    cursor = connection.cursor()
-    try:
-        cursor.execute("""
-            INSERT INTO Jobs (title, company, location, url, description, benefits, schedule, application_questions, work_authorisation, date_posted)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-        """, (title, company, location, url, description, benefits, schedule, application_questions, work_authorisation, date_posted))
-        connection.commit()
-    except Exception as err:
-        return jsonify({"message": f"Database error: {err}"}), 400
+        return jsonify(jobs), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
     finally:
         cursor.close()
         connection.close()
 
-    return jsonify({"message": "Job added successfully!"}), 201
-
-# Route: Get a Job by ID
-@jobs_bp.route('/jobs/<int:job_id>', methods=['GET'])
-def get_job_by_id(job_id):
-    connection = get_connection()
-    cursor = connection.cursor(dictionary=True)
-    try:
-        cursor.execute("SELECT * FROM Jobs WHERE id = %s", (job_id,))
-        job = cursor.fetchone()
-        if not job:
-            return jsonify({"message": "Job not found"}), 404
-    finally:
-        cursor.close()
-        connection.close()
-    return jsonify(job), 200
-
-# Route: Update a Job
-@jobs_bp.route('/jobs/<int:job_id>', methods=['PUT'])
-@jwt_required()
-def update_job(job_id):
-    data = request.json
-    updates = {key: value for key, value in data.items() if value is not None}
-
-    if not updates:
-        return jsonify({"message": "No updates provided"}), 400
-
-    columns = ", ".join(f"{key} = %s" for key in updates.keys())
-    values = list(updates.values()) + [job_id]
-
-    connection = get_connection()
-    cursor = connection.cursor()
-    try:
-        cursor.execute(f"UPDATE Jobs SET {columns} WHERE id = %s", values)
-        connection.commit()
-        if cursor.rowcount == 0:
-            return jsonify({"message": "Job not found or no changes made"}), 404
-    finally:
-        cursor.close()
-        connection.close()
-
-    return jsonify({"message": "Job updated successfully!"}), 200
-
-# Route: Delete a Job
-@jobs_bp.route('/jobs/<int:job_id>', methods=['DELETE'])
-@jwt_required()
-def delete_job(job_id):
-    connection = get_connection()
-    cursor = connection.cursor()
-    try:
-        cursor.execute("DELETE FROM Jobs WHERE id = %s", (job_id,))
-        connection.commit()
-        if cursor.rowcount == 0:
-            return jsonify({"message": "Job not found"}), 404
-    finally:
-        cursor.close()
-        connection.close()
-
-    return jsonify({"message": "Job deleted successfully!"}), 200
-
-# Route: List All CVs (excluding binary content)
+# Route: List All CVs
 @jobs_bp.route('/cvs', methods=['GET'])
 def get_cvs():
-    connection = get_connection()
-    cursor = connection.cursor(dictionary=True)
-
     try:
-        # Query to fetch saved CVs excluding the binary field
-        cursor.execute("SELECT id, job_id, customization_status, created_at FROM customized_cvs")
+        connection = get_connection()
+        cursor = connection.cursor(dictionary=True)
+        cursor.execute("SELECT id, job_id, file_url, customization_status, created_at FROM customized_cvs")
         cvs = cursor.fetchall()
         return jsonify(cvs), 200
     except Exception as e:
@@ -126,38 +53,108 @@ def get_cvs():
         cursor.close()
         connection.close()
 
-
-
-# Route: Serve a specific CV (Word document)
-# Route: Serve a specific CV (Word document)
-# Route: Serve a specific CV (Word document)
+# Route: Get a Specific CV by ID
 @jobs_bp.route('/cvs/<int:cv_id>', methods=['GET'])
 def get_cv_file(cv_id):
     connection = get_connection()
     cursor = connection.cursor(dictionary=True)
 
     try:
-        # Fetch the specific CV by ID
-        cursor.execute("SELECT pdf_content, job_id FROM customized_cvs WHERE id = %s", (cv_id,))
+        # Fetch the specific CV's file URL
+        cursor.execute("SELECT file_url FROM customized_cvs WHERE id = %s", (cv_id,))
         cv = cursor.fetchone()
 
-        if not cv or not cv["pdf_content"]:
-            return abort(404, description="CV not found or no Word content available.")
+        if not cv or not cv["file_url"]:
+            return jsonify({"error": "CV not found or file URL missing."}), 404
 
-        # Convert binary data into a file-like object
-        docx_content = cv["pdf_content"]
-        job_id = cv["job_id"]
+        # Extract the file name from the URL
+        file_url = cv["file_url"]
+        file_key = file_url.split(f"{S3_BUCKET}.s3.{S3_REGION}.amazonaws.com/")[-1]
 
-        # Serve the Word document file
-        return send_file(
-            io.BytesIO(docx_content),
-            download_name=f"job_{job_id}_CV.docx",
-            mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-            as_attachment=True  # This forces the browser/Postman to download the file
-        )
+        # Generate a presigned URL
+        try:
+            presigned_url = s3.generate_presigned_url(
+                'get_object',
+                Params={'Bucket': S3_BUCKET, 'Key': file_key},
+                ExpiresIn=3600  # URL expires in 1 hour
+            )
+            return jsonify({"presigned_url": presigned_url}), 200
+        except NoCredentialsError:
+            return jsonify({"error": "AWS credentials not found"}), 500
+
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     finally:
         cursor.close()
         connection.close()
 
+
+
+# Route: Upload a CV to S3 and Update Metadata
+@jobs_bp.route('/cvs/<int:cv_id>/upload', methods=['POST'])
+@jwt_required()
+def upload_cv_to_s3(cv_id):
+    if 'cv' not in request.files:
+        return jsonify({"error": "No file part"}), 400
+
+    file = request.files['cv']
+
+    if file.filename == '':
+        return jsonify({"error": "No selected file"}), 400
+
+    try:
+        # Generate a unique file name
+        file_name = f"Joel_Maguranye_cv_{cv_id}_{file.filename}"
+
+        # Upload the file to S3
+        s3.upload_fileobj(
+            file,
+            S3_BUCKET,
+            file_name,
+            ExtraArgs={'ACL': 'private', 'ContentType': file.content_type}
+        )
+
+        # Generate the file URL
+        file_url = f"https://{S3_BUCKET}.s3.{S3_REGION}.amazonaws.com/{file_name}"
+
+        # Update the database
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(
+            "UPDATE customized_cvs SET file_url = %s, customization_status = 'updated' WHERE id = %s",
+            (file_url, cv_id)
+        )
+        connection.commit()
+
+        return jsonify({"message": "CV uploaded successfully", "file_url": file_url}), 200
+    except NoCredentialsError:
+        return jsonify({"error": "AWS credentials not found"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    finally:
+        cursor.close()
+        connection.close()
+
+# Route: Add a New CV Metadata Record
+@jobs_bp.route('/cvs', methods=['POST'])
+@jwt_required()
+def add_cv_metadata():
+    data = request.json
+    job_id = data.get("job_id")
+    customization_status = data.get("customization_status", "pending")
+
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(
+            "INSERT INTO customized_cvs (job_id, customization_status) VALUES (%s, %s)",
+            (job_id, customization_status)
+        )
+        connection.commit()
+
+        return jsonify({"message": "CV metadata added successfully!", "cv_id": cursor.lastrowid}), 201
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    finally:
+        cursor.close()
+        connection.close()

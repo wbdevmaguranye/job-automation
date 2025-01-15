@@ -3,18 +3,27 @@ from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required
 from jobs_routes import jobs_bp
 import mysql.connector
+import boto3
+from botocore.exceptions import NoCredentialsError
 from dotenv import load_dotenv
+from flask import Flask
+from flask_cors import CORS
 import os
 
 # Load environment variables
 load_dotenv()
+# S3 Configuration
+S3_BUCKET = os.getenv("AWS_S3_BUCKET")
+S3_REGION = os.getenv("AWS_REGION")
+S3_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID")
+S3_SECRET_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
-# Initialize Flask app
-app = Flask(__name__)
-app.config["JWT_SECRET_KEY"] = "testing"  # Replace with a secure key
-bcrypt = Bcrypt(app)
-jwt = JWTManager(app)
-
+s3 = boto3.client(
+    "s3",
+    aws_access_key_id=S3_ACCESS_KEY,
+    aws_secret_access_key=S3_SECRET_KEY,
+    region_name=S3_REGION,
+)
 # Connect to MySQL database
 connection = mysql.connector.connect(
     host=os.getenv("DB_HOST"),
@@ -22,6 +31,15 @@ connection = mysql.connector.connect(
     password=os.getenv("DB_PASSWORD"),
     database=os.getenv("DB_NAME")
 )
+
+# Initialize Flask app
+app = Flask(__name__)
+CORS(app)  # This will allow requests from any origin by default
+app.config["JWT_SECRET_KEY"] = "testing" 
+bcrypt = Bcrypt(app)
+jwt = JWTManager(app)
+
+
 
 
 # Route: Register User
@@ -35,7 +53,7 @@ def register():
     # Hash the password
     hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
 
-    # Insert user into the database
+  
     cursor = connection.cursor()
     try:
         cursor.execute("""
