@@ -14,31 +14,30 @@
         <b-navbar-nav>
           <b-nav-item href="/" class="text-white">Dashboard</b-nav-item>
           <b-nav-item href="/jobs" class="text-white">Jobs</b-nav-item>
+          <b-nav-item href="/analytics">Job Analytics</b-nav-item>
           <b-nav-item href="/cvs" class="text-white">CVs</b-nav-item>
           <b-nav-item href="/applications" class="text-white">Applications</b-nav-item>
+      
         </b-navbar-nav>
   
-        <!-- Right "Account" Dropdown -->
-        <b-navbar-nav class="ml-auto custom-padding2">
-          <b-nav-item-dropdown right>
-            <template #button-content>
-              <b-icon icon="person-circle" class="mr-2"></b-icon>
-              <span class="text-white">Account</span>
-            </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Settings</b-dropdown-item>
-            <b-dropdown-divider></b-dropdown-divider>
-            <b-dropdown-item href="#">Logout</b-dropdown-item>
-          </b-nav-item-dropdown>
-        </b-navbar-nav>
+    <!-- Right "Account" Dropdown -->
+    <b-navbar-nav class="ml-auto custom-padding2">
+        <b-nav-item-dropdown text="Account" right>
+          <b-dropdown-item to="/profile" v-if="userStore.isAuthenticated">Profile</b-dropdown-item>
+          <b-dropdown-item to="/register" v-if="!userStore.isAuthenticated">Register</b-dropdown-item>
+          <b-dropdown-item to="/login" v-if="!userStore.isAuthenticated">Login</b-dropdown-item>
+          <b-dropdown-item @click="logout" v-if="userStore.isAuthenticated">Logout</b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-navbar-nav>
       </b-collapse>
     </b-navbar>
   </template>
   
-  <script>
-  export default {
-    name: "NavBar",
-  };
+  <script setup>
+  import { useUserStore } from "@/stores/userStore";
+  
+  const userStore = useUserStore();
+  const logout = () => userStore.logout();
   </script>
   
   <style scoped>

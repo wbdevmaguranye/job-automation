@@ -1,21 +1,18 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-
+import Analytics from "@/components/Analytics.vue";
 </script>
 
 <template>
   <header>
-    
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <NavBar />
-    </div>
+    <NavBar />
   </header>
 
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
 </template>
+
 
 <style scoped>
 

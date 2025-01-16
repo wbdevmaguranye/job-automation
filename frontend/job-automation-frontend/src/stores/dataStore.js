@@ -4,33 +4,40 @@ import { httpInstance } from '@/plugins/http';
 
 export const useDataStore = defineStore('dataStore', {
   actions: {
-    async getData(url) {
+    // Generic GET request
+    async getData(url, options = {}) {
       try {
-        const response = await httpInstance.get(url);
+        const response = await httpInstance.get(url, addAuthHeader(options));
         return handleResponse(response);
       } catch (error) {
         return handleErrorResponse(error);
       }
     },
-    async postData(url, payload = {}) {
+
+    // Generic POST request
+    async postData(url, payload = {}, options = {}) {
       try {
-        const response = await httpInstance.post(url, payload);
+        const response = await httpInstance.post(url, payload, addAuthHeader(options));
         return handleResponse(response);
       } catch (error) {
         return handleErrorResponse(error);
       }
     },
-    async deleteData(url) {
+
+    // Generic DELETE request
+    async deleteData(url, options = {}) {
       try {
-        const response = await httpInstance.delete(url);
+        const response = await httpInstance.delete(url, addAuthHeader(options));
         return handleResponse(response);
       } catch (error) {
         return handleErrorResponse(error);
       }
     },
-    async putData(url, payload = {}) {
+
+    // Generic PUT request
+    async putData(url, payload = {}, options = {}) {
       try {
-        const response = await httpInstance.put(url, payload);
+        const response = await httpInstance.put(url, payload, addAuthHeader(options));
         return handleResponse(response);
       } catch (error) {
         return handleErrorResponse(error);
@@ -39,6 +46,19 @@ export const useDataStore = defineStore('dataStore', {
   },
 });
 
+// Utility: Add Authorization Header
+function addAuthHeader(headers) {
+  const token = localStorage.getItem('token');
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+    console.log("Authorization Header Set: ", headers); // Debugging log
+  } else {
+    console.warn("No token found for Authorization header.");
+  }
+  return headers;
+}
+
+// Utility: Handle API Response
 function handleResponse(response) {
   return {
     data: response.data?.data ?? response.data ?? {},
@@ -47,6 +67,7 @@ function handleResponse(response) {
   };
 }
 
+// Utility: Handle API Errors
 function handleErrorResponse(error) {
   console.error('API Error:', error);
   return {

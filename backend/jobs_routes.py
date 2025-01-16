@@ -158,3 +158,52 @@ def add_cv_metadata():
     finally:
         cursor.close()
         connection.close()
+
+
+    
+@jobs_bp.route('/job-analytics', methods=['GET'])
+def get_job_analytics():
+    db = None
+    cursor = None
+    try:
+        # Establish DB connection
+        db = get_connection()
+        cursor = db.cursor(dictionary=True)  # Use `db` instead of `None`
+
+        # Query to fetch job analytics
+        query = """
+        SELECT 
+            skill_match_level, 
+            location, 
+            count 
+        FROM 
+            analytics
+        ORDER BY 
+            skill_match_level, location
+        """
+        cursor.execute(query)
+        analytics_data = cursor.fetchall()
+
+        # Return the data in JSON format
+        return jsonify({
+            "status": "success",
+            "data": analytics_data
+        }), 200
+
+    except Exception as e:
+        # Handle errors
+        return jsonify({
+            "status": "error",
+            "message": str(e)
+        }), 500
+
+    finally:
+        # Ensure resources are closed
+        if cursor:
+            cursor.close()
+        if db:
+            db.close()
+
+if __name__ == '__main__':
+    jobs_bp.run(debug=True)
+

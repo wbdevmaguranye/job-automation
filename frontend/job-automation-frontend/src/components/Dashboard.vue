@@ -76,7 +76,7 @@
           {{ data.value || "No Match" }}
         </b-badge>
       </template>
-      
+
       <!-- Job Link -->
       <template #cell(url)="data">
         <a :href="data.value" target="_blank" class="text-success font-weight-bold">
