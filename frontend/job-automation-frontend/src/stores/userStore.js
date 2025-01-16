@@ -22,15 +22,18 @@ export const useUserStore = defineStore("user", {
     async login(email, password) {
       const dataStore = useDataStore();
       const response = await dataStore.postData("/login", { email, password });
-
+    // console.log("res yacho",response)
       if (response.success) {
         this.token = response.data.access_token;
+        console.log("Bearer token rach",this.token)
         localStorage.setItem("token", this.token);
-        await this.fetchUserProfile();
+        // await this.fetchUserProfile();
+        
       } else {
         console.error("Login error:", response.data.message);
       }
     },
+    
 
     async fetchUserProfile() {
       const dataStore = useDataStore();

@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify, send_file, abort
-from flask_jwt_extended import jwt_required
+from flask_jwt_extended import jwt_required,  get_jwt_identity
 from database import get_connection
 from botocore.exceptions import NoCredentialsError
 import boto3
@@ -160,6 +160,46 @@ def add_cv_metadata():
         connection.close()
 
 
+
+@jobs_bp.route('/dashboard/summary', methods=['GET'])
+@jwt_required()
+def dashboard_summary():
+    try:
+
+        connection = get_connection()
+        cursor = connection.cursor(dictionary=True)
+
+       
+        cursor.execute("SELECT COUNT(*) AS total_jobs FROM jobs")
+        total_jobs = cursor.fetchone()["total_jobs"]
+
+        cursor.execute("SELECT COUNT(*) AS total_cvs FROM customized_cvs")
+        total_cvs = cursor.fetchone()["total_cvs"]
+
+        cursor.execute("SELECT title, company FROM jobs ORDER BY created_at DESC LIMIT 7")
+        recent_jobs = cursor.fetchall()
+
+        # Prepare the summary data
+        summary = {
+            "total_jobs": total_jobs,
+            "total_cvs": total_cvs,
+            "recent_jobs": recent_jobs
+        }
+
+    
+        return jsonify({"data": summary}), 200
+    except Exception as e:
+ 
+        return jsonify({"message": f"Failed to fetch summary: {str(e)}"}), 500
+    finally:
+      
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
+
+
+
     
 @jobs_bp.route('/job-analytics', methods=['GET'])
 def get_job_analytics():
@@ -168,7 +208,7 @@ def get_job_analytics():
     try:
         # Establish DB connection
         db = get_connection()
-        cursor = db.cursor(dictionary=True)  # Use `db` instead of `None`
+        cursor = db.cursor(dictionary=True)  
 
         # Query to fetch job analytics
         query = """

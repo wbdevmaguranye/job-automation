@@ -4,7 +4,8 @@ const routes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    component: () => import("@/views/Dashboard.vue"),
+    component: () => import("@/views/DashboardView.vue"),
+    meta: { requiresAuth: true }, 
   },
   // Jobs Route
   {
@@ -43,11 +44,11 @@ const routes = [
     component: () => import("@/views/RegisterView.vue"),
   },
   // Profile Route
-  {
-    path: "/profile",
-    name: "Profile",
-    component: () => import("@/views/ProfileView.vue"),
-  },
+  // {
+  //   path: "/profile",
+  //   name: "Profile",
+  //   component: () => import("@/views/ProfileView.vue"),
+  // },
   // Catch-all for undefined routes, redirect to Dashboard
   {
     path: "/:pathMatch(.*)*",

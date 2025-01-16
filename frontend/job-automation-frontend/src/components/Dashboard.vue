@@ -1,343 +1,137 @@
 <template>
-  <b-container>
-    <!-- Jobs and CVs Stats -->
-    <b-row class="mb-4">
-      <b-col>
-        <b-card title="" class="text-center text-white bg-success">
-          <h4>Jobs: {{ jobs.length }}</h4>
-        </b-card>
-      </b-col>
-      <b-col>
-        <b-card title="" class="text-center text-white bg-success">
-          <h4>Custom CVs: {{ cvs.length }}</h4>
-        </b-card>
-      </b-col>
-    </b-row>
+  <div v-if="isLoading">Loading...</div>
+  <div v-else>
+    <b-container>
+      <h1 class="dashboard-title">Dashboard</h1>
 
-    <!-- Filters -->
-    <b-row class="mb-4">
-      <b-col>
-        <b-form-input
-          v-model="searchTitle"
-          placeholder="Search by Title"
-          class="mb-3 custom-search-input"
-        ></b-form-input>
-      </b-col>
-      <b-col>
-        <b-form-input
-          v-model="searchCompany"
-          placeholder="Search by Company"
-          class="mb-3 custom-search-input"
-        ></b-form-input>
-      </b-col>
-      <b-col>
-        <b-form-select
-  v-model="selectedSkillMatchLevel"
-  :options="skillMatchOptions"
-  class="mb-3 custom-select-border"
-  placeholder="Filter by Skill Match Level"
-></b-form-select>
+      <!-- Key Metrics Section -->
+      <b-row class="mb-4">
+        <b-col lg="4">
+          <b-card class="text-center stats-card bg-success text-white">
+            <h4>Total Jobs</h4>
+            <h2>{{ dashboardStore.totalJobs }}</h2>
+          </b-card>
+        </b-col>
+        <b-col lg="4">
+          <b-card class="text-center stats-card bg-primary text-white">
+            <h4>Total CVs</h4>
+            <h2>{{ dashboardStore.totalCVs }}</h2>
+          </b-card>
+        </b-col>
+        <b-col lg="4">
+          <b-card class="text-center stats-card bg-warning text-white">
+            <h4>Applications Submitted</h4>
+            <h2>{{ totalApplications }}</h2>
+          </b-card>
+        </b-col>
+      </b-row>
 
-      </b-col>
-    </b-row>
+      <!-- Recent Jobs Section -->
+      <h3>Recent Jobs</h3>
+      <b-table
+        striped
+        hover
+        :items="dashboardStore.recentJobs"
+        :fields="recentJobsFields"
+        responsive="sm"
+        class="mb-4"
+      ></b-table>
 
-    <!-- Jobs Table -->
-    <b-table
-      striped
-      hover
-      bordered
-      :items="paginatedJobs"
-      :fields="fields"
-      responsive="sm"
-      class="mb-4 custom-table"
-    >
-      <!-- Collapsible Description -->
-      <template #cell(description)="data">
-  <b-button
-    size="sm"
-    variant="success"
-    class="toggle-btn"
-    @click="toggleDescription(data.index)"
-  >
-    {{ collapsedRows[data.index] ? "Show More" : "Show Less" }}
-  </b-button>
-  <b-collapse :visible="!collapsedRows[data.index]" class="mt-2">
-    <div v-html="formatDescription(data.value || 'N/A')"></div>
-  </b-collapse>
-</template>
-
-
-      <!-- Skill Match Level -->
-      <template #cell(skill_match_level)="data">
-        <b-badge
-          :variant="getSkillMatchBadgeVariant(data.value)"
-          class="skill-match-badge"
-        >
-          {{ data.value || "No Match" }}
-        </b-badge>
-      </template>
-
-      <!-- Job Link -->
-      <template #cell(url)="data">
-        <a :href="data.value" target="_blank" class="text-success font-weight-bold">
-          View Job
-        </a>
-      </template>
-
-      <!-- CV Actions -->
-      <template #cell(actions)="data">
-        <b-button size="sm" variant="primary" @click="viewCV(data.item.id)">
-          View CV
-        </b-button>
-      </template>
-    </b-table>
-
-    <!-- Pagination -->
-    <b-pagination
-      v-model="currentJobsPage"
-      :total-rows="filteredJobs.length"
-      :per-page="jobsPerPage"
-      class="mt-3"
-    ></b-pagination>
-
-    <div v-if="filteredJobs.length === 0">
-      <p>No jobs available.</p>
-    </div>
-
-    <!-- CV Modal -->
-    <b-modal
-      id="cv-modal"
-      v-model="showCVModal"
-      title="Associated CV"
-      size="lg"
-    >
-      <template v-if="associatedCV">
-        <p><strong>CV ID:</strong> {{ associatedCV.id }}</p>
-        <p>
-          <strong>File URL:</strong>
-          <a :href="associatedCV.file_url" target="_blank">{{ associatedCV.file_url }}</a>
-        </p>
-        <p><strong>Customization Status:</strong> {{ associatedCV.customization_status }}</p>
-        <p><strong>Created At:</strong> {{ associatedCV.created_at }}</p>
-
-        <!-- Buttons Row -->
-        <div class="button-row mt-3">
-          <b-button size="sm" variant="success" @click="downloadCV">Download CV</b-button>
-          <b-button
-            size="sm"
-            variant="primary"
-            class="ml-2"
-            @click="applyCV(associatedCV.file_url, associatedCV.job_id)"
-            :disabled="!associatedCV.file_url"
-          >
-            Apply CV
-          </b-button>
-        </div>
-      </template>
-      <p v-else>No CV available for this job.</p>
-    </b-modal>
-  </b-container>
+      <!-- Quick Actions Section -->
+      <h3>Quick Actions</h3>
+      <b-row>
+        <b-col lg="4">
+          <b-card class="text-center quick-action-card" @click="navigateTo('/jobs')">
+            <b-icon icon="briefcase" class="action-icon"></b-icon>
+            <h5>Browse Jobs</h5>
+          </b-card>
+        </b-col>
+        <b-col lg="4">
+          <b-card class="text-center quick-action-card" @click="navigateTo('/cvs')">
+            <b-icon icon="file-earmark-text" class="action-icon"></b-icon>
+            <h5>View CVs</h5>
+          </b-card>
+        </b-col>
+        <b-col lg="4">
+          <b-card class="text-center quick-action-card" @click="navigateTo('/applications')">
+            <b-icon icon="check-circle" class="action-icon"></b-icon>
+            <h5>View Applications</h5>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
-import { useJobsStore } from "@/stores/jobsStore";
-import { useCVsStore } from "@/stores/cvsStore";
+import { ref, onMounted } from "vue";
+import { useDashboardStore } from "@/stores/dashboardStore";
+import { useRouter } from "vue-router";
 
-// Table fields for jobs
-const fields = [
+
+const dashboardStore = useDashboardStore();
+const router = useRouter();
+
+
+const isLoading = ref(true);
+
+
+const totalApplications = 15; // Example static value
+const recentJobsFields = [
   { key: "title", label: "Job Title", sortable: true },
   { key: "company", label: "Company", sortable: true },
-  { key: "location", label: "Location", sortable: true },
-  { key: "skill_match_level", label: "Skill Match ", sortable: true },
-  { key: "description", label: "Description", sortable: false },
-  { key: "url", label: "Link", sortable: false },
-  { key: "actions", label: "Actions" },
 ];
 
-// Collapsed state for job descriptions
-const collapsedRows = ref([]);
-
-// Pagination for jobs
-const currentJobsPage = ref(1);
-const jobsPerPage = 10;
-
-// Search filters
-const searchTitle = ref("");
-const searchCompany = ref("");
-const searchLocation = ref("");
-const selectedSkillMatchLevel = ref("");
-const skillMatchOptions = [
-  { value: "", text: "All" },
-  { value: "High Match", text: "High Match" },
-  { value: "Average Match", text: "Average Match" },
-  { value: "Low Match", text: "Low Match" },
-  { value: "No Match", text: "No Match" },
-];
-
-// Data stores
-const jobsStore = useJobsStore();
-const cvsStore = useCVsStore();
-const jobs = ref([]);
-const cvs = ref([]);
-const associatedCV = ref(null);
-const showCVModal = ref(false);
-
-// Fetch data on load
-const fetchData = async () => {
+// Fetch Dashboard Data
+const fetchSummary = async () => {
+  isLoading.value = true;
   try {
-    await jobsStore.fetchJobs();
-    await cvsStore.fetchCVs();
-    jobs.value = jobsStore.jobs || [];
-    cvs.value = cvsStore.cvs || [];
-    collapsedRows.value = Array(jobs.value.length).fill(true);
+    await dashboardStore.fetchDashboardSummary();
   } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-};
-fetchData();
-
-// Filtered jobs based on search
-const filteredJobs = computed(() =>
-  (jobs.value || []).filter(
-    (job) =>
-      job.title?.toLowerCase().includes(searchTitle.value.toLowerCase()) &&
-      job.company?.toLowerCase().includes(searchCompany.value.toLowerCase()) &&
-      job.location?.toLowerCase().includes(searchLocation.value.toLowerCase()) &&
-      (selectedSkillMatchLevel.value === "" || job.skill_match_level === selectedSkillMatchLevel.value)
-  )
-);
-
-// Paginated jobs
-const paginatedJobs = computed(() =>
-  filteredJobs.value.slice(
-    (currentJobsPage.value - 1) * jobsPerPage,
-    currentJobsPage.value * jobsPerPage
-  )
-);
-
-// Toggle description visibility
-const toggleDescription = (index) => {
-  collapsedRows.value[index] = !collapsedRows.value[index];
-};
-
-// Get badge variant based on skill match level
-const getSkillMatchBadgeVariant = (skillMatchLevel) => {
-  switch (skillMatchLevel) {
-    case "High Match":
-      return "success";
-    case "Average Match":
-      return "warning";
-    case "Low Match":
-      return "danger";
-    default:
-      return "secondary";
+    console.error("Error fetching dashboard summary:", error);
+  } finally {
+    isLoading.value = false;
   }
 };
 
-// View CV
-const viewCV = (jobId) => {
-  associatedCV.value = cvs.value.find((cv) => cv.job_id === jobId) || null;
-  if (associatedCV.value) {
-    showCVModal.value = true;
-  } else {
-    alert("No CV available for this job.");
-  }
+// Navigate to Other Pages
+const navigateTo = (path) => {
+  router.push(path);
 };
 
-// Download CV
-const downloadCV = () => {
-  if (associatedCV.value && associatedCV.value.file_url) {
-    const a = document.createElement("a");
-    a.href = associatedCV.value.file_url;
-    a.download = `CV_${associatedCV.value.id}.docx`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  } else {
-    alert("File URL not available for this CV.");
-  }
-};
-
-// Apply CV
-const applyCV = (fileUrl, jobId) => {
-  if (!fileUrl) {
-    alert("No CV to apply.");
-    return;
-  }
-
-  const job = jobs.value.find((job) => job.id === jobId);
-  if (!job || !job.url) {
-    alert("No job URL available.");
-    return;
-  }
-
-  const confirmation = confirm("Are you sure you want to apply to this job?");
-  if (confirmation) {
-    window.open(job.url, "_blank");
-  }
-};
-const formatDescription = (description) => {
-  if (!description) return "N/A";
-
-  // Example formatting: Bold keywords and add line breaks
-  return description
-    .replace(/(Responsibilities|Requirements|Skills):/gi, "<b>$1:</b>")
-    .replace(/\n/g, "<br>");
-};
+// Fetch data on component mount
+onMounted(() => {
+  fetchSummary();
+});
 </script>
 
 <style scoped>
-/* Styling for Dashboard */
-h1 {
-  color: #28a745;
+.dashboard-title {
   font-weight: bold;
+  color: #198754;
+  margin-bottom: 20px;
 }
 
-.custom-table {
-  background-color: #f9f9f9;
-  border: 1px solid #28a745;
+.stats-card {
+  padding: 20px;
+  border-radius: 8px;
 }
 
-.custom-table th {
-  background-color: #28a745;
-  color: white;
+.quick-action-card {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.quick-action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.custom-search-input {
-  border: 1px solid #28a745;
-  border-radius: 4px;
-}
-
-.toggle-btn {
-  text-transform: uppercase;
-  font-size: 0.8rem;
-}
-
-.button-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.skill-match-badge {
-  font-size: 0.85rem;
-}
-.custom-select-border {
-  border: 1px solid #28a745; 
-  border-radius: 4px; 
-}
-/* Improve readability of formatted job descriptions */
-.formatted-description ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.formatted-description li {
-  margin-bottom: 8px;
-}
-
-.formatted-description strong {
-  color: #28a745;
+.action-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #198754;
 }
 </style>
