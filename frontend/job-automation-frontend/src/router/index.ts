@@ -5,7 +5,7 @@ const routes = [
     path: "/dashboard",
     name: "Dashboard",
     component: () => import("@/views/DashboardView.vue"),
-    meta: { requiresAuth: true }, 
+      meta: { requiresAuth: true }, 
   },
   // Jobs Route
   {

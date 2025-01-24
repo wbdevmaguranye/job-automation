@@ -6,6 +6,7 @@ export const useDashboardStore = defineStore("dashboard", {
     summary: {
       total_jobs: 0,
       total_cvs: 0,
+      total_applications: 0, 
       recent_jobs: [],
     },
   }),
@@ -32,13 +33,9 @@ export const useDashboardStore = defineStore("dashboard", {
   },
 
   getters: {
-  
     totalJobs: (state) => state.summary.total_jobs || 0,
-
-    
     totalCVs: (state) => state.summary.total_cvs || 0,
-
-   
+    totalApplications: (state) => state.summary.total_applications || 0, 
     recentJobs: (state) => state.summary.recent_jobs || [],
   },
 });

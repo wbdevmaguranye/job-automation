@@ -40,18 +40,39 @@ def get_jobs():
 
 # Route: List All CVs
 @jobs_bp.route('/cvs', methods=['GET'])
+@jwt_required()
 def get_cvs():
+    connection = get_connection()
+    cursor = connection.cursor(dictionary=True)
     try:
-        connection = get_connection()
-        cursor = connection.cursor(dictionary=True)
-        cursor.execute("SELECT id, job_id, file_url, customization_status, created_at FROM customized_cvs")
+        query = """
+            SELECT 
+                c.id AS cv_id,
+                c.job_id,
+                c.file_url,
+                c.customization_status,
+                c.skills_match_category,
+                c.created_at,
+                j.title AS job_title,
+                j.skill_match_level
+            FROM 
+                customized_cvs c
+            JOIN 
+                jobs j 
+            ON 
+                c.job_id = j.id
+        """
+        cursor.execute(query)
         cvs = cursor.fetchall()
         return jsonify(cvs), 200
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"message": f"Error fetching CVs: {str(e)}"}), 500
     finally:
         cursor.close()
         connection.close()
+
+
+
 
 # Route: Get a Specific CV by ID
 @jobs_bp.route('/cvs/<int:cv_id>', methods=['GET'])
@@ -173,6 +194,9 @@ def dashboard_summary():
         cursor.execute("SELECT COUNT(*) AS total_jobs FROM jobs")
         total_jobs = cursor.fetchone()["total_jobs"]
 
+        cursor.execute("SELECT COUNT(*) AS total_applications FROM applications")
+        total_applications = cursor.fetchone()["total_applications"]
+
         cursor.execute("SELECT COUNT(*) AS total_cvs FROM customized_cvs")
         total_cvs = cursor.fetchone()["total_cvs"]
 
@@ -183,7 +207,8 @@ def dashboard_summary():
         summary = {
             "total_jobs": total_jobs,
             "total_cvs": total_cvs,
-            "recent_jobs": recent_jobs
+            "recent_jobs": recent_jobs,
+            "total_applications": total_applications
         }
 
     
@@ -198,6 +223,203 @@ def dashboard_summary():
         if connection:
             connection.close()
 
+
+# applications
+@jobs_bp.route('/applications', methods=['POST'])
+@jwt_required()
+def submit_application():
+    """
+    Submit a new application for a job.
+    """
+    connection = None
+    cursor = None
+    try:
+        data = request.json
+        cv_id = data.get("cv_id")
+        job_id = data.get("job_id")
+        source = data.get("source", "Manual")
+        user_id = get_jwt_identity()
+
+        # Validate input
+        if not job_id or not cv_id:
+            return jsonify({"message": "Job ID and CV ID are required"}), 400
+
+        # Connect to the database
+        connection = get_connection()
+        cursor = connection.cursor()
+
+        # Check if the provided CV exists
+        cursor.execute(
+            "SELECT COUNT(*) FROM customized_cvs WHERE id = %s AND job_id = %s",
+            (cv_id, job_id),
+        )
+        cv_exists = cursor.fetchone()[0]
+        if not cv_exists:
+            return jsonify({"message": "Invalid CV ID for the specified Job ID"}), 400
+
+        # Check if the application already exists
+        cursor.execute(
+            "SELECT COUNT(*) FROM applications WHERE job_id = %s AND user_id = %s",
+            (job_id, user_id),
+        )
+        application_exists = cursor.fetchone()[0]
+        if application_exists:
+            return jsonify({"message": "Application already submitted for this job"}), 400
+
+        # Insert the application into the database
+        cursor.execute(
+            """
+            INSERT INTO applications (job_id, user_id, cv_id, source, application_date)
+            VALUES (%s, %s, %s, %s, NOW())
+            """,
+            (job_id, user_id, cv_id, source),
+        )
+        connection.commit()
+
+        return jsonify({"message": "Application submitted successfully"}), 201
+    except Exception as e:
+        return jsonify({"message": f"Error: {str(e)}"}), 500
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
+
+
+@jobs_bp.route('/applications', methods=['GET'])
+@jwt_required()
+def get_user_applications():
+    """
+    Retrieve all applications for the logged-in user.
+    """
+    user_id = get_jwt_identity()
+    connection = None
+    cursor = None
+    try:
+        connection = get_connection()
+        cursor = connection.cursor(dictionary=True)
+
+        # Fetch user applications with associated CV details
+        cursor.execute(
+            """
+            SELECT a.id AS application_id, a.job_id, j.title AS job_title, 
+                   a.application_date, a.status, a.source, c.file_url AS cv_file_url
+            FROM applications a
+            JOIN jobs j ON a.job_id = j.id
+            LEFT JOIN customized_cvs c ON a.cv_id = c.id
+            WHERE a.user_id = %s
+            """,
+            (user_id,),
+        )
+        applications = cursor.fetchall()
+        return jsonify({"data": applications}), 200
+    except Exception as e:
+        return jsonify({"message": f"Error fetching applications: {str(e)}"}), 500
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
+
+
+
+@jobs_bp.route('/applications/<int:application_id>', methods=['DELETE'])
+@jwt_required()
+def delete_application(application_id):
+    """
+    Delete an application by ID.
+    """
+    connection = None
+    cursor = None
+    try:
+        user_id = get_jwt_identity()
+
+        # Connect to the database
+        connection = get_connection()
+        cursor = connection.cursor()
+
+        # Check if the application belongs to the user
+        cursor.execute(
+            """
+            SELECT COUNT(*) 
+            FROM applications 
+            WHERE id = %s AND user_id = %s
+            """,
+            (application_id, user_id),
+        )
+        application_exists = cursor.fetchone()[0]
+
+        if not application_exists:
+            return jsonify({"message": "Application not found or access denied"}), 404
+
+        # Delete the application
+        cursor.execute(
+            """
+            DELETE FROM applications 
+            WHERE id = %s AND user_id = %s
+            """,
+            (application_id, user_id),
+        )
+        connection.commit()
+
+        return jsonify({"message": "Application deleted successfully"}), 200
+    except Exception as e:
+        return jsonify({"message": f"Error: {str(e)}"}), 500
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
+
+
+
+@jobs_bp.route('/apply', methods=['POST'])
+@jwt_required()
+def apply_to_job():
+    """
+    Apply to a job using a CV.
+    """
+    connection = None
+    cursor = None
+    try:
+        data = request.json
+        job_id = data.get("job_id")
+        cv_id = data.get("cv_id")
+        user_id = get_jwt_identity()
+
+        if not job_id or not cv_id:
+            return jsonify({"message": "Job ID and CV ID are required"}), 400
+
+        connection = get_connection()
+        cursor = connection.cursor()
+
+        # Check if the application already exists
+        cursor.execute(
+            "SELECT COUNT(*) FROM applications WHERE job_id = %s AND user_id = %s",
+            (job_id, user_id),
+        )
+        application_exists = cursor.fetchone()[0]
+        if application_exists:
+            return jsonify({"message": "Application already submitted for this job"}), 400
+
+        # Insert the application
+        cursor.execute(
+            """
+            INSERT INTO applications (job_id, user_id, cv_id, source, application_date)
+            VALUES (%s, %s, %s, %s, NOW())
+            """,
+            (job_id, user_id, cv_id, "Manual"),
+        )
+        connection.commit()
+
+        return jsonify({"message": "Application successfully recorded"}), 201
+    except Exception as e:
+        return jsonify({"message": f"Error during application: {str(e)}"}), 500
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
 
 
     

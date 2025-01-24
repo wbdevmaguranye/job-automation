@@ -21,7 +21,7 @@
         <b-col lg="4">
           <b-card class="text-center stats-card bg-warning text-white">
             <h4>Applications Submitted</h4>
-            <h2>{{ totalApplications }}</h2>
+            <h2>{{ dashboardStore.totalApplications }}</h2> <!-- Dynamic value -->
           </b-card>
         </b-col>
       </b-row>
@@ -68,15 +68,11 @@ import { ref, onMounted } from "vue";
 import { useDashboardStore } from "@/stores/dashboardStore";
 import { useRouter } from "vue-router";
 
-
 const dashboardStore = useDashboardStore();
 const router = useRouter();
 
-
 const isLoading = ref(true);
 
-
-const totalApplications = 15; // Example static value
 const recentJobsFields = [
   { key: "title", label: "Job Title", sortable: true },
   { key: "company", label: "Company", sortable: true },

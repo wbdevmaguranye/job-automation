@@ -1,4 +1,3 @@
-// stores/cvsStore.js
 import { defineStore } from 'pinia';
 import { useDataStore } from './dataStore';
 
@@ -25,7 +24,7 @@ export const useCVsStore = defineStore('cvs', {
       return state.cvs;
     },
     getCVById: (state) => (id) => {
-      return state.cvs.find((cv) => cv.id === id);
+      return state.cvs.find((cv) => cv.cv_id === id);
     },
   },
 });

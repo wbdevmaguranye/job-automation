@@ -56,7 +56,7 @@
     <b-button
       size="sm"
       variant="success"
-      class="toggle-btn"
+      class="toggle-btn small-button"
       @click="toggleDescription(data.index)"
     >
       {{ collapsedRows[data.index] ? "Show More" : "Show Less" }}
@@ -79,16 +79,29 @@
   
         <!-- Job Link -->
         <template #cell(url)="data">
-          <a :href="data.value" target="_blank" class="text-success font-weight-bold">
-            View Job
+          <a :href="data.value" target="_blank" class="text-success text-small ">
+            View 
           </a>
         </template>
   
         <!-- CV Actions -->
         <template #cell(actions)="data">
-          <b-button size="sm" variant="primary" @click="viewCV(data.item.id)">
-            View CV
-          </b-button>
+          <b-button size="xs" variant="primary" class="small-button" @click="viewCV(data.item.id)">
+  View CV
+</b-button>
+       
+        </template>
+        <!-- apply for a job -->
+        <template #cell(apply)="data">
+          <b-button
+          size="sm"
+          class="small-button"
+          :variant="isJobApplied(data.item.id) ? 'secondary' : 'success'"
+          :disabled="isJobApplied(data.item.id)"
+          @click="applyForJob(data.item.id)"
+        >
+          {{ isJobApplied(data.item.id) ? "Applied" : "Apply" }}
+        </b-button>
         </template>
       </b-table>
   
@@ -106,36 +119,37 @@
   
       <!-- CV Modal -->
       <b-modal
-        id="cv-modal"
-        v-model="showCVModal"
-        title="Associated CV"
-        size="lg"
+  id="cv-modal"
+  v-model="showCVModal"
+  title="Associated CV"
+  size="lg"
+>
+  <template v-if="associatedCV">
+    <p><strong>CV ID:</strong> {{ associatedCV.id }}</p>
+    <p>
+      <strong>File URL:</strong>
+      <a :href="associatedCV.file_url" target="_blank">{{ associatedCV.file_url }}</a>
+    </p>
+    <p><strong>Customization Status:</strong> {{ associatedCV.customization_status }}</p>
+    <p><strong>Created At:</strong> {{ associatedCV.created_at }}</p>
+
+    <!-- Buttons Row -->
+    <div class="button-row mt-3">
+      <b-button size="sm" variant="success" @click="downloadCV">Download CV</b-button>
+      <b-button
+        size="sm"
+        :variant="collapsedApplyButton ? 'danger' : 'primary'"
+        class="ml-2"
+        @click="applyCV(associatedCV.file_url, associatedCV.job_id)"
       >
-        <template v-if="associatedCV">
-          <p><strong>CV ID:</strong> {{ associatedCV.id }}</p>
-          <p>
-            <strong>File URL:</strong>
-            <a :href="associatedCV.file_url" target="_blank">{{ associatedCV.file_url }}</a>
-          </p>
-          <p><strong>Customization Status:</strong> {{ associatedCV.customization_status }}</p>
-          <p><strong>Created At:</strong> {{ associatedCV.created_at }}</p>
-  
-          <!-- Buttons Row -->
-          <div class="button-row mt-3">
-            <b-button size="sm" variant="success" @click="downloadCV">Download CV</b-button>
-            <b-button
-              size="sm"
-              variant="primary"
-              class="ml-2"
-              @click="applyCV(associatedCV.file_url, associatedCV.job_id)"
-              :disabled="!associatedCV.file_url"
-            >
-              Apply CV
-            </b-button>
-          </div>
-        </template>
-        <p v-else>No CV available for this job.</p>
-      </b-modal>
+        {{ collapsedApplyButton ? "Undo Apply" : "Apply CV" }}
+      </b-button>
+    </div>
+  </template>
+  <p v-else>No CV available for this job.</p>
+</b-modal>
+
+
     </b-container>
   </template>
   
@@ -143,6 +157,7 @@
   import { ref, computed } from "vue";
   import { useJobsStore } from "@/stores/jobsStore";
   import { useCVsStore } from "@/stores/cvsStore";
+  import { useApplicationsStore } from "@/stores/applicationsStore";
   
   // Table fields for jobs
   const fields = [
@@ -152,6 +167,7 @@
     { key: "skill_match_level", label: "Skill Match ", sortable: true },
     { key: "description", label: "Description", sortable: false },
     { key: "url", label: "Link", sortable: false },
+    { key: "apply", label: "Apply", sortable: false },
     { key: "actions", label: "Actions" },
   ];
   
@@ -178,18 +194,22 @@
   // Data stores
   const jobsStore = useJobsStore();
   const cvsStore = useCVsStore();
+  const applicationsStore = useApplicationsStore();
+  const applications = ref([]);
   const jobs = ref([]);
   const cvs = ref([]);
   const associatedCV = ref(null);
   const showCVModal = ref(false);
-  
+  const collapsedApplyButton = ref(false); // Track toggle state for the Apply button
   // Fetch data on load
   const fetchData = async () => {
     try {
       await jobsStore.fetchJobs();
       await cvsStore.fetchCVs();
+      await applicationsStore.fetchApplications();
       jobs.value = jobsStore.jobs || [];
       cvs.value = cvsStore.cvs || [];
+      applications.value = applicationsStore.applications || [];
       collapsedRows.value = Array(jobs.value.length).fill(true);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -220,6 +240,10 @@
   const toggleDescription = (index) => {
     collapsedRows.value[index] = !collapsedRows.value[index];
   };
+  const toggleApplyButton = () => {
+      collapsedApplyButton.value = !collapsedApplyButton.value;
+    };
+
   
   // Get badge variant based on skill match level
   const getSkillMatchBadgeVariant = (skillMatchLevel) => {
@@ -260,23 +284,60 @@
   };
   
   // Apply CV
-  const applyCV = (fileUrl, jobId) => {
-    if (!fileUrl) {
-      alert("No CV to apply.");
-      return;
+  // Helper functions
+const isJobApplied = (jobId) => applicationsStore.isJobApplied(jobId);
+
+const applyForJob = async (jobId) => {
+  // Find the CV associated with the job
+  const cv = cvs.value.find((cv) => cv.job_id === jobId);
+
+  if (!cv) {
+    alert("No associated CV available to apply.");
+    console.error(`No CV found for job ID: ${jobId}`);
+    return;
+  }
+
+  try {
+    // Use `cv.cv_id` to send the correct ID to the API
+    const response = await applicationsStore.applyForJob(jobId, cv.cv_id);
+
+    if (response.success) {
+      alert("Job application successful!");
+    } else {
+      alert("Failed to apply for the job.");
     }
+  } catch (error) {
+    console.error("Error applying for the job:", error);
+    alert("An error occurred while applying for the job.");
+  }
+};
+
+
+const applyCV = async (fileUrl, jobId) => {
+  const cv = cvs.value.find((cv) => cv.job_id === jobId);
+
+  if (!cv || !fileUrl) {
+    alert("No CV available to apply.");
+    console.error(`No CV found or file URL missing for job ID: ${jobId}`);
+    return;
+  }
+
+  try {
+    const response = await applicationsStore.applyForJob(jobId, cv.cv_id);
   
-    const job = jobs.value.find((job) => job.id === jobId);
-    if (!job || !job.url) {
-      alert("No job URL available.");
-      return;
+
+    if (response.success) {
+      alert("Job application successful!");
+    } else {
+      alert("Failed to apply for the job.");
     }
-  
-    const confirmation = confirm("Are you sure you want to apply to this job?");
-    if (confirmation) {
-      window.open(job.url, "_blank");
-    }
-  };
+  } catch (error) {
+    console.error("Error applying with CV:", error);
+    alert("An error occurred while applying with the CV.");
+  }
+};
+
+
   const formatDescription = (description) => {
     if (!description) return "N/A";
   
@@ -340,5 +401,9 @@
   .formatted-description strong {
     color: #28a745;
   }
+  .small-button {
+  font-size: 10px; /* Adjust font size as needed */
+  padding: 4px 5px; /* Optionally adjust padding */
+}
   </style>
   
