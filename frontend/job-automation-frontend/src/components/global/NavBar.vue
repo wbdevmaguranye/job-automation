@@ -12,8 +12,9 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Left Navigation Links -->
       <b-navbar-nav>
-        <b-nav-item href="/" class="text-white">Dashboard</b-nav-item>
+       
         <b-nav-item href="/jobs" class="text-white">Jobs</b-nav-item>
+        <b-nav-item href="/" class="text-white">Dashboard</b-nav-item>
         <b-nav-item href="/analytics">Job Analytics</b-nav-item>
         <b-nav-item href="/cvs" class="text-white">CVs</b-nav-item>
         <b-nav-item href="/applications" class="text-white">Applications</b-nav-item>
@@ -37,10 +38,16 @@
 <script setup>
 import { computed } from "vue";
 import { useUserStore } from "@/stores/userStore";
+import { useRouter } from "vue-router";
 
 const userStore = useUserStore();
+const router = useRouter();
 const isAuthenticated = computed(() => userStore.isAuthenticated);
-const logout = () => userStore.logout();
+
+const logout = () => {
+  userStore.logout();
+  router.push("/login");
+};
 </script>
 
 <style scoped>

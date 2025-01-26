@@ -15,7 +15,7 @@ export const useCVsStore = defineStore('cvs', {
       if (response.success) {
         this.cvs = response.data;
       } else {
-        console.error('Error fetching CVs:', response.data.message);
+        // console.error('Error fetching CVs:', response.data.message);
       }
     },
   },

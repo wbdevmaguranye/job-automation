@@ -1,55 +1,48 @@
+// router/index.js
+
 import { createRouter, createWebHistory } from "vue-router";
+import { authMiddleware } from "@/middleware/authMiddleware";
 
 const routes = [
   {
     path: "/dashboard",
     name: "Dashboard",
     component: () => import("@/views/DashboardView.vue"),
-      meta: { requiresAuth: true }, 
+    beforeEnter: authMiddleware,
   },
-  // Jobs Route
   {
     path: "/jobs",
     name: "Jobs",
     component: () => import("@/views/JobsView.vue"),
   },
-  // CVs Route
   {
     path: "/cvs",
     name: "CVs",
     component: () => import("@/views/CVsView.vue"),
+    beforeEnter: authMiddleware, 
   },
-  // Applications Route
   {
     path: "/applications",
     name: "Applications",
     component: () => import("@/views/ApplicationsView.vue"),
+    beforeEnter: authMiddleware, 
   },
-  // Analytics Route
   {
     path: "/analytics",
     name: "Analytics",
     component: () => import("@/views/AnalyticsView.vue"),
+    beforeEnter: authMiddleware, 
   },
-  // Login Route
   {
     path: "/login",
     name: "Login",
     component: () => import("@/views/LoginView.vue"),
   },
-  // Register Route
   {
     path: "/register",
     name: "Register",
     component: () => import("@/views/RegisterView.vue"),
   },
-  // Profile Route
-  // {
-  //   path: "/profile",
-  //   name: "Profile",
-  //   component: () => import("@/views/ProfileView.vue"),
-  // },
-  // Catch-all for undefined routes, redirect to Dashboard
   {
     path: "/:pathMatch(.*)*",
     redirect: "/dashboard",

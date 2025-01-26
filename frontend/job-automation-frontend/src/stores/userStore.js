@@ -1,4 +1,3 @@
-// stores/userStore.js
 import { defineStore } from "pinia";
 import { useDataStore } from "./dataStore";
 
@@ -13,7 +12,7 @@ export const useUserStore = defineStore("user", {
       const response = await dataStore.postData("/register", { name, email, password });
 
       if (response.success) {
-        alert(response.data.message);
+ 
       } else {
         console.error("Registration error:", response.data.message);
       }
@@ -21,35 +20,21 @@ export const useUserStore = defineStore("user", {
 
     async login(email, password) {
       const dataStore = useDataStore();
-      const response = await dataStore.postData("/login", { email, password });
-    // console.log("res yacho",response)
-      if (response.success) {
-        this.token = response.data.access_token;
-        console.log("Bearer token rach",this.token)
-        localStorage.setItem("token", this.token);
-        // await this.fetchUserProfile();
-        
-      } else {
-        console.error("Login error:", response.data.message);
-      }
-    },
+      try {
+        const response = await dataStore.postData("/login", { email, password });
     
-
-    async fetchUserProfile() {
-      const dataStore = useDataStore();
-      const response = await dataStore.getData('/profile');
-    
-      if (response.success) {
-        this.user = response.data; // Set user data
-        console.log(response.data)
-      } else {
-        console.error('Fetch profile error:', response.data.message);
-        if (response.status === 401) {
-          this.logout(); // Clear user state if unauthorized
+        if (response.success) {
+          this.token = response.data.access_token;
+          localStorage.setItem("token", this.token);
+        } else {
+          // Throw an error to propagate it to the component
+          throw new Error(response.data.message);
         }
+      } catch (error) {
+        
+        throw error;
       }
-    },
-    
+    },  
     logout() {
       this.user = null;
       this.token = null;

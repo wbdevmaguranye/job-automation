@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import Analytics from "@/components/Analytics.vue";
+import { useUserStore } from "@/stores/userStore";
+
 </script>
 
 <template>

@@ -78,24 +78,24 @@ const recentJobsFields = [
   { key: "company", label: "Company", sortable: true },
 ];
 
-// Fetch Dashboard Data
+
 const fetchSummary = async () => {
   isLoading.value = true;
   try {
     await dashboardStore.fetchDashboardSummary();
   } catch (error) {
-    console.error("Error fetching dashboard summary:", error);
+    // console.error("Error fetching dashboard summary:", error);
   } finally {
     isLoading.value = false;
   }
 };
 
-// Navigate to Other Pages
+
 const navigateTo = (path) => {
   router.push(path);
 };
 
-// Fetch data on component mount
+
 onMounted(() => {
   fetchSummary();
 });

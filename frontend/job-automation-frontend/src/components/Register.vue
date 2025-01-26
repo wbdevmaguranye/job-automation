@@ -45,21 +45,25 @@
   import { ref } from "vue";
   import { useUserStore } from "@/stores/userStore";
   import { useRouter } from "vue-router";
+  import { useToast } from "vue-toastification";
   
   const name = ref("");
   const email = ref("");
   const password = ref("");
   const userStore = useUserStore();
   const router = useRouter();
+  const toast = useToast();
   
   const onRegister = async () => {
-    try {
-      await userStore.register(name.value, email.value, password.value);
-      router.push("/login");
-    } catch (error) {
-      console.error("Registration failed:", error);
-    }
-  };
+  try {
+    await userStore.register(name.value, email.value, password.value);
+    toast.success("Registration successful! You can now log in.");
+    router.push("/login");
+  } catch (error) {
+    const errorMessage = error.response?.data?.message || "Registration failed. Please try again.";
+    toast.error(errorMessage);
+  }
+};
   </script>
   
   <style scoped>

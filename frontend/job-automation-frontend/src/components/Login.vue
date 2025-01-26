@@ -35,24 +35,28 @@
 <script setup>
 import { ref } from "vue";
 import { useUserStore } from "@/stores/userStore";
+import { useToast } from "vue-toastification";
 import { useRouter } from "vue-router";
 
 const email = ref("");
 const password = ref("");
 const userStore = useUserStore();
 const router = useRouter();
+const toast = useToast();
 
 const onLogin = async () => {
   try {
     await userStore.login(email.value, password.value);
-    console.log("Authenticated:", userStore.isAuthenticated);
-    if (userStore.isAuthenticated) {
-      router.push("/dashboard");
-    }
+    toast.success("Login successful!");
+    router.push("/jobs");
   } catch (error) {
-    console.error("Login failed:", error);
+    toast.error(error.message || "An unexpected error occurred.");
   }
 };
+
+
+
+
 
 </script>
 

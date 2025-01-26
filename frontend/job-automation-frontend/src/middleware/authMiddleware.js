@@ -1,13 +1,13 @@
+// middleware/authMiddleware.js
+
 import { useUserStore } from "@/stores/userStore";
 
-export default function authMiddleware(redirectCallback) {
+export function authMiddleware(to, from, next) {
   const userStore = useUserStore();
 
   if (!userStore.isAuthenticated) {
-    // Call the redirect callback to navigate to login
-    redirectCallback("/login");
+    next("/login");
   } else {
-    // Call the redirect callback with no arguments to proceed
-    redirectCallback();
+    next();
   }
 }

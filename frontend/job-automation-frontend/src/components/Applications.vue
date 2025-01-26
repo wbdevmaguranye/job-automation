@@ -2,10 +2,8 @@
     <b-container>
       <h1 class="page-title">My Applications</h1>
   
-      <!-- Filter Section -->
-      <b-row class="mb-4">
-        <!-- Date Range Filter -->
-        <b-col lg="4">
+          <b-row class="mb-4">
+               <b-col lg="4">
           <b-form-group label="Start Date">
             <b-form-input
               type="date"
@@ -26,8 +24,7 @@
           </b-form-group>
         </b-col>
   
-        <!-- Status Filter -->
-        <b-col lg="4">
+               <b-col lg="4">
           <b-form-group label="Status">
             <b-form-select
               v-model="filters.status"
@@ -46,7 +43,7 @@
         :fields="fields"
         responsive="sm"
       >
-        <!-- CV Download -->
+      
         <template #cell(cv_file_url)="row">
           <a
             v-if="row.item.cv_file_url"
@@ -71,7 +68,7 @@
         </template>
       </b-table>
   
-      <!-- Pagination -->
+ 
       <b-pagination
         v-model="currentPage"
         :total-rows="filteredApplications.length"
@@ -93,7 +90,7 @@ const toast = useToast();
 
 // Pagination state
 const currentPage = ref(1);
-const perPage = ref(5); // Items per page
+const perPage = ref(10); 
 
 // Filters
 const filters = ref({
@@ -157,14 +154,13 @@ const deleteApplication = async (applicationId) => {
     await applicationsStore.deleteApplication(applicationId);
     applicationsStore.removeApplication(applicationId);
 
-    // Optionally refetch applications to ensure accurate data
-    // await applicationsStore.fetchApplications();
+    
 
     toast.success(`Record with ID ${applicationId} was deleted successfully.`);
   } catch (error) {
     const errorMessage =
       error.response?.data?.message || "Failed to delete the record.";
-    toast.error(errorMessage); // Show the server error
+    toast.error(errorMessage); 
   }
 };
 
@@ -182,8 +178,8 @@ onMounted(async () => {
     margin-bottom: 20px;
   }
   .small-button {
-  font-size: 10px; /* Adjust font size as needed */
-  padding: 4px 5px; /* Optionally adjust padding */
+  font-size: 10px; 
+  padding: 4px 5px; 
 }
 .custom-search-input {
     border: 1px solid #28a745;

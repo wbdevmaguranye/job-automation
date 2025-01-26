@@ -1,4 +1,4 @@
-// stores/dataStore.js
+
 import { defineStore } from 'pinia';
 import { httpInstance } from '@/plugins/http';
 
@@ -6,24 +6,24 @@ export const useDataStore = defineStore('dataStore', {
   actions: {
     async getData(url) {
       try {
-        console.log("Requesting GET:", url);
+        // console.log("Requesting GET:", url);
         const response = await httpInstance.get(url);
-        console.log("GET Response:", response);
+        // console.log("GET Response:", response);
         return handleResponse(response);
       } catch (error) {
-        console.error("GET Error:", error.response?.data || error.message);
+        // console.error("GET Error:", error.response?.data || error.message);
         return handleErrorResponse(error);
       }
     },
     
     async postData(url, payload = {}) {
       try {
-        console.log("Requesting POST:", url, "with payload:", payload);
+        // console.log("Requesting POST:", url, "with payload:", payload);
         const response = await httpInstance.post(url, payload);
-        console.log("POST Response:", response);
+        // console.log("POST Response:", response);
         return handleResponse(response);
       } catch (error) {
-        console.error("POST Error:", error.response?.data || error.message);
+        // console.error("POST Error:", error.response?.data || error.message);
         return handleErrorResponse(error);
       }
     },

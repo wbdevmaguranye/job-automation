@@ -63,7 +63,7 @@
         align="center"
         class="mt-3"
       ></b-pagination>
-      <!-- <chartjs /> -->
+   
     </b-container>
   </template>
   
@@ -71,7 +71,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { useCVsStore } from '@/stores/cvsStore';
-// import chartjs from "@/components/chartjs.vue";
+
 
 const cvsStore = useCVsStore();
 
@@ -115,7 +115,6 @@ const paginatedCVs = computed(() => {
 
 const fields = [
   { key: 'job_title', label: 'Job Title', sortable: true },
-//   { key: 'company', label: 'Company', sortable: true },
   { key: 'skill_match_level', label: 'Skill Match', sortable: true },
   { key: 'file_url', label: 'File URL', sortable: false },
   { key: 'created_at', label: 'Created At', sortable: true },

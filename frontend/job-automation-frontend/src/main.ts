@@ -13,12 +13,20 @@ import Toast from 'vue-toastification';
 
 import NavBar from "@/components/global/NavBar.vue";
 
+
+const options = {
+    
+    position: 'top-right',
+    timeout: 3000,
+    closeOnClick: true,
+    pauseOnHover: true,
+  };
 const app = createApp(App);
 
 app.use(BootstrapVue3);
 app.use(createPinia());
 app.use(router);
-app.use(Toast);
+app.use(Toast,options);
 
 app.component("NavBar", NavBar);
 
