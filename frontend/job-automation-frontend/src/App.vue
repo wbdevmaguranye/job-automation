@@ -1,21 +1,19 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { useUserStore } from "@/stores/userStore";
 
 </script>
 
 <template>
   <header>
-    
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <NavBar />
-    </div>
+    <NavBar />
   </header>
 
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
 </template>
+
 
 <style scoped>
 

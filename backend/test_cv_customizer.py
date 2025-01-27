@@ -1,51 +1,96 @@
-import re
-import os
-from utils.cv_customizer import generate_cv
+from utils.cv_customizer import (
+    generate_cv,
+    extract_relevant_skills,
+    calculate_skill_match_percentage,
+    PREDEFINED_CATEGORIES,
+)
 from database import get_connection
 from tqdm import tqdm
 import boto3
 from dotenv import load_dotenv
-from botocore.exceptions import NoCredentialsError  # Add this import
-
+import os
+from botocore.exceptions import NoCredentialsError
 
 # Load environment variables
 load_dotenv()
-# S3 Configuration
 S3_BUCKET = os.getenv("AWS_S3_BUCKET")
 S3_REGION = os.getenv("AWS_REGION")
 S3_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID")
 S3_SECRET_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
-# Initialize the S3 client
+# Initialize S3 client
 s3 = boto3.client(
     "s3",
     aws_access_key_id=S3_ACCESS_KEY,
     aws_secret_access_key=S3_SECRET_KEY,
     region_name=S3_REGION,
 )
-def ensure_directory_exists(directory_path):
-    """
-    Ensure the directory exists; if not, create it.
-    """
-    if not os.path.exists(directory_path):
-        os.makedirs(directory_path)
 
-def sanitize_filename(filename):
+SKILL_MATCH_THRESHOLD = float(os.getenv("SKILL_MATCH_THRESHOLD", 50.0))  # Default: 50%
+
+def calculate_skill_match_level(matched_skills):
     """
-    Remove or replace invalid characters from the filename.
+    Determine the match level: High, Average, Low, or No Match.
     """
-    return re.sub(r'[<>:"/\\|?*$,]', '_', filename)
+    categories_with_matches = sum(1 for skills in matched_skills.values() if skills)
+
+    if categories_with_matches == len(PREDEFINED_CATEGORIES):
+        return "High Match"
+    elif categories_with_matches >= 4:  # Adjusted to reflect additional categories
+        return "Average Match"
+    elif categories_with_matches >= 2:
+        return "Low Match"
+    else:
+        return "No Match"
 
 def get_all_jobs():
-    """
-    Fetch all jobs from the database.
-    :return: List of job dictionaries.
-    """
     connection = get_connection()
     cursor = connection.cursor(dictionary=True)
     try:
         cursor.execute("SELECT * FROM jobs")
         return cursor.fetchall()
+    finally:
+        cursor.close()
+        connection.close()
+
+def save_skill_match_to_db(job_id, skill_match_level):
+    connection = get_connection()
+    cursor = connection.cursor()
+    try:
+        cursor.execute(
+            """
+            UPDATE jobs
+            SET skill_match_level = %s
+            WHERE id = %s
+            """,
+            (skill_match_level, job_id),
+        )
+        connection.commit()
+    finally:
+        cursor.close()
+        connection.close()
+
+def save_cv_to_s3_and_database(job_id, docx_path):
+    connection = get_connection()
+    cursor = connection.cursor()
+    try:
+        file_name = f"job_{job_id}_cv.docx"
+        with open(docx_path, "rb") as docx_file:
+            s3.upload_fileobj(
+                docx_file,
+                S3_BUCKET,
+                file_name,
+                ExtraArgs={"ACL": "private", "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"},
+            )
+        file_url = f"https://{S3_BUCKET}.s3.{S3_REGION}.amazonaws.com/{file_name}"
+        cursor.execute(
+            """
+            INSERT INTO customized_cvs (job_id, file_url, customization_status)
+            VALUES (%s, %s, 'success')
+            """,
+            (job_id, file_url),
+        )
+        connection.commit()
     finally:
         cursor.close()
         connection.close()
@@ -65,86 +110,60 @@ def is_cv_saved(job_id):
         cursor.close()
         connection.close()
 
-def save_cv_to_s3_and_database(job_id, docx_path):
-    """
-    Upload the customized CV DOCX content to S3 and save its URL in the database.
-    :param job_id: ID of the job associated with the CV.
-    :param docx_path: Path to the DOCX file.
-    """
-    connection = get_connection()
-    cursor = connection.cursor()
-
-    try:
-        # Upload to S3
-        file_name = f"job_{job_id}_cv.docx"
-        with open(docx_path, "rb") as docx_file:
-            s3.upload_fileobj(
-                docx_file,
-                S3_BUCKET,
-                file_name,
-                ExtraArgs={"ACL": "private", "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"},
-            )
-
-        # Generate the file URL
-        file_url = f"https://{S3_BUCKET}.s3.{S3_REGION}.amazonaws.com/{file_name}"
-
-        # Save the URL in the database
-        cursor.execute(
-            """
-            INSERT INTO customized_cvs (job_id, file_url, customization_status)
-            VALUES (%s, %s, 'success')
-            ON DUPLICATE KEY UPDATE
-                file_url = VALUES(file_url),
-                customization_status = VALUES(customization_status),
-                created_at = CURRENT_TIMESTAMP;
-            """,
-            (job_id, file_url),
-        )
-        connection.commit()
-        print(f"CV saved to S3 and database for job ID: {job_id}")
-    except NoCredentialsError:
-        print("AWS credentials not found.")
-    except Exception as e:
-        print(f"Error saving CV to S3 or database for job ID: {job_id} - {e}")
-    finally:
-        cursor.close()
-        connection.close()
-
-
-
 def process_all_jobs():
-    """
-    Process all jobs in the database, customize CVs, save locally, and store in the database.
-    """
-    # Define the directory for saving locally customized CVs
     output_dir = os.path.abspath("backend/static/customized_cvs")
-    ensure_directory_exists(output_dir)
-
-    # Fetch all jobs
+    os.makedirs(output_dir, exist_ok=True)
     jobs = get_all_jobs()
-    if not jobs:
-        print("No jobs found in the database.")
-        return
 
-    # Process each job
     for job in tqdm(jobs, desc="Processing jobs"):
         try:
             job_id = job["id"]
-            if is_cv_saved(job_id):
-                print(f"CV already exists for job ID: {job_id}. Skipping.")
+            title = job.get("title", "N/A")
+            description = job.get("description", "")
+
+            # Extract matched skills
+            matched_skills = extract_relevant_skills(description, PREDEFINED_CATEGORIES)
+
+            # Calculate skill match level
+            skill_match_level = calculate_skill_match_level(matched_skills)
+
+            # Save skill match level to database
+            save_skill_match_to_db(job_id, skill_match_level)
+
+            # Skip customization if no match
+            if skill_match_level == "No Match":
+                print(f"Job ID {job_id} - {title}: {skill_match_level}. Skipping customization.")
                 continue
 
-            # Determine the appropriate template type
-            template_type = "devops" if "devops" in job["title"].lower() else "frontend"
+            # Check if CV already exists
+            if is_cv_saved(job_id):
+                print(f"Job ID {job_id} - {title}: CV already exists. Skipping.")
+                continue
 
-            # Generate the CV locally and get the path
+            # Determine the template type based on skills and title
+            # Determine the template type based on skills and title
+            if any(matched_skills[category] for category in [
+                "Cloud Platforms", "CI/CD Tools", "Infrastructure as Code (IaC) Tools", 
+                "Monitoring Tools", "Containerization & Orchestration", "Version Control Tools", 
+                "Scripting Languages", "Build Tools", "Operating Systems & Platforms", 
+                "Networking Tools", "Database & Storage Tools", "Security Tools", 
+                "Artifact Repositories"]):
+                template_type = "devops"
+            elif any(matched_skills[category] for category in []):  # Placeholder for future frontend skills
+                template_type = "frontend"
+            else:
+                # Default to "frontend" if no match (for now, skip customization)
+                print(f"Job ID {job_id} - {title}: No matching skills found. Skipping customization.")
+                continue
+
+            # Generate the CV locally
             customized_cv_path = generate_cv(job, template_type, output_dir)
 
-            # Save the generated CV to S3 and database
+            # Save CV to S3 and database
             save_cv_to_s3_and_database(job_id, customized_cv_path)
 
         except Exception as e:
-            print(f"Error processing job ID: {job['id']} - {e}")
+            print(f"Error processing job ID {job_id}: {e}")
 
 if __name__ == "__main__":
     process_all_jobs()

@@ -1,4 +1,3 @@
-// stores/cvsStore.js
 import { defineStore } from 'pinia';
 import { useDataStore } from './dataStore';
 
@@ -16,7 +15,7 @@ export const useCVsStore = defineStore('cvs', {
       if (response.success) {
         this.cvs = response.data;
       } else {
-        console.error('Error fetching CVs:', response.data.message);
+        // console.error('Error fetching CVs:', response.data.message);
       }
     },
   },
@@ -25,7 +24,7 @@ export const useCVsStore = defineStore('cvs', {
       return state.cvs;
     },
     getCVById: (state) => (id) => {
-      return state.cvs.find((cv) => cv.id === id);
+      return state.cvs.find((cv) => cv.cv_id === id);
     },
   },
 });

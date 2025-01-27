@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_bcrypt import Bcrypt
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required ,get_jwt_identity
 from jobs_routes import jobs_bp
 import mysql.connector
 import boto3
@@ -94,7 +94,10 @@ def login():
 @app.route('/profile', methods=['GET'])
 @jwt_required()
 def profile():
-    return jsonify({"message": "This is a protected route"}), 200
+    current_user = get_jwt_identity()
+    if not current_user:
+        return jsonify({"message": "Unauthorized"}), 401
+    return jsonify({"message": f"Welcome, User {current_user}"}), 200
 
 # Register the Blueprint
 app.register_blueprint(jobs_bp)
