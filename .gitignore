@@ -49,5 +49,6 @@ vite.config.ts.timestamp*
 *.sln
 *.sw?
 .env
+echo ".env" >> .gitignore
 *.tsbuildinfo
 .eslintcache
