@@ -57,7 +57,7 @@ def register():
     cursor = connection.cursor()
     try:
         cursor.execute("""
-            INSERT INTO Users (name, email, password)
+            INSERT INTO users (name, email, password)
             VALUES (%s, %s, %s)
         """, (name, email, hashed_password))
         connection.commit()
@@ -78,7 +78,7 @@ def login():
 
     # Fetch user from the database
     cursor = connection.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM Users WHERE email = %s", (email,))
+    cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
     user = cursor.fetchone()
     cursor.close()
 
