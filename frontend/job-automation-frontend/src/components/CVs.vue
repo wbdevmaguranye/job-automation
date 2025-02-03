@@ -38,7 +38,7 @@
         <template #cell(skill_match_level)="row">
           <span
             :class="{
-              'badge badge-high': row.value === 'High',
+              'badge badge-high': row.value === 'High Match',
               'badge badge-average': row.value === 'Average Match',
               'badge badge-low': row.value === 'Low Match',
               'badge badge-no-match': row.value === 'No Match',
@@ -91,7 +91,7 @@ const pageSize = ref(10);
 
 // Skill match options for the filter
 const skillOptions = [
-  { value: 'High', text: 'High' },
+  { value: 'High Match', text: 'High Match' },
   { value: 'Average Match', text: 'Average Match' },
   { value: 'Low Match', text: 'Low Match' },
   { value: 'No Match', text: 'No Match' },

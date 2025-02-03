@@ -16,3 +16,4 @@ mysql-connector-python
 tqdm
 boto3
 botocore
+playwright

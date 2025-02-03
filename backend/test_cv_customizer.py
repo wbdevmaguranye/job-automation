@@ -1,7 +1,6 @@
 from utils.cv_customizer import (
     generate_cv,
     extract_relevant_skills,
-    calculate_skill_match_percentage,
     PREDEFINED_CATEGORIES,
 )
 from database import get_connection
@@ -12,7 +11,7 @@ import os
 from botocore.exceptions import NoCredentialsError
 
 # Load environment variables
-load_dotenv()
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '.env'))
 S3_BUCKET = os.getenv("AWS_S3_BUCKET")
 S3_REGION = os.getenv("AWS_REGION")
 S3_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID")
@@ -34,9 +33,9 @@ def calculate_skill_match_level(matched_skills):
     """
     categories_with_matches = sum(1 for skills in matched_skills.values() if skills)
 
-    if categories_with_matches == len(PREDEFINED_CATEGORIES):
+    if categories_with_matches >= 6:
         return "High Match"
-    elif categories_with_matches >= 4:  # Adjusted to reflect additional categories
+    elif categories_with_matches >= 4:
         return "Average Match"
     elif categories_with_matches >= 2:
         return "Low Match"
@@ -53,7 +52,24 @@ def get_all_jobs():
         cursor.close()
         connection.close()
 
-def save_skill_match_to_db(job_id, skill_match_level):
+def update_analytics_table(skill_match_level, location):
+    connection = get_connection()
+    cursor = connection.cursor()
+    try:
+        cursor.execute(
+            """
+            INSERT INTO analytics (skill_match_level, location, count)
+            VALUES (%s, %s, 1)
+            ON DUPLICATE KEY UPDATE count = count + 1
+            """,
+            (skill_match_level, location)
+        )
+        connection.commit()
+    finally:
+        cursor.close()
+        connection.close()
+
+def save_skill_match_to_db(job_id, skill_match_level, location):
     connection = get_connection()
     cursor = connection.cursor()
     try:
@@ -65,6 +81,7 @@ def save_skill_match_to_db(job_id, skill_match_level):
             """,
             (skill_match_level, job_id),
         )
+        update_analytics_table(skill_match_level, location)
         connection.commit()
     finally:
         cursor.close()
@@ -96,11 +113,6 @@ def save_cv_to_s3_and_database(job_id, docx_path):
         connection.close()
 
 def is_cv_saved(job_id):
-    """
-    Check if a CV for a given job ID is already saved in the database.
-    :param job_id: ID of the job.
-    :return: True if a CV already exists, otherwise False.
-    """
     connection = get_connection()
     cursor = connection.cursor()
     try:
@@ -120,46 +132,30 @@ def process_all_jobs():
             job_id = job["id"]
             title = job.get("title", "N/A")
             description = job.get("description", "")
+            location = job.get("location", "Unknown")
 
-            # Extract matched skills
             matched_skills = extract_relevant_skills(description, PREDEFINED_CATEGORIES)
 
-            # Calculate skill match level
             skill_match_level = calculate_skill_match_level(matched_skills)
 
-            # Save skill match level to database
-            save_skill_match_to_db(job_id, skill_match_level)
+            save_skill_match_to_db(job_id, skill_match_level, location)
 
-            # Skip customization if no match
             if skill_match_level == "No Match":
                 print(f"Job ID {job_id} - {title}: {skill_match_level}. Skipping customization.")
                 continue
 
-            # Check if CV already exists
             if is_cv_saved(job_id):
                 print(f"Job ID {job_id} - {title}: CV already exists. Skipping.")
                 continue
 
-            # Determine the template type based on skills and title
-            # Determine the template type based on skills and title
-            if any(matched_skills[category] for category in [
-                "Cloud Platforms", "CI/CD Tools", "Infrastructure as Code (IaC) Tools", 
-                "Monitoring Tools", "Containerization & Orchestration", "Version Control Tools", 
-                "Scripting Languages", "Build Tools", "Operating Systems & Platforms", 
-                "Networking Tools", "Database & Storage Tools", "Security Tools", 
-                "Artifact Repositories"]):
-                template_type = "devops"
-            elif any(matched_skills[category] for category in []):  # Placeholder for future frontend skills
-                template_type = "frontend"
-            else:
-                # Default to "frontend" if no match (for now, skip customization)
+            template_type = "devops" if any(matched_skills[category] for category in PREDEFINED_CATEGORIES) else "frontend"
+
+            if template_type == "frontend":
                 print(f"Job ID {job_id} - {title}: No matching skills found. Skipping customization.")
                 continue
 
-            # Generate the CV locally
             customized_cv_path = generate_cv(job, template_type, output_dir)
 
-            # Save CV to S3 and database
             save_cv_to_s3_and_database(job_id, customized_cv_path)
 
         except Exception as e:
