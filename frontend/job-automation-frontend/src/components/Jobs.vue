@@ -370,6 +370,9 @@ function resetAppliedState() {
 </script>
 
 <style scoped>
+.skill-match-badge.bg-success {
+  background-color: #0ed862 !important;  /* Custom green */
+}
 h1 {
   color: #28a745;
   font-weight: bold;

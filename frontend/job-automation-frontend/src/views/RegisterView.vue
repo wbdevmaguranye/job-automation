@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import Register from "@/components/Register.vue";
+// import { RouterLink, RouterView } from 'vue-router'
+import Register from '@/components/Register.vue';
 </script>
 
 <template>

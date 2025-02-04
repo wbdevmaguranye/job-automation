@@ -27,29 +27,20 @@ job_titles = [
 search_query = " OR ".join([f'"{title}"' for title in job_titles])
 
 async def fetch_job_details(browser, url, retries=3):
-    """Fetch job details from the job's individual page using specific IDs."""
+    """Fetch job details from the job's individual page using flexible selectors."""
     for attempt in range(retries):
         try:
-            # Open a new context and page for each job
             context = await browser.new_context()
             page = await context.new_page()
             await page.goto(url, timeout=60000)
             await page.wait_for_load_state("networkidle")
 
-            # Extract details using IDs
-            location = await page.locator("#jobLocationText").text_content(timeout=5000) or "N/A"
-            try:
-                title = await page.locator("h2[data-testid='jobsearch-JobInfoHeader-title']").text_content(timeout=5000)
-            except:
-                title = "N/A"
-
+            # Flexible selectors with fallbacks
+            title = await page.locator("h2[data-testid='jobsearch-JobInfoHeader-title'], h1.jobsearch-JobInfoHeader-title").text_content(timeout=5000) or "N/A"
+            location = await page.locator("#jobLocationText, div[data-testid='jobsearch-JobInfoHeader-companyLocation']").text_content(timeout=5000) or "N/A"
             description = await page.locator("#jobDescriptionText").text_content(timeout=10000) or "N/A"
-            try:
-                company = await page.locator("div[data-company-name='true'] a").text_content(timeout=5000)
-            except:
-                company = "N/A"
+            company = await page.locator("div[data-company-name='true'] a, div.css-nj0gl a").text_content(timeout=5000) or "N/A"
 
-            # Close the context and page
             await page.close()
             await context.close()
 
@@ -59,11 +50,13 @@ async def fetch_job_details(browser, url, retries=3):
                 "description": description.strip(),
                 "company": company.strip(),
             }
+
         except Exception as e:
             logging.warning(f"Attempt {attempt + 1}/{retries}: Failed to fetch details for {url} - {e}")
-            await asyncio.sleep(2 ** attempt)  # Exponential backoff
+            await asyncio.sleep(2 ** attempt)
 
     return {"title": "N/A", "location": "N/A", "description": "N/A", "company": "N/A"}
+
 
 async def save_to_database(job):
     """Save job details into the database."""
@@ -71,7 +64,7 @@ async def save_to_database(job):
     cursor = connection.cursor()
     try:
         cursor.execute("""
-            INSERT INTO Jobs (title, location, description, company, url)
+            INSERT INTO jobs (title, location, description, company, url)
             VALUES (%s, %s, %s, %s, %s)
         """, (job['title'], job['location'], job['description'], job['company'], job['url']))
         connection.commit()

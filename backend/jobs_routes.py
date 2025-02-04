@@ -23,20 +23,53 @@ s3 = boto3.client(
 # Define a Blueprint for job routes
 jobs_bp = Blueprint('jobs', __name__)
 
-# Route: List All Jobs
-@jobs_bp.route('/jobs', methods=['GET'])
-def get_jobs():
-    try:
-        connection = get_connection()
-        cursor = connection.cursor(dictionary=True)
-        cursor.execute("SELECT * FROM jobs")
-        jobs = cursor.fetchall()
-        return jsonify(jobs), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-    finally:
-        cursor.close()
-        connection.close()
+
+# Existing Route: List All Jobs
+@jobs_bp.route('/jobs', methods=['GET', 'POST'])
+def jobs():
+    if request.method == 'GET':
+        # Existing GET logic to fetch jobs
+        try:
+            connection = get_connection()
+            cursor = connection.cursor(dictionary=True)
+            cursor.execute("SELECT * FROM jobs")
+            jobs = cursor.fetchall()
+            return jsonify(jobs), 200
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+        finally:
+            cursor.close()
+            connection.close()
+
+    elif request.method == 'POST':
+        # New POST logic to add a job from your web scraper
+        job_data = request.get_json()
+
+        # Extract job details from the request
+        title = job_data.get('title')
+        location = job_data.get('location')
+        description = job_data.get('description')
+        company = job_data.get('company')
+        url = job_data.get('url')
+
+        # Validate that all required fields are provided
+        if not all([title, location, description, company, url]):
+            return jsonify({"error": "Missing required job fields"}), 400
+
+        try:
+            connection = get_connection()
+            cursor = connection.cursor()
+            cursor.execute("""
+                INSERT INTO jobs (title, location, description, company, url)
+                VALUES (%s, %s, %s, %s, %s)
+            """, (title, location, description, company, url))
+            connection.commit()
+            return jsonify({"message": "Job added successfully!"}), 201
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+        finally:
+            cursor.close()
+            connection.close()
 
 # Route: List All CVs
 @jobs_bp.route('/cvs', methods=['GET'])

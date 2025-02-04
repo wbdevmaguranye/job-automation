@@ -76,18 +76,23 @@ def login():
     email = data.get("email")
     password = data.get("password")
 
-    # Fetch user from the database
     cursor = connection.cursor(dictionary=True)
     cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
     user = cursor.fetchone()
     cursor.close()
 
-    if not user or not bcrypt.check_password_hash(user["password"], password):
+    if not user:
         return jsonify({"message": "Invalid email or password"}), 401
 
-    # Convert user ID to string before creating the access token
+    try:
+        if not bcrypt.check_password_hash(user["password"], password):
+            return jsonify({"message": "Invalid email or password"}), 401
+    except ValueError:
+        return jsonify({"message": "Invalid password format stored in DB. Please reset your password."}), 500
+
     access_token = create_access_token(identity=str(user["id"]))
     return jsonify({"access_token": access_token}), 200
+
 
 
 # Route: Protected Profile
